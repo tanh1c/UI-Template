@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Style Museum | All Design Styles Showcase</title>
+    <meta name="description"
+        content="A comprehensive gallery of modern UI design styles: Glassmorphism, Brutalism, Neumorphism, and more.">
+
+    <!-- Tailwind for Layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-black text-white selection:bg-blue-500">
+
+    <div class="grain-overlay"></div>
+
+    <header class="py-20 px-10 text-center max-w-5xl mx-auto">
+        <div
+            class="inline-block px-4 py-1 border border-white/20 rounded-full text-[10px] uppercase tracking-widest mb-6 opacity-60">
+            UI DESIGN SYSTEMS 2025
+        </div>
+        <h1
+            class="text-6xl md:text-8xl font-black tracking-tighter mb-8 bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent italic !overflow-visible">
+            UI Style <span class="font-light">Museum.</span>
+        </h1>
+        <p class="text-xl text-white/50 leading-relaxed font-medium">
+            Explore 58 distinct UI design styles from our Searchable Database. Each exhibit demonstrates the unique
+            aesthetics, colors, and interactions of its era.
+        </p>
+    </header>
+
+    <main class="museum-grid" id="mainGrid">
+        <!-- Exhibit 1: Minimalism -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-minimalism">
+                            <h3 class="mb-4">Minimalism</h3>
+                            <button>LESS IS MORE</button>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Minimalism & Swiss</div>
+                        <div class="exhibit-desc">Clean, simple, spacious, functional. Grid-based and typography
+                            focused.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Minimalist Logic</h4>
+                    <div class="code-snippet">.style-minimalism {
+                        background: #ffffff;
+                        font-family: 'Inter', sans-serif;
+                        letter-spacing: 4px;
+                        }
+                        button {
+                        background: #000;
+                        padding: 12px 24px;
+                        font-weight: 500;
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 2: Neumorphism -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-neumorphism">
+                            <div class="neumo-btn"><i data-lucide="power" class="w-8 h-8"></i></div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Neumorphism</div>
+                        <div class="exhibit-desc">Soft UI with embossed and debossed effects. Subtle depth via light
+                            source.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Neumorphic Depth</h4>
+                    <div class="code-snippet">.neumo-btn {
+                        background: #e0e0e0;
+                        border-radius: 20px;
+                        box-shadow:
+                        20px 20px 60px #bebebe,
+                        -20px -20px 60px #ffffff;
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 3: Glassmorphism -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-glassmorphism">
+                            <div class="glass-card">
+                                <div class="w-10 h-10 bg-white/20 rounded-lg mb-4"></div>
+                                <div class="h-2 w-full bg-white/20 rounded mb-2"></div>
+                                <div class="h-2 w-2/3 bg-white/20 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Glassmorphism</div>
+                        <div class="exhibit-desc">Frosted glass, transparency, and background blurring. Layered depth.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Frosted Glass</h4>
+                    <div class="code-snippet">.glass-card {
+                        background: rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        border-radius: 20px;
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 4: Brutalism -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-brutalism">
+                            <div class="text-4xl font-black mb-2 italic">RAW POWER</div>
+                            <button class="brutal-btn">CLICK IF YOU DARE</button>
+                            <div class="mt-4 p-2 border-2 border-black font-mono text-xs">LOG: 0xFF23A1</div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Brutalism</div>
+                        <div class="exhibit-desc">Raw, unpolished, stark, high contrast. Visible borders and default
+                            fonts.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Raw Syntax</h4>
+                    <div class="code-snippet">.brutal-btn {
+                        background: #000;
+                        border: 4px solid #000;
+                        font-weight: 900;
+                        box-shadow: 8px 8px 0px #ff0000;
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 10: Aurora UI -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-aurora">
+                            <div class="aurora-blob top-0 left-0"></div>
+                            <div class="aurora-blob bottom-0 right-0"
+                                style="background: linear-gradient(to right, #7928ca, #ff0080); animation-delay: -5s;">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-2xl font-bold tracking-tighter">Aurora Flow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Aurora UI</div>
+                        <div class="exhibit-desc">Vibrant gradients with smooth blending. Luminous and atmospheric.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Mesh Gradient</h4>
+                    <div class="code-snippet">.aurora-blob {
+                        filter: blur(80px);
+                        opacity: 0.6;
+                        animation: rotate 10s infinite linear;
+                        }
+                        @keyframes rotate {
+                        from { transform: rotate(0deg); }
+                        to { transform: rotate(360deg); }
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 9: Claymorphism -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-claymorphism">
+                            <button class="clay-btn">PLAY</button>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Claymorphism</div>
+                        <div class="exhibit-desc">Soft, playful, toy-like 3D with bubbly shapes and inner/outer shadows.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Tactile Play</h4>
+                    <div class="code-snippet">.clay-btn {
+                        box-shadow:
+                        10px 10px 20px rgba(0,0,0,0.05),
+                        inset -8px -8px 12px rgba(0,0,0,0.1),
+                        inset 8px 8px 12px rgba(255,255,255,0.4);
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 40: Y2K -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-y2k">
+                            <div class="y2k-blob">Y2K</div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Y2K Aesthetic</div>
+                        <div class="exhibit-desc">Glossy, bubblegum, chrome, and neon pink. Retro-futuristic nostalgia.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Millennium Glow</h4>
+                    <div class="code-snippet">.y2k-blob {
+                        background: #01cdfe;
+                        border-radius: 50%;
+                        box-shadow:
+                        10px 10px 0 #b967ff,
+                        inset 5px 5px 15px rgba(255,255,255,0.5);
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 45: Vaporwave -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-vaporwave">
+                            <div class="vapor-grid"></div>
+                            <div class="vapor-sun"></div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Vaporwave</div>
+                        <div class="exhibit-desc">Nostalgic sunset gradients with glitch overlays and futuristic 80s
+                            vibes.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>80s Retrowave</h4>
+                    <div class="code-snippet">.vapor-grid {
+                        transform:
+                        perspective(100px)
+                        rotateX(60deg);
+                        background-image:
+                        linear-gradient(#ff71ce 100%),
+                        linear-gradient(90deg, #ff71ce 100%);
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 38: Neubrutalism -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-neubrutalism">
+                            <div class="neu-card">
+                                <i data-lucide="zap" class="w-8 h-8 mb-4"></i>
+                                <div>GEN Z VIBES</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Neubrutalism</div>
+                        <div class="exhibit-desc">Bold black outlines, primary colors, thick 45° shadows. Playful and
+                            loud.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Pop Contrast</h4>
+                    <div class="code-snippet">.neu-card {
+                        border: 3px solid #000;
+                        box-shadow: 6px 6px 0px #000;
+                        font-family: 'Space Grotesk';
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 41: Cyberpunk -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-cyberpunk">
+                            <div class="cyber-text mb-4 tracking-[10px]">SYSTEM ERROR</div>
+                            <button class="cyber-btn">EXECUTE</button>
+                            <div class="absolute top-0 w-full h-1 bg-green-500/20 animate-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Cyberpunk UI</div>
+                        <div class="exhibit-desc">Neon glow, dark mode, scanlines, and dystopian tech noir aesthetics.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Dystopian HUD</h4>
+                    <div class="code-snippet">.cyber-text {
+                        text-shadow: 0 0 10px #00ff00;
+                        }
+                        .cyber-btn {
+                        clip-path: polygon(
+                        10% 0, 100% 0, 90% 100%, 0 100%
+                        );
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 52: Pixel Art -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-pixelart">
+                            <div class="pixel-box">START</div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Pixel Art</div>
+                        <div class="exhibit-desc">Retro, blocky, nostalgic 8-bit/16-bit arcade aesthetics. Dithered
+                            textures.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>8-Bit Render</h4>
+                    <div class="code-snippet">.style-pixelart {
+                        image-rendering: pixelated;
+                        }
+                        .pixel-box {
+                        border: 4px solid #fff;
+                        box-shadow: 4px 4px 0 #000;
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 53: Bento Grid -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-bento">
+                            <div class="bento-item p-4">
+                                <div class="h-4 w-12 bg-gray-100 rounded"></div>
+                            </div>
+                            <div class="bento-item flex items-center justify-center"><i data-lucide="camera"
+                                    class="w-6 h-6 text-gray-300"></i></div>
+                            <div class="bento-item flex items-center justify-center"><i data-lucide="mic"
+                                    class="w-6 h-6 text-gray-300"></i></div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Bento Grids</div>
+                        <div class="exhibit-desc">Modular asymmetric cards, Apple-style hierarchical layout. Clean
+                            hierarchy.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Modular Bento</h4>
+                    <div class="code-snippet">.style-bento {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 10px;
+                        }
+                        .bento-item:nth-child(1) {
+                        grid-column: span 2;
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 55: Spatial UI -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-spatial">
+                            <div class="spatial-glass">Vision App</div>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">Spatial UI (VisionOS)</div>
+                        <div class="exhibit-desc">Immersive depth, translucent glass layers, and physical lighting
+                            response.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>VisionOS Glass</h4>
+                    <div class="code-snippet">.spatial-glass {
+                        backdrop-filter: blur(25px);
+                        transform:
+                        perspective(1000px)
+                        rotateX(10deg);
+                        border-radius: 1000px;
+                        }</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exhibit 56: E-Ink -->
+        <div class="exhibit-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="exhibit-preview">
+                        <div class="style-eink">
+                            <div class="eink-header">The Journal</div>
+                            <p class="text-sm opacity-80 leading-relaxed italic">Distraction-free reading experience
+                                inspired by paper texture and monochrome ink.</p>
+                        </div>
+                    </div>
+                    <div class="exhibit-info">
+                        <div class="exhibit-title">E-Ink / Paper</div>
+                        <div class="exhibit-desc">Matte texture, high contrast reading, monochrome, and paper-like
+                            tranquility.</div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h4>Paper Matte</h4>
+                    <div class="code-snippet">.style-eink {
+                        background: #fdfbf7;
+                        color: #1a1a1a;
+                        font-family: 'Cormorant Garamond';
+                        }</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-20 text-center opacity-30 text-[10px] tracking-[0.5em] uppercase">
+        © 2025 UI Museum | Built by Antigravity Designer
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

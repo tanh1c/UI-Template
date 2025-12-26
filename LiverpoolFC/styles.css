@@ -1,0 +1,141 @@
+/* Liverpool FC Custom Aesthetics */
+
+@layer base {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #0A0A0B;
+    }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+/* Slow Zoom for Hero */
+@keyframes slow-zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.motion-safe\:animate-slow-zoom {
+    animation: slow-zoom 20s ease-out forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0A0B;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C8102E;
+    border: 2px solid #0A0A0B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
+/* Nav Link Hover */
+.nav-link {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #C8102E;
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Reveal on Scroll */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cascade Animation for Hero */
+.reveal-cascade>* {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal-item 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal-cascade>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.reveal-cascade>*:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.reveal-cascade>*:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes reveal-item {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skew Buttons */
+.skew-btn {
+    display: inline-block;
+    transform: skewX(-15deg);
+}
+
+.skew-btn span {
+    display: block;
+    transform: skewX(15deg);
+}
+
+/* Grain Pattern Overlay */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 100;
+}

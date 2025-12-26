@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOCE LUXE | The Pinnacle of Performance</title>
+    <meta name="description"
+        content="Experience the future of automotive excellence at VELOCE LUXE. Curated collections of elite performance and electric vehicles.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        veloce: {
+                            base: '#0A0A0B',
+                            card: '#141417',
+                            primary: '#2DD4BF', // Teal/Cyan accent
+                            accent: '#F43F5E', // Red accent for performance
+                            slate: '#94A3B8',
+                            silver: '#E2E8F0'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Bebas Neue', 'cursive'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'glow': 'glow 3s ease-in-out infinite',
+                        'slide-up': 'slide-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%, 100%': { opacity: '0.3' },
+                            '50%': { opacity: '1' },
+                        },
+                        'slide-up': {
+                            '0%': { transform: 'translateY(40px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-veloce-base text-white font-body selection:bg-veloce-primary selection:text-veloce-base overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between transition-all duration-500 bg-transparent">
+        <div class="flex items-center gap-2">
+            <span class="font-heading text-4xl tracking-tighter text-veloce-primary">VELOCE</span>
+            <span class="font-heading text-4xl tracking-tighter opacity-50">LUXE</span>
+        </div>
+
+        <div
+            class="hidden lg:flex items-center gap-12 text-[10px] font-bold uppercase tracking-[0.4em] text-veloce-slate">
+            <a href="#inventory" class="nav-link hover:text-white transition-colors">Inventory</a>
+            <a href="#atelier" class="nav-link hover:text-white transition-colors">Atelier</a>
+            <a href="#legacy" class="nav-link hover:text-white transition-colors">Legacy</a>
+            <a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <button class="hover:text-veloce-primary transition-colors"><i data-lucide="search"
+                    class="w-5 h-5"></i></button>
+            <a href="#"
+                class="px-8 py-3 bg-veloce-primary text-veloce-base font-bold text-[10px] uppercase tracking-[0.3em] hover:bg-white transition-all shadow-lg shadow-veloce-primary/20">Reserve
+                Now</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img id="hero-img" src="hero.png" alt="Veloce Luxe Showcase"
+                    class="w-full h-full object-cover grayscale opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-veloce-base via-veloce-base/40 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-8">
+                <div class="max-w-4xl animate-slide-up">
+                    <p class="text-veloce-primary font-bold text-[10px] uppercase tracking-[0.6em] mb-6">Engineered for
+                        the elite</p>
+                    <h1 class="font-heading text-8xl md:text-[160px] leading-[0.85] mb-8 tracking-tighter">
+                        Beyond <br /> <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-veloce-primary to-veloce-silver">Velocity.</span>
+                    </h1>
+                    <p class="text-lg text-veloce-slate max-w-xl leading-relaxed mb-12 font-light">
+                        Discover the intersection of architectural design and raw automotive power. Veloce Luxe curates
+                        the world's most exclusive performance electric vehicles.
+                    </p>
+                    <div class="flex flex-wrap gap-8">
+                        <a href="#inventory"
+                            class="px-12 py-5 bg-white text-veloce-base font-bold text-[10px] uppercase tracking-[0.4em] hover:bg-veloce-primary transition-all">Explore
+                            Fleet</a>
+                        <a href="#"
+                            class="flex items-center gap-4 text-white font-bold text-[10px] uppercase tracking-[0.4em] group border-b border-white/20 pb-2 hover:border-veloce-primary transition-all">
+                            View 2025 Catalog <i data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Overlay -->
+            <div class="absolute bottom-12 right-12 hidden xl:flex gap-16 animate-fade-in" style="animation-delay: 1s;">
+                <div>
+                    <p class="font-heading text-4xl text-veloce-primary">1.9s</p>
+                    <p class="text-[8px] uppercase tracking-[0.3em] text-veloce-slate">0-60 MPH</p>
+                </div>
+                <div>
+                    <p class="font-heading text-4xl text-veloce-primary">1020</p>
+                    <p class="text-[8px] uppercase tracking-[0.3em] text-veloce-slate">Total HP</p>
+                </div>
+                <div>
+                    <p class="font-heading text-4xl text-veloce-primary">480mi</p>
+                    <p class="text-[8px] uppercase tracking-[0.3em] text-veloce-slate">Pioneering Range</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Grid Section -->
+        <section id="inventory" class="py-40 bg-veloce-base">
+            <div class="container mx-auto px-8">
+                <div class="flex flex-col md:row justify-between items-end mb-24 gap-8">
+                    <div class="max-w-2xl reveal-on-scroll">
+                        <h2 class="font-heading text-6xl md:text-8xl mb-8 tracking-tighter">The <span
+                                class="italic text-veloce-primary">Selection.</span></h2>
+                        <p class="text-veloce-slate leading-relaxed">Each vehicle in our atelier undergoes a rigorous
+                            200-point validation process. We don't just sell cars; we deliver masterpieces of motion.
+                        </p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button
+                            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-veloce-base transition-all"><i
+                                data-lucide="chevron-left"></i></button>
+                        <button
+                            class="w-12 h-12 rounded-full border border-veloce-primary text-veloce-primary flex items-center justify-center hover:bg-veloce-primary hover:text-veloce-base transition-all"><i
+                                data-lucide="chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Car 1 -->
+                    <div class="group reveal-on-scroll">
+                        <div class="relative aspect-[16/10] overflow-hidden mb-8 bg-veloce-card border border-white/5">
+                            <img src="hero.png" alt="Model V1"
+                                class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-veloce-base/80 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <span
+                                    class="px-3 py-1 bg-veloce-primary text-veloce-base text-[8px] font-black uppercase tracking-widest">Available
+                                    Now</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-heading text-3xl mb-1">AETERNA S1</h4>
+                                <p class="text-[10px] uppercase tracking-widest text-veloce-slate">Hyper-Electric GT</p>
+                            </div>
+                            <p class="font-heading text-2xl text-veloce-primary">$245,000</p>
+                        </div>
+                    </div>
+
+                    <!-- Car 2 -->
+                    <div class="group reveal-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="relative aspect-[16/10] overflow-hidden mb-8 bg-veloce-card border border-white/5">
+                            <img src="hero.png" alt="Model V2"
+                                class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-veloce-base/80 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <span
+                                    class="px-3 py-1 bg-white text-veloce-base text-[8px] font-black uppercase tracking-widest">Pre-Order</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-heading text-3xl mb-1">CHRONOS X</h4>
+                                <p class="text-[10px] uppercase tracking-widest text-veloce-slate">Performance SUV</p>
+                            </div>
+                            <p class="font-heading text-2xl text-veloce-primary">$189,000</p>
+                        </div>
+                    </div>
+
+                    <!-- Car 3 -->
+                    <div class="group reveal-on-scroll" style="transition-delay: 0.4s;">
+                        <div class="relative aspect-[16/10] overflow-hidden mb-8 bg-veloce-card border border-white/5">
+                            <img src="hero.png" alt="Model V3"
+                                class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-veloce-base/80 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <span
+                                    class="px-3 py-1 bg-veloce-accent text-white text-[8px] font-black uppercase tracking-widest">Limited
+                                    Edition</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-heading text-3xl mb-1">NOIR NOCTURNE R</h4>
+                                <p class="text-[10px] uppercase tracking-widest text-veloce-slate">Track-Ready Special
+                                </p>
+                            </div>
+                            <p class="font-heading text-2xl text-veloce-primary">$312,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Contact -->
+        <section id="contact" class="py-40 relative">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-veloce-primary/5"></div>
+                <div
+                    class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-veloce-primary/50 to-transparent">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-8 relative z-10 text-center">
+                <h2 class="font-heading text-6xl md:text-9xl mb-12 tracking-tighter">Enter the <br /> <span
+                        class="text-veloce-primary">Inner Circle.</span></h2>
+                <div class="max-w-2xl mx-auto p-16 bg-veloce-card border border-white/5 shadow-2xl">
+                    <p class="text-[10px] uppercase tracking-[0.4em] text-veloce-slate mb-12">Private consultations by
+                        appointment only</p>
+                    <form class="flex flex-col gap-6">
+                        <input type="email" placeholder="YOUR EMAIL ADDRESS"
+                            class="bg-veloce-base border border-white/10 px-8 py-6 text-[10px] tracking-[0.3em] focus:border-veloce-primary outline-none transition-all">
+                        <button type="submit"
+                            class="bg-white text-veloce-base font-bold text-[10px] uppercase tracking-[0.5em] py-6 hover:bg-veloce-primary transition-all">Request
+                            Access</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-veloce-card py-24 border-t border-white/5">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-20 items-start">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-12">
+                        <span class="font-heading text-4xl tracking-tighter text-veloce-primary">VELOCE</span>
+                        <span class="font-heading text-4xl tracking-tighter opacity-50 text-white">LUXE</span>
+                    </div>
+                    <p class="text-veloce-slate text-xs uppercase tracking-widest leading-loose max-w-sm mb-12">
+                        Redefining automotive luxury through architectural purity and electrical performance since
+                        MCMXCIX.</p>
+                    <div class="flex gap-8">
+                        <a href="#" class="text-veloce-slate hover:text-white transition-colors"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-veloce-slate hover:text-white transition-colors"><i
+                                data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-veloce-slate hover:text-white transition-colors"><i
+                                data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.3em] mb-12 text-veloce-primary">Navigation
+                    </h5>
+                    <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-widest text-veloce-slate">
+                        <li><a href="#" class="hover:text-white transition-colors">Electric Fleet</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Performance S</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pre-Owned Elite</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Trade-In Private</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.3em] mb-12 text-veloce-primary">Concierge
+                    </h5>
+                    <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-widest text-veloce-slate">
+                        <li><a href="#" class="hover:text-white transition-colors">Test Drive Request</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Atelier Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Global Delivery</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Press Center</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="mt-24 pt-12 border-t border-white/5 flex flex-col md:row items-center justify-between gap-12 text-[8px] uppercase tracking-[0.4em] text-veloce-slate">
+                <p>© 2025 VELOCE LUXE AUTOMOTIVE GROUP.</p>
+                <div class="flex gap-12">
+                    <a href="#" class="hover:text-white transition-all">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-all">Legal Notice</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

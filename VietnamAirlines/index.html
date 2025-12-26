@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIETNAM AIRLINES | Reach Further</title>
+    <meta name="description"
+        content="Experience the spirit of Vietnam with our 4-star global airline. Book flights, manage your journey, and discover premium travel with the Lotus Privilege.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vna: {
+                            teal: '#005F5F',
+                            gold: '#C5A059',
+                            cream: '#F9F7F2',
+                            dark: '#1A1A1A',
+                            slate: '#4F4F4F'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slide-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'slide-up': {
+                            '0%': { transform: 'translateY(40px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-vna-cream text-vna-dark font-sans selection:bg-vna-teal selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 px-8 lg:px-16 py-6 flex items-center justify-between transition-all duration-700 bg-transparent">
+        <div class="flex items-center gap-4">
+            <div class="w-12 h-12 flex items-center justify-center">
+                <i data-lucide="flower-2" class="text-vna-gold w-10 h-10 animate-float"></i>
+            </div>
+            <div class="flex flex-col">
+                <span
+                    class="font-serif text-xl lg:text-3xl tracking-[0.1em] uppercase text-white drop-shadow-md">Vietnam
+                    Airlines</span>
+            </div>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-10 font-medium text-[10px] uppercase tracking-[0.3em] text-white">
+            <a href="#discover" class="nav-link">Discover</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#privilege" class="nav-link">Lotusmiles</a>
+            <a href="#booking"
+                class="px-8 py-3 bg-vna-gold text-white font-bold hover:bg-white hover:text-vna-teal transition-all shadow-xl">Book
+                Now</a>
+        </div>
+
+        <button class="lg:hidden text-white">
+            <i data-lucide="menu"></i>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[100vh] min-h-[800px] flex items-center justify-center">
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img id="hero-img" src="hero.png" alt="Vietnam Airlines Journey"
+                    class="w-full h-full object-cover scale-110">
+                <div class="absolute inset-0 bg-gradient-to-b from-vna-teal/40 via-transparent to-vna-cream"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-8 text-center mt-[-150px]">
+                <div class="animate-slide-up opacity-0" style="animation-delay: 0.2s;">
+                    <p class="text-white font-serif text-xl md:text-2xl italic mb-8 tracking-widest drop-shadow-lg">The
+                        Spirit of Vietnam</p>
+                    <h1 class="font-serif text-6xl md:text-9xl text-white mb-12 leading-tight drop-shadow-2xl">
+                        Journey to the <br /> <span class="italic text-vna-gold">Heart of Artistry.</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Booking Widget (Floating at bottom of hero) -->
+            <div id="booking" class="absolute bottom-0 left-0 w-full translate-y-[50%] z-30 px-8 lg:px-16">
+                <div
+                    class="container mx-auto px-6 py-10 bg-white shadow-[0_40px_100px_rgba(0,0,0,0.15)] border-b-4 border-vna-teal reveal-on-scroll">
+                    <div class="flex flex-wrap items-end gap-10">
+                        <div class="flex-1 min-w-[200px]">
+                            <label
+                                class="block text-[8px] uppercase tracking-[0.3em] text-vna-slate mb-3 font-bold">Departure</label>
+                            <div class="flex items-center border-b border-vna-gold/30 pb-2 gap-3 group">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-vna-gold"></i>
+                                <input type="text" placeholder="Hanoi (HAN)"
+                                    class="w-full bg-transparent outline-none font-serif text-lg">
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-[200px]">
+                            <label
+                                class="block text-[8px] uppercase tracking-[0.3em] text-vna-slate mb-3 font-bold">Destination</label>
+                            <div class="flex items-center border-b border-vna-gold/30 pb-2 gap-3 group">
+                                <i data-lucide="navigation-2" class="w-4 h-4 text-vna-gold"></i>
+                                <input type="text" placeholder="Paris (CDG)"
+                                    class="w-full bg-transparent outline-none font-serif text-lg">
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-[150px]">
+                            <label
+                                class="block text-[8px] uppercase tracking-[0.3em] text-vna-slate mb-3 font-bold">Date</label>
+                            <div class="flex items-center border-b border-vna-gold/30 pb-2 gap-3 group">
+                                <i data-lucide="calendar" class="w-4 h-4 text-vna-gold"></i>
+                                <input type="text" value="30 Dec 2025"
+                                    class="w-full bg-transparent outline-none font-serif text-lg">
+                            </div>
+                        </div>
+                        <div class="flex-none">
+                            <button
+                                class="px-16 py-5 bg-vna-teal text-white font-bold text-xs uppercase tracking-[0.4em] hover:bg-vna-gold transition-all duration-500 shadow-xl shadow-vna-teal/20">
+                                Search Flights
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex gap-10 mt-8 text-[10px] uppercase tracking-[0.2em] font-medium text-vna-slate">
+                        <label class="flex items-center gap-2 cursor-pointer text-vna-teal">
+                            <div class="w-4 h-4 rounded-full border-2 border-vna-teal flex items-center justify-center">
+                                <div class="w-2 h-2 bg-vna-teal rounded-full"></div>
+                            </div>
+                            Round-trip
+                        </label>
+                        <label
+                            class="flex items-center gap-2 cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
+                            <div
+                                class="w-4 h-4 rounded-full border-2 border-vna-slate flex items-center justify-center">
+                            </div>
+                            One-way
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="discover" class="pt-64 pb-40 bg-vna-cream relative">
+            <div class="container mx-auto px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div class="reveal-on-scroll">
+                        <p class="text-vna-gold font-serif text-xl italic mb-6">Vietnamese Hospitality</p>
+                        <h2 class="font-serif text-5xl md:text-7xl mb-12 leading-tight">Tradition meets <br /> <span
+                                class="text-vna-teal italic underline decoration-vna-gold/30 underline-offset-8">Sky-high</span>
+                            Elegance.</h2>
+                        <p class="text-vna-slate leading-relaxed text-lg font-light mb-12">
+                            From the grace of the Ao Dai to the exquisite flavors of traditional Vietnamese cuisine
+                            served 35,000 feet in the air, Vietnam Airlines is more than a carrier—it is a cultural
+                            gateway. We take pride in our 4-star Skytrax service, ensuring every minute of your journey
+                            is a celebration of artistry.
+                        </p>
+                        <a href="#"
+                            class="group flex items-center gap-6 font-bold text-xs uppercase tracking-[0.3em] text-vna-teal">
+                            Our Heritage <i data-lucide="arrow-right"
+                                class="group-hover:translate-x-3 transition-transform"></i>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 reveal-on-scroll">
+                        <div class="aspect-[3/4] overflow-hidden shadow-2xl mt-12">
+                            <img src="hero.png"
+                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                        </div>
+                        <div class="aspect-[3/5] overflow-hidden shadow-2xl">
+                            <img src="hero.png" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Gallery -->
+        <section id="experience" class="py-40 bg-vna-dark text-white relative">
+            <div class="container mx-auto px-8">
+                <div class="text-center mb-32">
+                    <h3 class="font-serif text-5xl md:text-7xl mb-8 italic">Defined by <span
+                            class="text-vna-gold">Excellence.</span></h3>
+                    <p class="text-white/40 max-w-2xl mx-auto uppercase text-[10px] tracking-[0.5em]">The Ultimate
+                        In-Flight Experience</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="group cursor-pointer reveal-on-scroll">
+                        <div class="relative aspect-[4/5] overflow-hidden mb-8">
+                            <img src="hero.png"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-vna-teal/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-4 italic">Business Class</h4>
+                        <p class="text-white/40 text-[10px] uppercase tracking-widest leading-loose">Full-flat seating,
+                            gourmet dining, and absolute privacy on our fleet of Dreamliners and A350s.</p>
+                    </div>
+                    <div class="group cursor-pointer reveal-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="relative aspect-[4/5] overflow-hidden mb-8">
+                            <img src="hero.png"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-vna-teal/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-4 italic">Premium Economy</h4>
+                        <p class="text-white/40 text-[10px] uppercase tracking-widest leading-loose">Wider legroom,
+                            dedicated check-in, and enhanced amenities for the discerning traveler.</p>
+                    </div>
+                    <div class="group cursor-pointer reveal-on-scroll" style="transition-delay: 0.4s;">
+                        <div class="relative aspect-[4/5] overflow-hidden mb-8">
+                            <img src="hero.png"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-vna-teal/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-4 italic">Luxury Lounges</h4>
+                        <p class="text-white/40 text-[10px] uppercase tracking-widest leading-loose">Tranquil spaces to
+                            rest and recharge at global hubs before your next departure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="privilege" class="py-40 bg-vna-teal text-white text-center overflow-hidden relative">
+            <div class="absolute -top-40 -left-40 w-96 h-96 bg-white/5 blur-[120px] rounded-full"></div>
+            <div class="container mx-auto px-8 relative z-10">
+                <i data-lucide="flower-2" class="text-vna-gold w-16 h-16 mx-auto mb-12 opacity-50"></i>
+                <h2 class="font-serif text-5xl md:text-8xl mb-12 tracking-tight">The <span
+                        class="italic text-vna-gold">Lotus</span> privilege.</h2>
+                <p class="text-xl font-light mb-16 max-w-xl mx-auto uppercase tracking-widest">Join Lotusmiles and reach
+                    further with global rewards and priority access.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-8">
+                    <a href="#"
+                        class="px-16 py-6 bg-vna-gold text-white font-bold text-xs uppercase tracking-[0.4em] hover:bg-white hover:text-vna-teal transition-all shadow-2xl">Join
+                        Lotusmiles</a>
+                    <a href="#"
+                        class="px-16 py-6 border border-white/30 text-white font-bold text-xs uppercase tracking-[0.4em] hover:bg-white hover:text-vna-teal transition-all">Member
+                        Login</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-vna-cream py-32 border-t border-vna-gold/10">
+        <div class="container mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-24">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-4 mb-12">
+                    <i data-lucide="flower-2" class="text-vna-teal w-8 h-8"></i>
+                    <span class="font-serif text-3xl tracking-[0.15em] uppercase text-vna-teal">Vietnam Airlines</span>
+                </div>
+                <p class="text-vna-slate text-[10px] uppercase tracking-[0.3em] leading-loose max-w-sm mb-12 italic">
+                    Spreading the spirit of Vietnam across the global sky. A member of the SkyTeam alliance.
+                </p>
+                <div class="flex gap-12">
+                    <a href="#" class="text-vna-teal hover:text-vna-gold transition-colors"><i data-lucide="instagram"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="text-vna-teal hover:text-vna-gold transition-colors"><i data-lucide="facebook"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="text-vna-teal hover:text-vna-gold transition-colors"><i data-lucide="youtube"
+                            class="w-5 h-5"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="text-[10px] font-bold uppercase tracking-[0.5em] mb-12 text-vna-teal">Connect</h5>
+                <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-widest text-vna-slate">
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">Booking Guide</a></li>
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">Route Maps</a></li>
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">Help Center</a></li>
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">SkyTeam Alliance</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-[10px] font-bold uppercase tracking-[0.5em] mb-12 text-vna-teal">Atelier</h5>
+                <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-widest text-vna-slate">
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">Sustainability</a></li>
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">Investor Relations</a></li>
+                    <li><a href="#" class="hover:text-vna-gold transition-colors">Press Room</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="container mx-auto px-8 mt-32 pt-12 border-t border-vna-gold/10 flex flex-col md:row items-center justify-between gap-12 text-[8px] uppercase tracking-[0.5em] text-vna-slate/50">
+            <p>© 2025 Vietnam Airlines Joint Stock Company. Reach Further.</p>
+            <div class="flex gap-12 underline decoration-vna-gold/20">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

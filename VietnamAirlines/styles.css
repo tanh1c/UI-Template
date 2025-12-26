@@ -1,0 +1,89 @@
+/* Vietnam Airlines Custom Aesthetics */
+
+@layer base {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Nav Link Hover Effect */
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #C5A059;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Reveal on Scroll */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar (Teal & Gold) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F9F7F2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #005F5F;
+    border: 2px solid #F9F7F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C5A059;
+}
+
+/* Parallax Image Contain */
+#hero-img {
+    transition: transform 0.2s ease-out;
+}
+
+/* Subtle Film Grain Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 99;
+}
+
+/* Booking Widget Internal Transitions */
+#booking input {
+    background: transparent;
+}
+
+#booking .group:hover i {
+    transform: translateY(-2px);
+    transition: transform 0.3s;
+}

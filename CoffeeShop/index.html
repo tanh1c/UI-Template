@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIREN & BEAN | More Than Just Coffee</title>
+    <meta name="description"
+        content="Experience the finest artisanal coffee at Siren & Bean. Crafted with passion, served with love. Discover your perfect brew today.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        siren: {
+                            deep: '#006241',    // Official Starbucks Green
+                            light: '#D4E9E2',   // Light Mint
+                            warm: '#F2F0EB',    // Warm Cream
+                            dark: '#1E3932',    // Dark Forest
+                            gold: '#C5A059'     // Accent Gold
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float-soft': 'float-soft 6s ease-in-out infinite',
+                        'reveal-up': 'reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        'float-soft': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        'reveal-up': {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-siren-warm text-siren-dark font-body selection:bg-siren-deep selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between transition-all duration-700 bg-transparent">
+        <div class="flex items-center gap-3 group cursor-pointer">
+            <div
+                class="w-12 h-12 bg-siren-deep rounded-full flex items-center justify-center text-white transition-transform group-hover:rotate-12">
+                <i data-lucide="coffee" class="w-7 h-7"></i>
+            </div>
+            <span class="font-heading text-2xl font-black tracking-tight text-siren-deep uppercase">Siren<span
+                    class="text-siren-gold">&</span>Bean</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-12 font-semibold text-[10px] uppercase tracking-[0.3em]">
+            <a href="#menu" class="nav-link hover:text-siren-deep transition-colors">The Menu</a>
+            <a href="#story" class="nav-link hover:text-siren-deep transition-colors">Our Story</a>
+            <a href="#rewards" class="nav-link hover:text-siren-deep transition-colors">Rewards</a>
+            <a href="#"
+                class="px-8 py-3 bg-siren-deep text-white font-bold hover:bg-siren-dark transition-all shadow-xl shadow-siren-deep/20 rounded-full">Order
+                Now</a>
+        </div>
+
+        <button class="lg:hidden text-siren-deep">
+            <i data-lucide="menu"></i>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+            <!-- Background Shape -->
+            <div
+                class="absolute -top-[10%] -right-[10%] w-[60%] h-[120%] bg-siren-light/50 rounded-l-full -z-10 animate-float-soft">
+            </div>
+
+            <div class="container mx-auto px-8 relative z-10 grid lg:grid-cols-2 gap-20 items-center">
+                <div class="animate-reveal-up opacity-0" style="animation-delay: 0.2s;">
+                    <p class="text-siren-deep font-bold text-sm uppercase tracking-[0.4em] mb-6">Crafted for Your
+                        Morning</p>
+                    <h1 class="font-heading text-7xl md:text-9xl leading-[0.9] mb-10 italic">
+                        Every sip is <br />
+                        <span class="text-siren-deep not-italic font-black">a Story.</span>
+                    </h1>
+                    <p class="text-lg text-siren-dark/70 max-w-lg leading-relaxed mb-12">
+                        More than just coffee, it's a moment of clarity. From our ethically sourced beans to the
+                        artistry of our baristas, we bring you the ultimate cafe experience.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#menu"
+                            class="px-12 py-5 bg-siren-deep text-white font-bold text-xs uppercase tracking-[0.3em] rounded-full hover:bg-siren-dark hover:shadow-2xl transition-all">Discover
+                            Menu</a>
+                        <a href="#"
+                            class="flex items-center gap-4 text-siren-deep font-bold border-b-2 border-siren-deep/20 pb-2 hover:border-siren-deep transition-all">
+                            Find a Store <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center lg:justify-end animate-reveal-up opacity-0"
+                    style="animation-delay: 0.5s;">
+                    <div class="relative w-full max-w-[500px] group">
+                        <div
+                            class="absolute inset-0 bg-siren-deep/5 blur-[100px] -z-10 group-hover:bg-siren-deep/10 transition-colors">
+                        </div>
+                        <img id="hero-img" src="hero.png" alt="Siren & Bean Signature Coffee"
+                            class="w-full h-auto drop-shadow-[0_30px_50px_rgba(0,0,0,0.15)] transform transition-all duration-700 group-hover:scale-105 group-hover:rotate-3">
+
+                        <!-- Floating Badges -->
+                        <div class="absolute -top-10 -left-10 bg-white p-6 rounded-2xl shadow-2xl reveal-on-scroll">
+                            <i data-lucide="leaf" class="text-siren-deep w-8 h-8 mb-2"></i>
+                            <p class="text-[8px] font-black uppercase tracking-widest">100% Organic</p>
+                        </div>
+                        <div class="absolute -bottom-10 -right-10 bg-siren-gold text-white p-6 rounded-2xl shadow-2xl reveal-on-scroll"
+                            style="transition-delay: 0.3s;">
+                            <p class="font-heading text-3xl italic">#1</p>
+                            <p class="text-[8px] font-black uppercase tracking-widest italic">Barista's Choice</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div
+                class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-siren-deep/40">
+                <span class="text-[10px] uppercase tracking-[0.5em] font-bold">Discover More</span>
+                <div class="w-[1px] h-20 bg-gradient-to-b from-siren-deep to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- Menu Highlight -->
+        <section id="menu" class="py-40 bg-white">
+            <div class="container mx-auto px-8">
+                <div class="grid lg:grid-cols-3 gap-12 items-end mb-24">
+                    <div class="lg:col-span-2 reveal-on-scroll">
+                        <p class="text-siren-gold font-bold text-xs uppercase tracking-[0.4em] mb-6 font-body">Artisan
+                            Curation</p>
+                        <h2 class="font-heading text-6xl md:text-8xl italic">Seasonal <span
+                                class="text-siren-deep not-italic font-black">Favorites.</span></h2>
+                    </div>
+                    <div class="reveal-on-scroll">
+                        <p class="text-siren-dark/50 leading-loose">Explore our limited edition blends and freshly
+                            crafted pastries designed for the modern palate.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                    <!-- Item 1 -->
+                    <div class="group reveal-on-scroll">
+                        <div class="relative aspect-square overflow-hidden rounded-[40px] mb-8 bg-siren-warm">
+                            <img src="hero.png" alt="Matcha Latte"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur rounded-full text-[8px] font-black uppercase tracking-widest text-siren-deep">
+                                Voted Best</div>
+                        </div>
+                        <h4 class="font-heading text-3xl mb-3 pr-10 relative">Iced Matcha Oat <span
+                                class="absolute right-0 top-0 text-siren-gold italic text-xl">$6.50</span></h4>
+                        <p class="text-siren-dark/40 text-[10px] uppercase tracking-widest">Earthly, creamy, and
+                            revitalizing.</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="group reveal-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="relative aspect-square overflow-hidden rounded-[40px] mb-8 bg-siren-warm">
+                            <img src="hero.png" alt="Cold Brew"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <h4 class="font-heading text-3xl mb-3 pr-10 relative">Siren Cold Brew <span
+                                class="absolute right-0 top-0 text-siren-gold italic text-xl">$5.25</span></h4>
+                        <p class="text-siren-dark/40 text-[10px] uppercase tracking-widest">24-hour steeped signature
+                            blend.</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="group reveal-on-scroll" style="transition-delay: 0.4s;">
+                        <div class="relative aspect-square overflow-hidden rounded-[40px] mb-8 bg-siren-warm">
+                            <img src="hero.png" alt="Butter Croissant"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-siren-deep/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+                                <span
+                                    class="px-8 py-3 bg-white text-siren-deep text-[8px] font-black uppercase tracking-widest">Quick
+                                    View</span>
+                            </div>
+                        </div>
+                        <h4 class="font-heading text-3xl mb-3 pr-10 relative">Butter Croissant <span
+                                class="absolute right-0 top-0 text-siren-gold italic text-xl">$4.50</span></h4>
+                        <p class="text-siren-dark/40 text-[10px] uppercase tracking-widest">Handmade, flaky, and golden.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rewards CTA -->
+        <section id="rewards" class="py-40 relative overflow-hidden">
+            <div class="absolute inset-0 bg-siren-dark -z-10"></div>
+            <div class="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-siren-deep/20 blur-[150px] rounded-full">
+            </div>
+
+            <div class="container mx-auto px-8">
+                <div class="max-w-4xl mx-auto text-center reveal-on-scroll">
+                    <i data-lucide="star" class="text-siren-gold w-16 h-16 mx-auto mb-10 animate-pulse"></i>
+                    <h2 class="font-heading text-6xl md:text-9xl text-white italic mb-12">Earn Your <br /> <span
+                            class="text-siren-light">Morning Stars.</span></h2>
+                    <p class="text-white/60 text-lg font-light mb-16 max-w-2xl mx-auto leading-relaxed">
+                        Join Siren & Bean Rewards to earn free drinks, get early access to and special birthday treats.
+                        Every cup brings you closer to gold.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-8">
+                        <a href="#"
+                            class="px-16 py-6 bg-siren-deep text-white font-bold text-xs uppercase tracking-[0.4em] rounded-full hover:bg-white hover:text-siren-deep transition-all">Join
+                            for Free</a>
+                        <a href="#"
+                            class="px-16 py-6 border-2 border-white/20 text-white font-bold text-xs uppercase tracking-[0.4em] rounded-full hover:border-white transition-all">Check
+                            Balance</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-siren-warm py-32">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-20">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-10">
+                        <div class="w-10 h-10 bg-siren-deep rounded-full flex items-center justify-center text-white">
+                            <i data-lucide="coffee" class="w-6 h-6"></i>
+                        </div>
+                        <span
+                            class="font-heading text-2xl font-black tracking-tight text-siren-deep uppercase">Siren<span
+                                class="text-siren-gold">&</span>Bean</span>
+                    </div>
+                    <p class="text-siren-dark/50 text-xs uppercase tracking-[0.3em] leading-loose max-w-sm mb-12">Fine
+                        artisanal coffee culture since 1971. Sourcing with care, roasting with fire, serving with soul.
+                    </p>
+                    <div class="flex gap-8">
+                        <a href="#" class="text-siren-deep/60 hover:text-siren-deep transition-colors"><i
+                                data-lucide="instagram"></i></a>
+                        <a href="#" class="text-siren-deep/60 hover:text-siren-deep transition-colors"><i
+                                data-lucide="twitter"></i></a>
+                        <a href="#" class="text-siren-deep/60 hover:text-siren-deep transition-colors"><i
+                                data-lucide="facebook"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-[10px] font-black uppercase tracking-[0.5em] mb-10 text-siren-deep">Company</h5>
+                    <ul
+                        class="flex flex-col gap-6 text-[10px] uppercase tracking-widest text-siren-dark/60 font-medium">
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Our Ethos</a></li>
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Philanthropy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-[10px] font-black uppercase tracking-[0.5em] mb-10 text-siren-deep">Explore</h5>
+                    <ul
+                        class="flex flex-col gap-6 text-[10px] uppercase tracking-widest text-siren-dark/60 font-medium">
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Home Delivery</a></li>
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Brewing Guide</a></li>
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Whole Bean</a></li>
+                        <li><a href="#" class="hover:text-siren-deep transition-colors">Corporate Gift</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="mt-32 pt-12 border-t border-siren-deep/10 flex flex-col md:row items-center justify-between gap-12 text-[8px] uppercase tracking-[0.5em] text-siren-dark/30 font-bold">
+                <p>© 2025 Siren & Bean Coffee Co. All Rights Reserved.</p>
+                <div class="flex gap-12">
+                    <a href="#" class="hover:text-siren-deep transition-all">Privacy</a>
+                    <a href="#" class="hover:text-siren-deep transition-all">Terms</a>
+                    <a href="#" class="hover:text-siren-deep transition-all">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

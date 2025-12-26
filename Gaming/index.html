@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERARENA | The Ultimate Esports Experience</title>
+    <meta name="description"
+        content="Enter the world of CyberArena, the premiere platform for competitive gaming and esports tournaments. Join the revolution today.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        game: {
+                            primary: '#7C3AED',
+                            secondary: '#A78BFA',
+                            accent: '#F43F5E',
+                            dark: '#0F0F23',
+                            bg: '#0F0F23',
+                            text: '#E2E8F0',
+                            border: '#4C1D95'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Bebas Neue', 'sans-serif'],
+                        body: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-game-dark text-game-text font-body selection:bg-game-accent selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-game-dark/80 backdrop-blur-xl">
+        <div class="container mx-auto px-6 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-12 h-12 bg-game-accent flex items-center justify-center transform skew-x-[-12deg] shadow-[4px_4px_0px_#7C3AED]">
+                    <i data-lucide="gamepad-2" class="text-white w-7 h-7 transform skew-x-[12deg]"></i>
+                </div>
+                <span class="font-heading text-4xl tracking-wider text-white">CYBERARENA</span>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-12 font-heading text-xl tracking-widest">
+                <a href="#arena" class="hover:text-game-accent transition-colors">Arena</a>
+                <a href="#rankings" class="hover:text-game-accent transition-colors">Rankings</a>
+                <a href="#tournaments" class="hover:text-game-accent transition-colors">Tournaments</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="#"
+                    class="hidden md:block font-heading text-xl tracking-widest hover:text-game-accent transition-colors underline decoration-game-accent underline-offset-8">Login</a>
+                <a href="#"
+                    class="px-8 py-3 bg-gradient-to-r from-game-primary to-game-accent text-white font-heading text-2xl tracking-widest hover:scale-105 active:scale-95 transition-all shadow-[6px_6px_0px_white]">JOIN
+                    NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <img src="hero.png" alt="CyberArena Hero" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-game-dark via-game-dark/60 to-transparent"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 pt-20">
+                <div class="max-w-4xl">
+                    <div class="flex items-center gap-4 mb-8">
+                        <span class="w-12 h-[2px] bg-game-accent"></span>
+                        <span class="font-heading text-2xl text-game-accent tracking-[0.3em] uppercase">E-Sports
+                            Revolution</span>
+                    </div>
+                    <h1
+                        class="font-heading text-[120px] md:text-[180px] leading-none mb-4 italic tracking-tighter text-white drop-shadow-[10px_10px_0px_#7C3AED]">
+                        CLAIM YOUR <br /> <span class="text-transparent border-t-2 border-b-2 border-game-accent"
+                            style="-webkit-text-stroke: 2px white;">THRONE.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mb-12 font-medium leading-relaxed">
+                        Join the world's most competitive esports ecosystem. Compete in high-stakes tournaments, climb
+                        global leaderboards, and win legendary rewards.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-8">
+                        <a href="#"
+                            class="group px-12 py-6 bg-white text-game-dark font-heading text-3xl tracking-widest hover:bg-game-accent hover:text-white transition-all transform hover:-translate-y-2 brutal-shadow">
+                            START COMPETING
+                        </a>
+                        <div class="flex items-center gap-10">
+                            <div class="text-center">
+                                <p class="font-heading text-4xl text-white">4.2M</p>
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-game-accent">Players</p>
+                            </div>
+                            <div class="w-[1px] h-12 bg-white/10"></div>
+                            <div class="text-center">
+                                <p class="font-heading text-4xl text-white">$2.5M</p>
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-game-accent">Prizes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+                <i data-lucide="chevrons-down" class="text-white/40 w-10 h-10"></i>
+            </div>
+        </section>
+
+        <!-- Dynamic Grid -->
+        <section id="arena" class="py-32 bg-game-dark relative">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-0 border-4 border-game-border shadow-[20px_20px_0px_rgba(124,58,237,0.1)]">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="p-12 border-b-4 md:border-b-0 md:border-r-4 border-game-border group hover:bg-game-primary transition-colors cursor-pointer">
+                        <div
+                            class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white group-hover:scale-110 transition-all">
+                            <i data-lucide="zap" class="text-game-accent w-8 h-8 group-hover:text-game-primary"></i>
+                        </div>
+                        <h3 class="font-heading text-4xl text-white mb-4 tracking-widest uppercase">Instant Match</h3>
+                        <p class="text-slate-400 group-hover:text-white/80 transition-colors">Our AI-driven matchmaking
+                            system pairs you with the perfect opponents in seconds.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="p-12 border-b-4 md:border-b-0 md:border-r-4 border-game-border group hover:bg-game-accent transition-colors cursor-pointer">
+                        <div
+                            class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white group-hover:scale-110 transition-all">
+                            <i data-lucide="trophy"
+                                class="text-game-primary w-8 h-8 group-hover:text-game-accent transition-all"></i>
+                        </div>
+                        <h3 class="font-heading text-4xl text-white mb-4 tracking-widest uppercase">Tournament Hub</h3>
+                        <p class="text-slate-400 group-hover:text-white/80 transition-colors">Daily bracket tournaments
+                            with automated wins reporting and instant payouts.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-12 group hover:bg-white transition-colors cursor-pointer">
+                        <div
+                            class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-game-dark group-hover:scale-110 transition-all">
+                            <i data-lucide="shield" class="text-white w-8 h-8 group-hover:text-white"></i>
+                        </div>
+                        <h3
+                            class="font-heading text-4xl text-white group-hover:text-game-dark mb-4 tracking-widest uppercase transition-colors">
+                            Pro Security</h3>
+                        <p class="text-slate-400 group-hover:text-game-dark/60 transition-colors">Kernel-level
+                            anti-cheat system and 24/7 human moderation for a fair fight.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 bg-game-accent relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 flex items-center justify-center">
+                <h1 class="font-heading text-[30rem] text-white leading-none mb-4 italic tracking-tighter select-none">
+                    FIGHT</h1>
+            </div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h2 class="font-heading text-7xl md:text-[120px] text-white mb-12 tracking-widest">READY TO PLAY?</h2>
+                <div class="flex flex-col md:row items-center justify-center gap-12">
+                    <a href="#"
+                        class="px-20 py-8 bg-game-dark text-white font-heading text-5xl tracking-[0.2em] transform transition-transform hover:scale-110 hover:-rotate-2 shadow-[12px_12px_0px_white]">ENTER
+                        THE ARENA</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-game-dark border-t-8 border-game-border py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-20">
+                <div class="max-w-md">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div
+                            class="w-10 h-10 bg-game-accent flex items-center justify-center transform skew-x-[-12deg]">
+                            <i data-lucide="gamepad-2" class="text-white w-6 h-6 transform skew-x-[12deg]"></i>
+                        </div>
+                        <span class="font-heading text-3xl tracking-wider text-white">CYBERARENA</span>
+                    </div>
+                    <p class="text-slate-500 mb-10 text-lg uppercase font-bold tracking-widest leading-loose">The future
+                        of competitive digital sports. Built by gamers, for legendary champions.</p>
+                    <div class="flex gap-8">
+                        <a href="#"
+                            class="w-12 h-12 border-2 border-white/10 flex items-center justify-center hover:bg-game-accent hover:border-game-accent transition-all"><i
+                                data-lucide="twitter"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 border-2 border-white/10 flex items-center justify-center hover:bg-game-accent hover:border-game-accent transition-all"><i
+                                data-lucide="twitch"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 border-2 border-white/10 flex items-center justify-center hover:bg-game-accent hover:border-game-accent transition-all"><i
+                                data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-20">
+                    <div>
+                        <h4 class="font-heading text-2xl text-white mb-10 tracking-widest">ECOSYSTEM</h4>
+                        <ul class="space-y-6 font-bold uppercase text-[10px] tracking-[0.3em] text-slate-500">
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Tournaments</a></li>
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Rankings</a></li>
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Arenas</a></li>
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Rewards</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-heading text-2xl text-white mb-10 tracking-widest">SUPPORT</h4>
+                        <ul class="space-y-6 font-bold uppercase text-[10px] tracking-[0.3em] text-slate-500">
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Help Center</a></li>
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Rules</a></li>
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Partners</a></li>
+                            <li><a href="#" class="hover:text-game-accent transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-32 pt-10 border-t border-white/5 flex flex-col md:row items-center justify-between gap-6">
+                <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-600">© 2025 CYBERARENA ESPORTS
+                    GLOBAL. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.4em] text-slate-600">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

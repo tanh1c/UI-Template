@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONIX | Feel the Sound</title>
+    <meta name="description"
+        content="Experience high-fidelity music streaming with SONIX. Explore millions of tracks, curated playlists, and lossless audio Quality.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sonix: {
+                            base: '#000000',
+                            primary: '#1D75F0',
+                            secondary: '#0A2472',
+                            accent: '#3D5AFA',
+                            text: '#FFFFFF',
+                            muted: '#A1A1AA',
+                            glass: 'rgba(255, 255, 255, 0.03)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace']
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                            '50%': { opacity: '0.6', transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-sonix-base text-sonix-text font-body selection:bg-sonix-primary selection:text-sonix-base overflow-x-hidden">
+
+    <!-- Ambient Background Blobs -->
+    <div class="fixed inset-0 -z-10 bg-sonix-base overflow-hidden">
+        <div
+            class="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-sonix-primary/10 blur-[180px] rounded-full animate-pulse-glow">
+        </div>
+        <div class="absolute top-[30%] -right-[15%] w-[55%] h-[55%] bg-sonix-accent/10 blur-[200px] rounded-full animate-pulse-glow"
+            style="animation-delay: 1.5s;"></div>
+        <div class="absolute -bottom-[10%] left-[20%] w-[45%] h-[45%] bg-sonix-secondary/15 blur-[150px] rounded-full animate-pulse-glow"
+            style="animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between transition-all duration-500 bg-transparent">
+        <div class="flex items-center gap-2">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-sonix-primary to-sonix-secondary rounded-full flex items-center justify-center shadow-lg shadow-sonix-primary/20">
+                <i data-lucide="music" class="text-sonix-base w-6 h-6"></i>
+            </div>
+            <span class="font-heading font-extrabold text-2xl tracking-tighter">SONIX</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-10 font-medium text-sm uppercase tracking-widest text-sonix-muted">
+            <a href="#discover" class="hover:text-sonix-primary transition-colors">Discover</a>
+            <a href="#premium" class="hover:text-sonix-primary transition-colors">Premium</a>
+            <a href="#devices" class="hover:text-sonix-primary transition-colors">Devices</a>
+            <a href="#support" class="hover:text-sonix-primary transition-colors">Support</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="hidden sm:block text-sm font-bold hover:text-sonix-primary transition-colors">Sign
+                In</button>
+            <a href="#"
+                class="px-7 py-3 bg-white text-sonix-base rounded-full font-extrabold text-xs uppercase tracking-[0.2em] hover:bg-sonix-primary transition-all hover:scale-105 active:scale-95 shadow-xl shadow-white/5">Start
+                Free Trial</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-24 pb-20">
+            <div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative z-10 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sonix-primary/30 bg-sonix-primary/10 text-sonix-primary text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sonix-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-sonix-primary"></span>
+                        </span>
+                        Lossless Audio Now Live
+                    </div>
+                    <h1 class="font-heading font-black text-6xl md:text-8xl lg:text-[100px] leading-[0.9] mb-8">
+                        Music <br /> That <span
+                            class="bg-gradient-to-r from-sonix-primary to-sonix-accent bg-clip-text text-transparent italic">Breathes.</span>
+                    </h1>
+                    <p class="text-xl text-sonix-muted max-w-xl mx-auto lg:mx-0 leading-relaxed mb-12 font-medium">
+                        Hear your music as the artists intended. Millions of tracks in ultra-high fidelity, now with
+                        spatial audio.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-6">
+                        <a href="#"
+                            class="group px-10 py-5 bg-gradient-to-r from-sonix-primary to-sonix-secondary text-sonix-base rounded-[20px] font-black text-lg flex items-center justify-center gap-3 hover:shadow-[0_0_40px_rgba(0,245,255,0.3)] transition-all hover:-translate-y-1">
+                            Get Sonix Free <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                        </a>
+                        <a href="#"
+                            class="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-[20px] font-black text-lg flex items-center justify-center gap-3 backdrop-blur-xl hover:bg-white/10 transition-all">
+                            See Pricing
+                        </a>
+                    </div>
+                    <div class="mt-16 flex flex-col sm:row items-center justify-center lg:justify-start gap-8">
+                        <div class="flex -space-x-4">
+                            <div class="w-12 h-12 rounded-full border-4 border-sonix-base bg-zinc-800"></div>
+                            <div class="w-12 h-12 rounded-full border-4 border-sonix-base bg-zinc-700"></div>
+                            <div class="w-12 h-12 rounded-full border-4 border-sonix-base bg-zinc-600"></div>
+                        </div>
+                        <p class="text-xs text-sonix-muted font-bold uppercase tracking-[0.2em]"><span
+                                class="text-white">12M+</span> Active Listeners</p>
+                    </div>
+                </div>
+
+                <div class="relative items-center justify-center flex lg:justify-end">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-sonix-primary/20 to-sonix-accent/20 blur-[100px] -z-10">
+                    </div>
+                    <div class="relative w-full max-w-[550px] animate-float">
+                        <img src="hero.png" alt="Sonix High-Fi Audio"
+                            class="w-full h-auto drop-shadow-[0_0_60px_rgba(0,245,255,0.2)]">
+
+                        <!-- HUD Player Element -->
+                        <div
+                            class="absolute -bottom-10 right-0 lg:-right-10 p-6 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[30px] shadow-2xl reveal-on-scroll">
+                            <div class="flex items-center gap-5 mb-6">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-sonix-primary to-sonix-accent rounded-2xl flex items-center justify-center animate-spin-slow">
+                                    <i data-lucide="disc" class="text-white w-10 h-10"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-extrabold text-white text-lg">Hyper-Spatial</h4>
+                                    <p class="text-sonix-primary text-xs font-black uppercase tracking-widest">Master
+                                        Quality</p>
+                                </div>
+                            </div>
+                            <div class="w-48 h-1 bg-white/10 rounded-full overflow-hidden">
+                                <div class="w-2/3 h-full bg-sonix-primary shadow-[0_0_10px_#00F5FF]"></div>
+                            </div>
+                            <div
+                                class="mt-4 flex justify-between text-[10px] font-mono font-bold text-sonix-muted uppercase tracking-widest">
+                                <span>3:42</span>
+                                <span>5:12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Bento -->
+        <section id="discover" class="py-40 relative">
+            <div class="container mx-auto px-8">
+                <div class="max-w-3xl mb-24">
+                    <h2 class="font-heading font-black text-5xl md:text-7xl mb-8 leading-tight">Elevate Your <br />
+                        <span
+                            class="bg-gradient-to-r from-sonix-primary to-sonix-secondary bg-clip-text text-transparent">Sonic
+                            World.</span>
+                    </h2>
+                    <p class="text-xl text-sonix-muted">More than just streaming. Sonix is an ecosystem built for those
+                        who live for the detail in every note.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div
+                        class="md:col-span-2 group relative p-12 rounded-[40px] bg-white/[0.02] border border-white/5 overflow-hidden hover:border-sonix-primary/30 transition-all duration-700">
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-sonix-primary/10 blur-[80px] -z-10 group-hover:bg-sonix-primary/20 transition-all">
+                        </div>
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div>
+                                <h3 class="font-heading font-black text-4xl mb-6">Smart Curation</h3>
+                                <p class="text-lg text-sonix-muted max-w-md">Our neural engine learns your frequency.
+                                    Discover tracks that match your mood, perfectly syncopated to your day.</p>
+                            </div>
+                            <div class="mt-12 flex gap-4">
+                                <span
+                                    class="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-widest">Mood-Sync</span>
+                                <span
+                                    class="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-widest">Neural
+                                    Flow</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div
+                        class="group relative p-12 rounded-[40px] bg-gradient-to-b from-sonix-primary/10 to-transparent border border-white/5 overflow-hidden hover:border-sonix-primary/30 transition-all duration-700 text-center">
+                        <div
+                            class="w-20 h-20 bg-sonix-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform">
+                            <i data-lucide="wifi-off" class="text-sonix-primary w-10 h-10"></i>
+                        </div>
+                        <h3 class="font-heading font-black text-3xl mb-4">Total Freedom</h3>
+                        <p class="text-sonix-muted">Offline mode that actually works. High-fi downloads in one tap.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div
+                        class="group relative p-12 rounded-[40px] bg-white/[0.02] border border-white/5 overflow-hidden hover:border-sonix-accent/30 transition-all duration-700">
+                        <div class="w-16 h-16 bg-sonix-accent/10 rounded-2xl flex items-center justify-center mb-8">
+                            <i data-lucide="headphones" class="text-sonix-accent w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-heading font-black text-2xl mb-4 uppercase tracking-tighter">Hi-Fi Audio</h3>
+                        <p class="text-sonix-muted text-sm leading-relaxed">Lossless FLAC streaming at 24-bit / 192kHz.
+                            Hear what you've been missing.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div
+                        class="md:col-span-2 group relative p-12 rounded-[40px] bg-sonix-primary text-sonix-base overflow-hidden hover:shadow-[0_0_50px_rgba(0,245,255,0.2)] transition-all duration-700">
+                        <div
+                            class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/20 rounded-full blur-[60px] group-hover:scale-110 transition-transform">
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="font-heading font-black text-4xl mb-6 tracking-tight">Ecosystem Sync</h3>
+                            <p class="text-sonix-base font-medium text-lg max-w-md">Seamless transition from your phone
+                                to your speakers. Control your world with a single tap.</p>
+                            <a href="#"
+                                class="inline-flex items-center gap-3 mt-10 font-black uppercase text-xs tracking-widest group">Launch
+                                App <i data-lucide="arrow-right"
+                                    class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-40">
+            <div class="container mx-auto px-8">
+                <div class="relative rounded-[60px] bg-gradient-to-r from-sonix-primary to-sonix-accent p-1">
+                    <div class="bg-sonix-base rounded-[59px] py-24 px-8 text-center overflow-hidden relative">
+                        <div
+                            class="absolute -top-40 -left-40 w-96 h-96 bg-sonix-primary/20 blur-[120px] rounded-full animate-pulse-glow">
+                        </div>
+                        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-sonix-accent/20 blur-[120px] rounded-full animate-pulse-glow"
+                            style="animation-delay: 2s;"></div>
+
+                        <h2 class="font-heading font-black text-5xl md:text-8xl mb-10 tracking-tight relative z-10">Stop
+                            listening. <br /> <span
+                                class="italic text-transparent bg-clip-text bg-gradient-to-r from-sonix-primary to-sonix-secondary">Start
+                                feeling.</span></h2>
+                        <a href="#"
+                            class="inline-flex items-center gap-4 px-14 py-7 bg-white text-sonix-base rounded-[25px] font-black text-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl relative z-10">
+                            Get Sonix Premium <i data-lucide="sparkles" class="w-8 h-8 text-sonix-primary"></i>
+                        </a>
+                        <p class="mt-8 text-sonix-muted font-bold uppercase text-xs tracking-[0.4em] relative z-10">No
+                            commitment • Cancel anytime</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-sonix-base border-t border-white/5 py-32">
+        <div class="container mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-20">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-10">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-sonix-primary to-sonix-secondary rounded-full flex items-center justify-center">
+                        <i data-lucide="music" class="text-sonix-base w-6 h-6"></i>
+                    </div>
+                    <span class="font-heading font-extrabold text-2xl tracking-tighter">SONIX</span>
+                </div>
+                <p class="text-sonix-muted max-w-sm mb-12 leading-relaxed font-medium">Reimagining the way the world
+                    experiences music through high-fidelity technology and neural curation.</p>
+                <div class="flex gap-8">
+                    <a href="#"
+                        class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-sonix-primary hover:text-sonix-base transition-all"><i
+                            data-lucide="twitter"></i></a>
+                    <a href="#"
+                        class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-sonix-primary hover:text-sonix-base transition-all"><i
+                            data-lucide="instagram"></i></a>
+                    <a href="#"
+                        class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-sonix-primary hover:text-sonix-base transition-all"><i
+                            data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-10 uppercase tracking-[0.3em] text-xs">Ecosystem</h4>
+                <ul class="space-y-6 text-sm font-medium text-sonix-muted">
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Sonix Mobile</a></li>
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Sonix Desktop</a></li>
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Sonix Hi-Fi</a></li>
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Devices</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-10 uppercase tracking-[0.3em] text-xs">Platform</h4>
+                <ul class="space-y-6 text-sm font-medium text-sonix-muted">
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">About</a></li>
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Artists</a></li>
+                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="container mx-auto px-8 mt-32 pt-10 border-t border-white/5 flex flex-col md:row items-center justify-between gap-8 opacity-40">
+            <p class="text-[10px] font-bold uppercase tracking-[0.5em]">© 2025 Sonix Global Media. Built for the ears.
+            </p>
+            <div class="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.5em] text-sonix-primary">
+                <div class="w-2 h-2 rounded-full bg-sonix-primary animate-pulse"></div>
+                Sonix Stream Status: Optimal
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

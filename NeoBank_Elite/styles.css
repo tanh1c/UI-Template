@@ -1,0 +1,128 @@
+:root {
+    --bank-primary: #0A192F;
+    --bank-secondary: #D4AF37;
+    /* Gold */
+    --bank-gold-dark: #B8860B;
+    --bank-slate: #1F2937;
+    --bank-light: #F9FAFB;
+    --text-rich: #020617;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-rich);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header & Nav */
+.nav-classic {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Buttons */
+.btn-elite {
+    background: var(--bank-primary);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid var(--bank-primary);
+}
+
+.btn-elite:hover {
+    background: transparent;
+    color: var(--bank-primary);
+    box-shadow: 0 10px 20px rgba(10, 25, 47, 0.1);
+}
+
+.btn-outline-gold {
+    border: 1.5px solid var(--bank-secondary);
+    color: var(--bank-secondary);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background: var(--bank-secondary);
+    color: white;
+}
+
+/* Sections */
+.hero-gradient {
+    background: radial-gradient(circle at top right, #f8fafc, #fff);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Feature Cards */
+.classic-card {
+    border: 1px solid #f1f5f9;
+    padding: 40px;
+    transition: all 0.5s ease;
+    background: #fff;
+}
+
+.classic-card:hover {
+    border-color: var(--bank-secondary);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.03);
+}
+
+.gold-icon {
+    color: var(--bank-secondary);
+    margin-bottom: 24px;
+}
+
+/* Stats Section */
+.stats-bar {
+    background: var(--bank-primary);
+    color: white;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #020617;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer h4 {
+    color: #fff;
+}
+
+.footer-link:hover {
+    color: var(--bank-secondary);
+}

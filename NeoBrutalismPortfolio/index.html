@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AleX | Designer & Problem Solver</title>
+    <meta name="description" content="Portfolio of Alex Rivera in Neo-Brutalism style. Bold, raw, and functional.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brutal: {
+                            pink: '#FF90E8',
+                            yellow: '#FFDF00',
+                            green: '#00F38D',
+                            blue: '#4D8BFF',
+                            black: '#000000',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-brutal-white text-brutal-black font-heading selection:bg-brutal-yellow selection:text-brutal-black overflow-x-hidden">
+
+    <!-- Marquee -->
+    <div class="bg-brutal-black text-brutal-white py-2 border-b-4 border-brutal-black overflow-hidden relative">
+        <div class="flex animate-marquee whitespace-nowrap">
+            <span class="text-xs font-mono font-bold uppercase tracking-tightest px-4">Available for work • Available
+                for work • Available for work • Available for work • Available for work • Available for work • Available
+                for work • Available for work • Available for work • Available for work • </span>
+            <span class="text-xs font-mono font-bold uppercase tracking-tightest px-4">Available for work • Available
+                for work • Available for work • Available for work • Available for work • Available for work • Available
+                for work • Available for work • Available for work • Available for work • </span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+        class="sticky top-4 z-50 mx-auto w-[90%] max-w-4xl px-6 py-4 bg-brutal-white border-4 border-brutal-black brutal-shadow flex items-center justify-between mt-6">
+        <a href="#" class="font-bold text-2xl tracking-tighter hover:bg-brutal-yellow transition-colors px-2">ALEX.</a>
+        <div class="hidden md:flex items-center gap-8 font-bold uppercase text-sm tracking-widest">
+            <a href="#work" class="hover:underline underline-offset-4 decoration-4 decoration-brutal-pink">Projects</a>
+            <a href="#about" class="hover:underline underline-offset-4 decoration-4 decoration-brutal-green">About</a>
+            <a href="#contact"
+                class="hover:underline underline-offset-4 decoration-4 decoration-brutal-blue">Contact</a>
+        </div>
+        <button
+            class="bg-brutal-black text-brutal-white px-4 py-2 font-bold uppercase text-xs brutal-shadow-sm active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">Let's
+            talk</button>
+    </nav>
+
+    <main class="container mx-auto px-6 pt-20">
+
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32 items-center relative">
+
+            <!-- Left: Headline Block -->
+            <div class="lg:col-span-8">
+                <div
+                    class="inline-block bg-brutal-pink px-4 py-1 border-2 border-brutal-black brutal-shadow-sm mb-6 -rotate-2">
+                    <span class="font-bold uppercase text-sm">Designer & Developer</span>
+                </div>
+                <h1 class="text-6xl md:text-9xl font-black leading-[0.9] tracking-tighter mb-8 uppercase">
+                    I build <span class="bg-brutal-yellow px-2 border-4 border-brutal-black">crazy</span> <br />
+                    shit for the <br />
+                    <span class="bg-brutal-green px-2 border-4 border-brutal-black">internet</span>.
+                </h1>
+                <p class="text-xl md:text-2xl font-bold max-w-2xl border-l-8 border-brutal-black pl-6 mb-12">
+                    Minimalism is boring. I prefer raw code, heavy shadows, and pixels that punch you in the face.
+                </p>
+            </div>
+
+            <!-- Right: Decorative Widget (New) -->
+            <div class="lg:col-span-4 hidden lg:flex flex-col gap-8 relative z-10">
+
+                <!-- System Status Window -->
+                <div
+                    class="bg-brutal-white border-4 border-brutal-black brutal-shadow p-0 overflow-hidden rotate-2 hover:rotate-0 transition-all duration-300 cursor-help">
+                    <div class="bg-brutal-black p-2 flex items-center justify-between">
+                        <span
+                            class="text-white text-[10px] font-mono font-bold uppercase tracking-widest px-2">System_Status.exe</span>
+                        <div class="flex gap-1.5 px-2">
+                            <div class="w-2.5 h-2.5 bg-brutal-green border-2 border-white"></div>
+                            <div class="w-2.5 h-2.5 bg-brutal-yellow border-2 border-white"></div>
+                            <div class="w-2.5 h-2.5 bg-brutal-pink border-2 border-white"></div>
+                        </div>
+                    </div>
+                    <div class="p-6 font-mono text-xs space-y-4">
+                        <div class="flex justify-between items-center border-b-2 border-brutal-black pb-2">
+                            <span class="font-bold">MOOD:</span>
+                            <span class="bg-brutal-blue text-white px-2">HYPER_FOCUSED</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b-2 border-brutal-black pb-2">
+                            <span class="font-bold">COFFEE:</span>
+                            <span class="animate-pulse">████████░░ 80%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">BRAIN_LOAD:</span>
+                            <span class="text-brutal-pink">OVER_9000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Terminal Window -->
+                <div
+                    class="bg-brutal-black border-4 border-brutal-black brutal-shadow p-0 overflow-hidden -rotate-2 hover:rotate-0 transition-all duration-300 cursor-terminal">
+                    <div class="bg-brutal-white/20 p-2 flex items-center gap-2">
+                        <i data-lucide="terminal" class="text-white w-3 h-3"></i>
+                        <span class="text-white text-[9px] font-mono uppercase tracking-widest">creative_logs.txt</span>
+                    </div>
+                    <div
+                        class="p-4 font-mono text-[10px] text-brutal-green leading-relaxed h-32 overflow-hidden relative">
+                        <div class="animate-typewriter">
+                            > initializing_chaos... <br />
+                            > checking_pixel_perfect... <br />
+                            > error: too_much_style <br />
+                            > deploying_cool_shit... <br />
+                            > status: legendary <br />
+                            > waiting_for_input_
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-brutal-black to-transparent pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Clock Sticker -->
+                <div
+                    class="self-end bg-brutal-yellow border-4 border-brutal-black brutal-shadow px-6 py-4 -rotate-6 hover:rotate-0 transition-all duration-300 cursor-wait flex flex-col items-center">
+                    <span class="text-[10px] font-black uppercase mb-1">Local Time</span>
+                    <span id="live-clock" class="text-2xl font-black font-mono tracking-tighter">18:01:24</span>
+                </div>
+
+                <!-- Decorative Background Big Shapes -->
+                <div
+                    class="absolute -top-20 -right-20 w-48 h-48 border-8 border-brutal-black rounded-full -z-20 opacity-10">
+                </div>
+                <div
+                    class="absolute top-40 -left-60 w-32 h-32 bg-brutal-pink border-4 border-brutal-black -z-20 opacity-5 rotate-45">
+                </div>
+
+                <!-- Floating Sticker 1 -->
+                <div
+                    class="absolute -top-16 -right-12 bg-brutal-blue border-4 border-brutal-black brutal-shadow p-3 rotate-12 animate-bounce">
+                    <i data-lucide="zap" class="text-white w-10 h-10"></i>
+                </div>
+            </div>
+
+            <!-- Portrait & Bottom Call for Action Section -->
+            <div class="lg:col-span-5 relative group">
+                <div
+                    class="absolute inset-0 bg-brutal-blue border-4 border-brutal-black translate-x-4 translate-y-4 -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform">
+                </div>
+                <img src="portrait.png" alt="Alex Rivera"
+                    class="w-full border-4 border-brutal-black h-[500px] object-cover">
+            </div>
+
+            <div class="lg:col-span-7 flex flex-col gap-8">
+                <div class="bg-brutal-white border-4 border-brutal-black p-8 brutal-shadow">
+                    <h3 class="text-2xl font-black uppercase mb-4">The Stack</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tag-pink">React</span>
+                        <span class="tag-yellow">Three.js</span>
+                        <span class="tag-green">Tailwind</span>
+                        <span class="tag-blue">Node.js</span>
+                        <span class="tag-pink">Figma</span>
+                        <span class="tag-yellow">Houdini</span>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#work"
+                        class="flex-1 bg-brutal-black text-brutal-white text-center py-6 text-xl font-black uppercase brutal-shadow hover:-translate-y-1 active:translate-y-1 transition-all">Explore
+                        Work</a>
+                    <a href="#"
+                        class="aspect-square bg-brutal-yellow border-4 border-brutal-black flex items-center justify-center brutal-shadow hover:-translate-y-1 transition-all">
+                        <i data-lucide="arrow-down-right" class="w-10 h-10"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Grid -->
+        <section id="work" class="py-20">
+            <h2 class="text-5xl md:text-7xl font-black uppercase mb-16 tracking-tighter">Selected <span
+                    class="italic text-brutal-pink drop-shadow-[4px_4px_0px_#000]">Chaos</span></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                <!-- Project 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden border-4 border-brutal-black brutal-shadow mb-6">
+                        <img src="portrait.png" alt="Project 1"
+                            class="w-full h-[400px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <div
+                            class="absolute top-4 right-4 bg-brutal-green border-2 border-brutal-black px-4 py-1 font-bold">
+                            2024</div>
+                    </div>
+                    <h3 class="text-3xl font-black uppercase mb-2">Neon Void Protocol</h3>
+                    <p class="font-bold text-brutal-black/60 mb-6">Experimenting with hyper-colors and radical UI for
+                        high-frequence traders.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="font-black underline decoration-4 underline-offset-4 hover:text-brutal-pink">Live
+                            Demo</a>
+                        <a href="#"
+                            class="font-black underline decoration-4 underline-offset-4 hover:text-brutal-blue">Read
+                            Case</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group">
+                    <div class="relative overflow-hidden border-4 border-brutal-black brutal-shadow mb-6">
+                        <img src="portrait.png" alt="Project 2"
+                            class="w-full h-[400px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <div
+                            class="absolute top-4 right-4 bg-brutal-pink border-2 border-brutal-black px-4 py-1 font-bold">
+                            2023</div>
+                    </div>
+                    <h3 class="text-3xl font-black uppercase mb-2">Acid Reality Engine</h3>
+                    <p class="font-bold text-brutal-black/60 mb-6">A shader-heavy platform for digital artists to
+                        collaborate in real-time.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="font-black underline decoration-4 underline-offset-4 hover:text-brutal-green">Live
+                            Demo</a>
+                        <a href="#"
+                            class="font-black underline decoration-4 underline-offset-4 hover:text-brutal-yellow">Read
+                            Case</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact"
+            class="py-32 bg-brutal-green border-4 border-brutal-black brutal-shadow-lg text-center mb-32 px-6">
+            <h2 class="text-5xl md:text-8xl font-black uppercase leading-tight mb-12">
+                Let's make something <br />
+                <span class="bg-brutal-black text-brutal-white px-4 italic">unforgettable</span>.
+            </h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
+                <a href="mailto:hello@alex.xyz"
+                    class="bg-brutal-black text-brutal-white px-12 py-6 text-2xl font-black uppercase hover:bg-brutal-pink transition-colors w-full sm:w-auto brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none">hello@alex.xyz</a>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-16 h-16 bg-brutal-white border-4 border-brutal-black flex items-center justify-center brutal-shadow hover:bg-brutal-blue transition-all">
+                        <i data-lucide="twitter" class="w-8 h-8"></i>
+                    </a>
+                    <a href="#"
+                        class="w-16 h-16 bg-brutal-white border-4 border-brutal-black flex items-center justify-center brutal-shadow hover:bg-brutal-yellow transition-all">
+                        <i data-lucide="github" class="w-8 h-8"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brutal-black text-brutal-white py-12">
+        <div class="container mx-auto px-6 flex flex-col md:row items-center justify-between gap-8">
+            <span class="font-bold text-3xl tracking-tight">ALEX.</span>
+            <p class="font-mono text-xs uppercase tracking-widest text-brutal-white/40">© 2025 Alex Rivera — Anti-Design
+                Protocol Activated.</p>
+            <div class="flex gap-10 font-bold uppercase text-xs tracking-widest">
+                <a href="#" class="hover:text-brutal-pink">Twitter</a>
+                <a href="#" class="hover:text-brutal-green">Github</a>
+                <a href="#" class="hover:text-brutal-yellow">Medium</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

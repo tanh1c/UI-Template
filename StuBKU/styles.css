@@ -1,0 +1,113 @@
+/* StuBKU Custom Aesthetics */
+
+@layer base {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Nav Blur Adjustment */
+#navbar.scrolled {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Reveal on Scroll */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0F172A;
+}
+
+/* Hero Parallax Float */
+.animate-float {
+    perspective: 1000px;
+}
+
+/* Feature Card Hover Gradients */
+.group:hover {
+    box-shadow: 0 40px 80px -20px rgba(59, 130, 246, 0.15);
+}
+
+/* Text Selection Glow */
+::selection {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3B82F6;
+}
+
+/* Custom Grain Texture */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* 3D Perspective */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+/* Magnetic Button Interaction */
+.magnetic {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Counter Animation Helper */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 1000;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #3B82F6, #10B981);
+    width: 0%;
+}
+
+/* Smooth Transitions for Hero Img */
+.hero-img {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}

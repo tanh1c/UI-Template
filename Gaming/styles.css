@@ -1,0 +1,94 @@
+/* CyberArena Gaming Aesthetics */
+
+@layer utilities {
+    .brutal-shadow {
+        box-shadow: 12px 12px 0px 0px #7C3AED;
+    }
+
+    .brutal-shadow:hover {
+        box-shadow: 12px 12px 0px 0px #F43F5E;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0F0F23;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7C3AED;
+    border: 3px solid #0F0F23;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #F43F5E;
+}
+
+/* Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(100px) skewY(2deg);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0) skewY(0deg);
+}
+
+/* Scanline Effect */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.2) 50%);
+    background-size: 100% 4px;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+/* Glitch Animation for Headlines */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        text-shadow: 0 0 0 transparent;
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+        text-shadow: 2px 0 #7C3AED, -2px 0 #F43F5E;
+    }
+
+    40% {
+        transform: translate(2px, -2px);
+        text-shadow: -2px 0 #7C3AED, 2px 0 #F43F5E;
+    }
+
+    60% {
+        transform: translate(-2px, -2px);
+        text-shadow: 2px 0 #7C3AED, -2px 0 #F43F5E;
+    }
+
+    80% {
+        transform: translate(2px, 2px);
+        text-shadow: -2px 0 #7C3AED, 2px 0 #F43F5E;
+    }
+
+    100% {
+        transform: translate(0);
+        text-shadow: 0 0 0 transparent;
+    }
+}
+
+h1:hover {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both;
+}

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --glass: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --accent-violet: #8b5cf6;
+    --accent-cyan: #06b6d4;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --bg-main: #020205;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.font-spatial {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar Spatial Style */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 10px;
+}
+
+/* Glass System */
+.spatial-glass {
+    background: var(--glass);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: 32px;
+}
+
+.spatial-nav {
+    background: rgba(2, 2, 5, 0.6);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* Immersive Hero */
+.hero-container {
+    perspective: 1000px;
+}
+
+.floating-layer {
+    transition: transform 0.1s ease-out;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+.sphere-glow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--accent-cyan), transparent 70%);
+    filter: blur(40px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Interaction Cues */
+.btn-spatial {
+    background: var(--text-primary);
+    color: var(--bg-main);
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid transparent;
+}
+
+.btn-spatial:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    background: var(--accent-cyan);
+}
+
+.btn-glass {
+    background: var(--glass);
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Feature Holograms */
+.feature-card {
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateZ(50px) translateY(-10px);
+    border-color: var(--accent-cyan);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Section Transitions */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Background Spatial Grid */
+.spatial-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 60%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 80px 80px, 80px 80px;
+    z-index: -2;
+}
+
+/* Z-Depth indicators */
+.z-depth-1 {
+    position: relative;
+    z-index: 10;
+}
+
+.z-depth-2 {
+    position: relative;
+    z-index: 20;
+}
+
+.z-depth-3 {
+    position: relative;
+    z-index: 30;
+}

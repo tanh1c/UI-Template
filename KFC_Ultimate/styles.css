@@ -1,0 +1,111 @@
+/* KFC Premium Aesthetics */
+
+@layer base {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F9F6F1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E4002B;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0F0F0F;
+}
+
+/* Reveal on Scroll */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Imagewrapper */
+.hero-image-wrapper {
+    transition: transform 0.1s ease-out;
+}
+
+/* 3D Perspective */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+/* Grain Animation */
+.grain::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Magnetic Interaction */
+.magnetic {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Glass Navbar on Scroll */
+#navbar.scrolled {
+    background: rgba(249, 246, 241, 0.8);
+    backdrop-filter: blur(20px);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(228, 0, 43, 0.1);
+}
+
+/* Float Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Custom Selection */
+::selection {
+    background: #E4002B;
+    color: #FFFFFF;
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 40px 80px -20px rgba(228, 0, 43, 0.2);
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVERPOOL FC | The Official Club Experience</title>
+    <meta name="description"
+        content="Experience the passion and legacy of Liverpool FC. Join the community, explore the journey, and witness the glory of the Reds.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lfc: {
+                            red: '#C8102E',
+                            dark: '#0A0A0B',
+                            gold: '#D4AF37',
+                            white: '#FFFFFF',
+                            slate: '#1E1E1E'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Bebas Neue', 'cursive'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-red': 'pulse-red 3s ease-in-out infinite',
+                        'slide-left': 'slide-left 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        'pulse-red': {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(200, 16, 46, 0.2)' },
+                            '50%': { boxShadow: '0 0 40px rgba(200, 16, 46, 0.6)' },
+                        },
+                        'slide-left': {
+                            '0%': { transform: 'translateX(100px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-lfc-dark text-white font-body selection:bg-lfc-red selection:text-white overflow-x-hidden">
+
+    <!-- Global Match Ticker (Marquee) -->
+    <div class="bg-lfc-red py-2 overflow-hidden border-b border-white/10 relative z-[60]">
+        <div class="flex whitespace-nowrap animate-marquee uppercase font-heading text-lg tracking-widest">
+            <span class="mx-8">Next Match: Liverpool vs Real Madrid | 28.12.2025 | Anfield</span>
+            <span class="mx-8 text-lfc-gold">★ Champions League Nights ★</span>
+            <span class="mx-8">Flash Sale: 20% Off Home Kit</span>
+            <span class="mx-8">Next Match: Liverpool vs Real Madrid | 28.12.2025 | Anfield</span>
+            <span class="mx-8 text-lfc-gold">★ Champions League Nights ★</span>
+            <span class="mx-8">Flash Sale: 20% Off Home Kit</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-12 left-0 w-full z-50 px-8 py-4 flex items-center justify-between transition-all duration-500 bg-transparent">
+        <div class="flex items-center gap-4">
+            <div class="bg-lfc-red p-2 rounded-sm shadow-xl animate-pulse-red">
+                <i data-lucide="shield" class="w-8 h-8 text-white"></i>
+            </div>
+            <span class="font-heading text-4xl tracking-tight hidden sm:block">Liverpool <span
+                    class="text-lfc-red underline decoration-lfc-gold underline-offset-4">FC</span></span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-10 font-heading text-2xl tracking-widest text-white/70">
+            <a href="#legacy" class="hover:text-lfc-red transition-all hover:scale-110">Legacy</a>
+            <a href="#squad" class="hover:text-lfc-red transition-all hover:scale-110">The Squad</a>
+            <a href="#anfield" class="hover:text-lfc-red transition-all hover:scale-110">Anfield</a>
+            <a href="#store" class="hover:text-lfc-red transition-all hover:scale-110">Store</a>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <button class="hover:text-lfc-red transition-colors"><i data-lucide="search"></i></button>
+            <a href="#"
+                class="px-8 py-3 bg-lfc-red text-white font-heading text-2xl tracking-widest hover:bg-white hover:text-lfc-red transition-all shadow-2xl skew-x-[-15deg]">
+                <span class="skew-x-[15deg] block">Tickets</span>
+            </a>
+            <button class="lg:hidden"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 scale-105 motion-safe:animate-slow-zoom">
+                <img src="hero.png" alt="Anfield Stadium Atmosphere" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-lfc-dark via-lfc-dark/50 to-transparent"></div>
+                <div class="absolute inset-0 bg-lfc-red/10 mix-blend-overlay"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-8">
+                <div class="max-w-5xl reveal-cascade">
+                    <p class="font-heading text-3xl text-lfc-gold mb-4 tracking-[0.3em]">YOU'LL NEVER WALK ALONE</p>
+                    <h1
+                        class="font-heading text-[100px] md:text-[180px] leading-[0.8] mb-8 tracking-tighter drop-shadow-2xl">
+                        THIS IS <br /> <span
+                            class="text-lfc-red italic inline-block transform -skew-x-12">ANFIELD.</span>
+                    </h1>
+                    <div class="flex flex-col md:flex-row gap-10 items-start md:items-center mt-12">
+                        <a href="#legacy"
+                            class="group relative px-12 py-5 bg-lfc-red text-white font-heading text-3xl tracking-widest overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(200,16,46,0.4)]">
+                            Our Journey
+                        </a>
+                        <div class="flex items-center gap-6 group cursor-pointer reveal-on-scroll">
+                            <div
+                                class="w-16 h-16 border-2 border-white/20 rounded-full flex items-center justify-center group-hover:border-lfc-red transition-all">
+                                <i data-lucide="play" class="fill-current text-white group-hover:text-lfc-red"></i>
+                            </div>
+                            <span
+                                class="font-heading text-2xl tracking-widest uppercase border-b-2 border-lfc-red/30 group-hover:border-lfc-red transition-all">Watch
+                                match highlights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Matches Overlay -->
+            <div
+                class="absolute bottom-12 right-12 hidden xl:block w-80 bg-lfc-slate/80 backdrop-blur-xl border-l-4 border-lfc-red p-8 animate-slide-left">
+                <h4 class="font-heading text-2xl mb-4 tracking-widest text-lfc-gold">Featured Event</h4>
+                <div class="flex justify-between items-center mb-6">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full mb-2 flex items-center justify-center font-heading text-xl">
+                            LFC</div>
+                        <p class="text-[10px] uppercase font-bold tracking-widest">Liverpool</p>
+                    </div>
+                    <div class="font-heading text-3xl">VS</div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-full mb-2 flex items-center justify-center font-heading text-xl">
+                            RMA</div>
+                        <p class="text-[10px] uppercase font-bold tracking-widest">R. Madrid</p>
+                    </div>
+                </div>
+                <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-center border-t border-white/10 pt-4">
+                    Champions League | 28.12.2025</p>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section id="legacy" class="py-40 bg-lfc-dark relative overflow-hidden">
+            <div class="absolute -right-40 top-40 w-[600px] h-[600px] bg-lfc-red/5 blur-[120px] rounded-full"></div>
+
+            <div class="container mx-auto px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-24 items-center">
+                    <div class="w-full lg:w-1/2 reveal-on-scroll">
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-4 bg-lfc-red/20 blur opacity-0 group-hover:opacity-100 transition-all">
+                            </div>
+                            <img src="hero.png" alt="LFC History"
+                                class="relative rounded-sm border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
+                            <div class="absolute -bottom-10 -right-10 bg-lfc-red p-8 hidden md:block">
+                                <p class="font-heading text-6xl leading-none">19</p>
+                                <p class="text-[10px] uppercase font-black tracking-widest">League Titles</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <p class="text-lfc-red font-heading text-2xl tracking-[0.4em] mb-6">THE LEGACY</p>
+                        <h2 class="font-heading text-6xl md:text-8xl mb-12 leading-none">Built with <br /> <span
+                                class="italic transform -skew-x-12 inline-block">blood & glory.</span></h2>
+                        <p class="text-white/60 text-lg leading-relaxed mb-12 font-light">
+                            From the legendary days of Bill Shankly to the modern era of domination, Liverpool Football
+                            Club stands as a beacon of unity and unwavering passion. It's more than football; it's a way
+                            of life shared by millions across the globe.
+                        </p>
+                        <div class="grid grid-cols-2 gap-12 border-t border-white/10 pt-12">
+                            <div>
+                                <h5 class="font-heading text-4xl text-lfc-gold">06</h5>
+                                <p class="text-[10px] uppercase font-bold tracking-[0.2em] text-white/40">European Cups
+                                </p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading text-4xl text-lfc-gold">08</h5>
+                                <p class="text-[10px] uppercase font-bold tracking-[0.2em] text-white/40">FA Cups</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community CTA -->
+        <section class="py-40 bg-lfc-red relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none">
+            </div>
+            <div class="container mx-auto px-8 text-center relative z-10">
+                <h2 class="font-heading text-7xl md:text-[140px] leading-tight mb-12 tracking-tighter">BE PART OF <br />
+                    THE REDS.</h2>
+                <p class="text-2xl font-light mb-16 max-w-2xl mx-auto uppercase tracking-widest text-white/90">Join the
+                    official membership and access exclusive rewards, priority tickets, and behind-the-scenes content.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-8">
+                    <a href="#"
+                        class="px-16 py-6 bg-white text-lfc-red font-heading text-3xl tracking-widest hover:bg-lfc-dark hover:text-white transition-all shadow-2xl skew-x-[-15deg]">
+                        <span class="skew-x-[15deg] block">Join Membership</span>
+                    </a>
+                    <a href="#"
+                        class="px-16 py-6 border-2 border-white text-white font-heading text-3xl tracking-widest hover:bg-white hover:text-lfc-red transition-all skew-x-[-15deg]">
+                        <span class="skew-x-[15deg] block">Latest News</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-lfc-dark pt-32 pb-20 border-t border-white/5 relative z-10">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-24 items-start mb-24">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-4 mb-10">
+                        <i data-lucide="shield" class="w-12 h-12 text-lfc-red"></i>
+                        <span class="font-heading text-5xl tracking-tight">LIVERPOOL FC</span>
+                    </div>
+                    <p class="text-white/40 text-xs uppercase tracking-[0.3em] leading-loose max-w-sm mb-12">
+                        Official website of Liverpool Football Club. Preserving the legacy, celebrating the future.
+                        You'll Never Walk Alone.
+                    </p>
+                    <div class="flex gap-8">
+                        <a href="#"
+                            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-lfc-red transition-all"><i
+                                data-lucide="instagram"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-lfc-red transition-all"><i
+                                data-lucide="facebook"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-lfc-red transition-all"><i
+                                data-lucide="youtube"></i></a>
+                        <a href="#"
+                            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-lfc-red transition-all"><i
+                                data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="font-heading text-3xl mb-10 tracking-widest text-lfc-gold">Quick Links</h5>
+                    <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-white/50">
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Match Center</a></li>
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Ticket Office</a></li>
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Hospitality</a></li>
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Junior Reds</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-heading text-3xl mb-10 tracking-widest text-lfc-gold">Resources</h5>
+                    <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-white/50">
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-lfc-red transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-white/5 flex flex-col md:row items-center justify-between gap-8 text-[10px] font-bold uppercase tracking-[0.4em] text-white/20">
+                <p>© 2025 THE LIVERPOOL FOOTBALL CLUB AND ATHLETIC GROUNDS LIMITED.</p>
+                <div class="flex gap-10">
+                    <span>Standard Chartered</span>
+                    <span>Nike</span>
+                    <span>AXA</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

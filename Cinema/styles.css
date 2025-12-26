@@ -1,0 +1,129 @@
+/* Cinema Aesthetics */
+
+@layer base {
+    body {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>') 10 10, auto;
+    }
+}
+
+/* Preloader Wings */
+.left-wing {
+    animation: slide-left 2s cubic-bezier(0.77, 0, 0.175, 1) 2.5s forwards;
+    transform-origin: left;
+}
+
+.right-wing {
+    animation: slide-right 2s cubic-bezier(0.77, 0, 0.175, 1) 2.5s forwards;
+    transform-origin: right;
+}
+
+#curtain {
+    animation: fade-out 0.5s linear 5.5s forwards;
+}
+
+#text-reveal {
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fade-out {
+    to {
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        letter-spacing: 0.5em;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        letter-spacing: 0.3em;
+    }
+}
+
+@keyframes slow-zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Scroll Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Nav Links */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #D4AF37;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Film Grain */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 99;
+}

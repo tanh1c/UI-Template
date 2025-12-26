@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAISON ÉLÉGANCE | Timeless Luxury</title>
+    <meta name="description"
+        content="Discover MAISON ÉLÉGANCE, where tradition meets modern sophistication. Explore our exclusive collection of hand-crafted luxury items.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            base: '#FCFAF7',
+                            dark: '#1A1A1A',
+                            gold: '#C5A059',
+                            muted: '#A3A3A3',
+                            accent: '#F5F1E9'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-luxury-base text-luxury-dark font-sans selection:bg-luxury-gold selection:text-white overflow-x-hidden">
+
+    <!-- Preloader -->
+    <div id="preloader"
+        class="fixed inset-0 z-[100] bg-white flex items-center justify-center transition-opacity duration-1000">
+        <div class="text-center overflow-hidden">
+            <h1 class="font-serif text-3xl tracking-[0.5em] uppercase animate-reveal text-luxury-gold">Maison Élégance
+            </h1>
+            <div class="h-[1px] bg-luxury-gold/30 mt-4 scale-x-0 animate-expand origin-center"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 px-12 py-8 flex items-center justify-between transition-all duration-700">
+        <div class="flex-1 hidden md:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-medium">
+            <a href="#collection" class="nav-link">Collection</a>
+            <a href="#heritage" class="nav-link">Heritage</a>
+        </div>
+
+        <div class="flex-none text-center">
+            <a href="#" class="font-serif text-2xl tracking-[0.3em] uppercase">Maison Élégance</a>
+        </div>
+
+        <div class="flex-1 flex justify-end gap-12 items-center">
+            <div class="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-medium">
+                <a href="#boutiques" class="nav-link">Boutiques</a>
+            </div>
+            <button class="hover:text-luxury-gold transition-colors"><i data-lucide="shopping-bag"
+                    class="w-5 h-5"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 scale-110">
+                <img id="hero-img" src="hero.png" alt="Maison Élégance Hero"
+                    class="w-full h-full object-cover opacity-90">
+                <div class="absolute inset-0 bg-white/10"></div>
+            </div>
+
+            <div class="relative z-10 text-center px-6">
+                <p class="text-[10px] uppercase tracking-[0.6em] mb-8 font-medium animate-fade-in opacity-0">Excellence
+                    Since 1892</p>
+                <h2
+                    class="font-serif text-6xl md:text-8xl lg:text-9xl mb-12 leading-tight tracking-tight animate-slide-up opacity-0">
+                    Artistry in <br /> <span
+                        class="italic text-luxury-gold underline decoration-luxury-gold/20 underline-offset-[20px]">Motion.</span>
+                </h2>
+                <div class="mt-16 animate-fade-in opacity-0" style="animation-delay: 1.2s;">
+                    <a href="#collection"
+                        class="px-12 py-5 bg-luxury-dark text-white text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-luxury-gold transition-all duration-500 shadow-xl shadow-black/5">
+                        Discover The Collection
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+                <span class="h-16 w-[1px] bg-luxury-dark/20 relative overflow-hidden">
+                    <span class="absolute top-0 left-0 w-full h-full bg-luxury-dark animate-scroll-line"></span>
+                </span>
+            </div>
+        </section>
+
+        <!-- Collection Section -->
+        <section id="collection" class="py-40 bg-white">
+            <div class="container mx-auto px-12">
+                <div class="flex flex-col md:flex-row gap-24 items-center">
+                    <div class="w-full md:w-1/2 reveal-on-scroll">
+                        <img src="hero.png" alt="Craftsmanship"
+                            class="w-full h-[700px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                    <div class="w-full md:w-1/2 reveal-on-scroll">
+                        <h3 class="font-serif text-5xl mb-12 leading-tight tracking-tight italic">Defined by <br />
+                            <span class="text-luxury-gold">Silent Luxury.</span></h3>
+                        <p class="text-luxury-muted leading-relaxed text-lg font-light mb-12 max-w-lg">
+                            At Maison Élégance, we believe true luxury is felt, not seen. Our artisans dedicate hundreds
+                            of hours to a single creation, ensuring that every stitch, every cut, and every finish is a
+                            testament to perfection.
+                        </p>
+                        <div class="pt-8 border-t border-luxury-dark/10 flex gap-12">
+                            <div>
+                                <p class="font-serif text-3xl mb-1">01</p>
+                                <p class="text-[8px] uppercase tracking-widest font-bold">Materials</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-3xl mb-1">02</p>
+                                <p class="text-[8px] uppercase tracking-widest font-bold">Craft</p>
+                            </div>
+                            <div>
+                                <p class="font-serif text-3xl mb-1">03</p>
+                                <p class="text-[8px] uppercase tracking-widest font-bold">Legacy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-40 bg-luxury-accent relative overflow-hidden">
+            <div class="container mx-auto px-12 text-center pointer-events-none">
+                <h2 class="font-serif text-5xl md:text-7xl mb-16 tracking-tighter">Your <span
+                        class="italic">Legacy</span> Starts Now.</h2>
+            </div>
+            <div class="flex justify-center relative z-10">
+                <a href="#"
+                    class="group px-20 py-10 border border-luxury-dark/20 text-luxury-dark text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-luxury-dark hover:text-white transition-all duration-700">
+                    Enter the Boutique
+                </a>
+            </div>
+            <div class="absolute -bottom-40 -left-20 w-[600px] h-[600px] bg-luxury-gold/5 blur-[120px] rounded-full">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-luxury-dark text-white py-32 font-light">
+        <div class="container mx-auto px-12 grid grid-cols-1 md:grid-cols-4 gap-24">
+            <div class="col-span-1 md:col-span-2">
+                <h4 class="font-serif text-4xl mb-12 tracking-[0.3em] uppercase">Maison Élégance</h4>
+                <div class="flex flex-col gap-6">
+                    <p class="text-luxury-muted text-sm max-w-sm uppercase tracking-widest leading-loose">The
+                        quintessence of refined living and timeless craftsmanship since the turn of the century.</p>
+                    <div class="flex gap-12 mt-8">
+                        <a href="#" class="text-white hover:text-luxury-gold transition-colors"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-white hover:text-luxury-gold transition-colors"><i
+                                data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-12 text-luxury-gold">Navigation</h5>
+                <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-widest">
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Spring Collection</a></li>
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Atelier Services</a></li>
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Bespoke Orders</a></li>
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Sustainability</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-[10px] uppercase tracking-[0.3em] font-bold mb-12 text-luxury-gold">Connect</h5>
+                <ul class="flex flex-col gap-6 text-[10px] uppercase tracking-widest">
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Virtual Concierge</a></li>
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Boutique Finder</a></li>
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Newsletter</a></li>
+                    <li><a href="#" class="hover:text-luxury-gold transition-colors">Press Center</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="container mx-auto px-12 mt-32 pt-12 border-t border-white/5 flex flex-col md:row items-center justify-between gap-12 opacity-40">
+            <p class="text-[8px] uppercase tracking-[0.4em]">© 2025 Maison Élégance International. All rights reserved.
+            </p>
+            <div class="flex gap-12 text-[8px] uppercase tracking-[0.4em]">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

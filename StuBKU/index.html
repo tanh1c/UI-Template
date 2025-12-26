@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuBKU | Elevate Your Learning Journey</title>
+    <meta name="description"
+        content="StuBKU is the ultimate student companion app designed to simplify your academic life. Manage schedules, track progress, and excel in your studies.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stu: {
+                            primary: '#3B82F6', // Vibrant Blue
+                            secondary: '#F59E0B', // Energetic Amber
+                            accent: '#10B981', // Success Green
+                            dark: '#0F172A', // Deep Slate
+                            bg: '#F8FAFC' // Light Grayish Blue
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Instrument Serif', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'reveal-up': 'reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'reveal-up': {
+                            '0%': { transform: 'translateY(40px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-stu-bg text-stu-dark font-sans selection:bg-stu-primary selection:text-white overflow-x-hidden">
+    <!-- Custom Cursor -->
+    <div id="cursor"
+        class="fixed w-8 h-8 rounded-full border-2 border-stu-primary pointer-events-none z-[9999] transition-transform duration-100 hidden md:block">
+    </div>
+    <div id="cursor-dot"
+        class="fixed w-1.5 h-1.5 bg-stu-primary rounded-full pointer-events-none z-[9999] hidden md:block"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 px-6 py-4 transition-all duration-300">
+        <div
+            class="max-w-7xl mx-auto flex items-center justify-between bg-white/70 backdrop-blur-xl border border-white/20 px-8 py-4 rounded-3xl shadow-lg">
+            <div class="magnetic flex items-center gap-3 group cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-stu-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-stu-primary/30 group-hover:rotate-12 transition-transform">
+                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tight text-stu-dark">Stu<span
+                        class="text-stu-primary font-black">BKU</span></span>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-10 font-bold text-sm text-stu-dark/60">
+                <a href="#features" class="hover:text-stu-primary transition-colors hover:scale-105">Features</a>
+                <a href="#how-it-works" class="hover:text-stu-primary transition-colors hover:scale-105">How it
+                    Works</a>
+                <a href="#testimonials" class="hover:text-stu-primary transition-colors hover:scale-105">Community</a>
+                <a href="#"
+                    class="px-6 py-3 bg-stu-primary text-white rounded-2xl hover:bg-stu-dark transition-all shadow-xl shadow-stu-primary/20">Get
+                    the App</a>
+            </nav>
+
+            <button class="md:hidden text-stu-dark">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-56 pb-40 overflow-hidden">
+            <!-- Background Grid -->
+            <div class="absolute inset-0 -z-20 opacity-[0.03]"
+                style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+            <!-- Background Decorations -->
+            <div
+                class="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-stu-primary/10 blur-[150px] rounded-full -z-10 animate-blob">
+            </div>
+            <div class="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-stu-secondary/10 blur-[150px] rounded-full -z-10 animate-blob"
+                style="animation-delay: 2s;"></div>
+            <div class="absolute top-[20%] left-[20%] w-32 h-32 bg-stu-accent/10 blur-[60px] rounded-full -z-10 animate-blob"
+                style="animation-delay: 4s;"></div>
+
+            <!-- Floating Decorative Icons -->
+            <div class="absolute top-[15%] left-[10%] opacity-20 animate-float hidden lg:block"
+                style="animation-duration: 8s;">
+                <i data-lucide="book" class="w-12 h-12 text-stu-primary"></i>
+            </div>
+            <div class="absolute bottom-[20%] left-[45%] opacity-20 animate-float hidden lg:block"
+                style="animation-duration: 12s; animation-delay: 1s;">
+                <i data-lucide="pen-tool" class="w-10 h-10 text-stu-accent"></i>
+            </div>
+            <div class="absolute top-[40%] right-[15%] opacity-20 animate-float hidden lg:block"
+                style="animation-duration: 10s; animation-delay: 2s;">
+                <i data-lucide="code" class="w-14 h-14 text-stu-secondary"></i>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+                <div class="animate-reveal-up" style="animation-delay: 0.2s;">
+                    <div
+                        class="inline-flex items-center gap-3 px-5 py-2.5 bg-white border border-stu-primary/20 text-stu-primary rounded-full font-bold text-xs uppercase tracking-[0.2em] mb-10 shadow-sm">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-stu-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-stu-primary"></span>
+                        </span>
+                        Academic Excellence 2.0
+                    </div>
+                    <h1 class="text-7xl lg:text-[110px] font-black leading-[0.85] text-stu-dark mb-10 tracking-tighter">
+                        Master your <br /> <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-stu-primary to-stu-accent font-serif italic font-light">future</span>
+                        today.
+                    </h1>
+                    <p class="text-xl text-stu-dark/60 leading-relaxed max-w-xl mb-14 font-medium">
+                        The definitive student ecosystem. Seamlessly manage your curriculum, track milestones, and
+                        collaborate with peers—all in one elegant interface.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-8">
+                        <a href="#"
+                            class="magnetic group relative px-12 py-6 bg-stu-dark text-white rounded-[2rem] font-bold overflow-hidden transition-all shadow-2xl shadow-stu-dark/20 hover:scale-105 active:scale-95">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-stu-primary to-stu-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                            <div class="relative flex items-center justify-center gap-4">
+                                <i data-lucide="apple" class="w-6 h-6"></i>
+                                <span>Download for iOS</span>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="magnetic px-12 py-6 bg-white text-stu-dark border-2 border-stu-dark/5 rounded-[2rem] font-bold hover:border-stu-primary hover:text-stu-primary transition-all flex items-center justify-center gap-4 shadow-sm hover:shadow-xl active:scale-95">
+                            <i data-lucide="play" class="w-6 h-6"></i>
+                            <span>Android Play Store</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center animate-reveal-up hero-image-container"
+                    style="animation-delay: 0.5s;">
+                    <div class="relative w-full max-w-lg perspective-1000">
+                        <div
+                            class="absolute -inset-10 bg-stu-primary/30 blur-[100px] rounded-full -z-10 opacity-40 animate-pulse">
+                        </div>
+                        <img src="hero.png" alt="StuBKU App Mockup"
+                            class="hero-img w-full h-auto drop-shadow-[0_60px_120px_rgba(59,130,246,0.4)] transition-all duration-300 cursor-zoom-in">
+
+                        <!-- Floating Glass Badges -->
+                        <div
+                            class="absolute top-[15%] -left-12 bg-white/80 backdrop-blur-xl p-6 rounded-[2.5rem] shadow-2xl border border-white/50 flex items-center gap-5 reveal-on-scroll">
+                            <div
+                                class="w-14 h-14 bg-stu-accent rounded-2xl flex items-center justify-center text-white shadow-lg shadow-stu-accent/30">
+                                <i data-lucide="trophy" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-stu-dark uppercase tracking-[0.2em] opacity-40">
+                                    Leaderboard</p>
+                                <p class="text-2xl font-black text-stu-dark tracking-tighter">Top 1%</p>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-[20%] -right-12 bg-stu-dark/90 backdrop-blur-xl p-6 rounded-[2.5rem] shadow-2xl border border-white/10 flex items-center gap-5 reveal-on-scroll"
+                            style="transition-delay: 0.3s;">
+                            <div
+                                class="w-14 h-14 bg-stu-secondary rounded-2xl flex items-center justify-center text-white shadow-lg shadow-stu-secondary/30">
+                                <i data-lucide="flame" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-white/40 uppercase tracking-[0.2em]">Daily Streak
+                                </p>
+                                <p class="text-2xl font-black text-white tracking-tighter">14 Days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-24 bg-stu-dark text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-[30%] h-full bg-stu-primary/10 transform skew-x-12"></div>
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10 text-center">
+                <div class="reveal-on-scroll">
+                    <p class="text-5xl font-black mb-2"><span class="counter-stat" data-target="98"
+                            data-target-suffix="%">0</span>%</p>
+                    <p class="text-sm font-bold opacity-40 uppercase tracking-widest">Satisfaction rate</p>
+                </div>
+                <div class="reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <p class="text-5xl font-black mb-2"><span class="counter-stat" data-target="1.2"
+                            data-is-float="true" data-target-suffix="M+">0</span>M+</p>
+                    <p class="text-sm font-bold opacity-40 uppercase tracking-widest">Tasks completed</p>
+                </div>
+                <div class="reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <p class="text-5xl font-black mb-2"><span class="counter-stat" data-target="4.9"
+                            data-is-float="true" data-target-suffix="/5">0</span>/5</p>
+                    <p class="text-sm font-bold opacity-40 uppercase tracking-widest">App Store Rating</p>
+                </div>
+                <div class="reveal-on-scroll" style="transition-delay: 0.3s;">
+                    <p class="text-5xl font-black mb-2"><span class="counter-stat" data-target="24"
+                            data-target-suffix="/7">0</span>/7</p>
+                    <p class="text-sm font-bold opacity-40 uppercase tracking-widest">Study support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features" class="py-40 relative">
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-stu-primary/20 to-transparent">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-32 reveal-on-scroll">
+                    <p class="text-stu-primary font-bold uppercase tracking-[0.5em] text-[10px] mb-8">The StuBKU
+                        Ecosystem</p>
+                    <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-12 leading-none">Smart tools for
+                        <br /> <span
+                            class="bg-gradient-to-r from-stu-primary to-stu-accent bg-clip-text text-transparent font-serif italic font-light">superior</span>
+                        results.
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-8 h-auto">
+                    <!-- Feature 1: Large -->
+                    <div
+                        class="md:col-span-2 md:row-span-2 group relative bg-white p-12 md:p-16 rounded-[3.5rem] shadow-[0_30px_90px_-20px_rgba(0,0,0,0.04)] border border-stu-dark/5 hover:border-stu-primary transition-all duration-700 reveal-on-scroll">
+                        <div
+                            class="absolute -top-10 left-16 w-20 h-20 bg-stu-primary rounded-3xl flex items-center justify-center text-white shadow-xl shadow-stu-primary/30 group-hover:scale-110 group-hover:-rotate-6 transition-all">
+                            <i data-lucide="calendar" class="w-10 h-10 font-bold"></i>
+                        </div>
+                        <h3 class="text-4xl font-black mb-8 mt-4 tracking-tight">Smart Planner 2.0</h3>
+                        <p class="text-stu-dark/50 leading-relaxed text-xl font-medium mb-8">Automatic scheduling that
+                            synchronizes with your academic portal and optimizes study blocks based on your energy
+                            levels.</p>
+                        <img src="https://images.unsplash.com/photo-1506784919141-93504932066c?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-64 object-cover rounded-[2.5rem] mt-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+
+                    <!-- Feature 2: Horizontal -->
+                    <div class="md:col-span-2 group relative bg-white p-12 rounded-[3.5rem] shadow-[0_30px_90px_-20px_rgba(0,0,0,0.04)] border border-stu-dark/5 hover:border-stu-accent transition-all duration-700 reveal-on-scroll"
+                        style="transition-delay: 0.2s;">
+                        <div
+                            class="absolute -top-10 left-12 w-16 h-16 bg-stu-accent rounded-2xl flex items-center justify-center text-white shadow-xl shadow-stu-accent/30 group-hover:scale-110 group-hover:rotate-6 transition-all">
+                            <i data-lucide="bar-chart-2" class="w-8 h-8 font-bold"></i>
+                        </div>
+                        <h3 class="text-2xl font-black mb-4 mt-2 tracking-tight">Deep Analytics</h3>
+                        <p class="text-stu-dark/50 leading-relaxed text-lg font-medium">Beautifully visualized grade
+                            tracking and performance forecasting to keep you on the Dean's list.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="group relative bg-white p-12 rounded-[3.5rem] shadow-[0_30px_90px_-20px_rgba(0,0,0,0.04)] border border-stu-dark/5 hover:border-stu-secondary transition-all duration-700 reveal-on-scroll"
+                        style="transition-delay: 0.4s;">
+                        <div
+                            class="absolute -top-10 left-12 w-16 h-16 bg-stu-secondary rounded-2xl flex items-center justify-center text-white shadow-xl shadow-stu-secondary/30 group-hover:scale-110 group-hover:-rotate-6 transition-all">
+                            <i data-lucide="users" class="w-8 h-8 font-bold"></i>
+                        </div>
+                        <h3 class="text-2xl font-black mb-4 mt-2 tracking-tight">BKU Network</h3>
+                        <p class="text-stu-dark/50 leading-relaxed text-sm font-medium">Connect with teammates
+                            instantly.</p>
+                    </div>
+
+                    <!-- Feature 4: Pulse -->
+                    <div class="group relative bg-stu-dark p-12 rounded-[3.5rem] shadow-2xl border border-white/10 transition-all duration-700 reveal-on-scroll flex flex-col justify-between"
+                        style="transition-delay: 0.5s;">
+                        <div class="flex items-center gap-4 text-white">
+                            <i data-lucide="zap" class="w-8 h-8 text-stu-secondary"></i>
+                            <span class="font-bold text-sm tracking-widest uppercase opacity-60">Real-time</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mt-8">Instant Sync</h3>
+                        <div class="mt-4 flex gap-2">
+                            <div class="w-2 h-2 rounded-full bg-stu-accent animate-pulse"></div>
+                            <div class="w-2 h-2 rounded-full bg-stu-accent animate-pulse"
+                                style="animation-delay: 0.2s;"></div>
+                            <div class="w-2 h-2 rounded-full bg-stu-accent animate-pulse"
+                                style="animation-delay: 0.4s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-40 bg-stu-bg overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-24 items-center">
+                    <div class="reveal-on-scroll">
+                        <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-12">Built by students, <br />
+                            <span class="text-stu-primary">for students.</span>
+                        </h2>
+                        <div class="space-y-12">
+                            <div class="flex gap-8 items-start">
+                                <img src="https://i.pravatar.cc/100?u=4" class="w-16 h-16 rounded-3xl shadow-lg">
+                                <div>
+                                    <p class="text-xl font-medium text-stu-dark mb-4 leading-relaxed">"StuBKU literally
+                                        saved my GPA. The smart scheduling actually understands my class times and
+                                        extracurriculars."</p>
+                                    <p class="text-sm font-bold uppercase tracking-widest text-stu-primary">Minh Anh —
+                                        Year 3, CSE</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-8 items-start">
+                                <img src="https://i.pravatar.cc/100?u=5" class="w-16 h-16 rounded-3xl shadow-lg">
+                                <div>
+                                    <p class="text-xl font-medium text-stu-dark mb-4 leading-relaxed">"The shared
+                                        resource drive is a game changer for lab reports. Everything is just... there."
+                                    </p>
+                                    <p class="text-sm font-bold uppercase tracking-widest text-stu-primary">Tuan Kiet —
+                                        Year 4, Mech</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative reveal-on-scroll">
+                        <div
+                            class="aspect-square bg-white rounded-[4rem] shadow-3xl p-16 flex items-center justify-center overflow-hidden">
+                            <div
+                                class="absolute -top-[20%] -right-[20%] w-[80%] h-[80%] bg-stu-primary/5 rounded-full blur-[100px]">
+                            </div>
+                            <div class="text-center relative z-10">
+                                <div class="text-8xl font-black text-stu-primary mb-6 italic">4.9</div>
+                                <div class="flex justify-center gap-2 mb-8">
+                                    <i data-lucide="star" class="w-8 h-8 text-stu-secondary fill-stu-secondary"></i>
+                                    <i data-lucide="star" class="w-8 h-8 text-stu-secondary fill-stu-secondary"></i>
+                                    <i data-lucide="star" class="w-8 h-8 text-stu-secondary fill-stu-secondary"></i>
+                                    <i data-lucide="star" class="w-8 h-8 text-stu-secondary fill-stu-secondary"></i>
+                                    <i data-lucide="star" class="w-8 h-8 text-stu-secondary fill-stu-secondary"></i>
+                                </div>
+                                <p class="text-[10px] font-black uppercase tracking-[0.5em] opacity-40">Average Student
+                                    Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-40 bg-stu-primary relative overflow-hidden text-center text-white">
+            <div class="absolute -top-40 -left-10 w-96 h-96 bg-white/10 blur-[120px] rounded-full animate-blob"></div>
+            <div class="absolute -bottom-40 -right-10 w-96 h-96 bg-stu-accent/20 blur-[120px] rounded-full animate-blob"
+                style="animation-delay: 3s;"></div>
+
+            <div class="max-w-4xl mx-auto px-6 relative z-10 reveal-on-scroll">
+                <i data-lucide="sparkles" class="w-16 h-16 mx-auto mb-12 text-stu-secondary animate-pulse"></i>
+                <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-12 leading-tight">Ready to unlock <br />
+                    your <span
+                        class="font-serif italic text-white underline decoration-stu-secondary/40 underline-offset-8">potential?</span>
+                </h2>
+                <p class="text-2xl font-medium opacity-80 mb-16 max-w-2xl mx-auto">Join the future of student
+                    organization and achieve the grades you've always wanted.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-8">
+                    <a href="#"
+                        class="px-16 py-7 bg-white text-stu-primary font-bold text-xl rounded-3xl hover:bg-stu-dark hover:text-white transition-all shadow-2xl shadow-black/10">Build
+                        Your Schedule</a>
+                    <a href="#"
+                        class="px-16 py-7 border-2 border-white/30 text-white font-bold text-xl rounded-3xl hover:bg-white hover:text-stu-primary transition-all">Request
+                        Demo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-32 border-t border-stu-dark/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-24">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-10">
+                    <div class="w-8 h-8 bg-stu-primary rounded-lg flex items-center justify-center text-white">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-stu-dark">Stu<span
+                            class="text-stu-primary font-black">BKU</span></span>
+                </div>
+                <p class="text-stu-dark/40 text-xs uppercase tracking-[0.4em] leading-loose max-w-sm mb-12 font-bold">
+                    Designed to empower students globally. Technology made simple for academia.</p>
+                <div class="flex gap-10">
+                    <a href="#" class="text-stu-dark/40 hover:text-stu-primary transition-colors"><i
+                            data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-stu-dark/40 hover:text-stu-primary transition-colors"><i
+                            data-lucide="twitter" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-stu-dark/40 hover:text-stu-primary transition-colors"><i
+                            data-lucide="linkedin" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-20 col-span-1 md:col-span-2">
+                <div>
+                    <h5 class="text-[10px] font-black uppercase tracking-[0.5em] mb-10 text-stu-dark">Core</h5>
+                    <ul class="flex flex-col gap-6 text-[10px] uppercase font-bold tracking-widest text-stu-dark/40">
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">Safety</a></li>
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">University</a></li>
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">Premium</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-[10px] font-black uppercase tracking-[0.5em] mb-10 text-stu-dark">Studio</h5>
+                    <ul class="flex flex-col gap-6 text-[10px] uppercase font-bold tracking-widest text-stu-dark/40">
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">Legal</a></li>
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">API Keys</a></li>
+                        <li><a href="#" class="hover:text-stu-primary transition-colors">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-6 mt-32 pt-12 border-t border-stu-dark/5 flex flex-col md:row items-center justify-between gap-12 text-[8px] uppercase tracking-[0.5em] text-stu-dark/30 font-bold">
+            <p>© 2025 STUBKU TECHNOLOGIES. BUILT FOR BACH KHOA.</p>
+            <div class="flex gap-12">
+                <a href="#" class="hover:text-stu-dark transition-all">Privacy</a>
+                <a href="#" class="hover:text-stu-dark transition-all">Terms</a>
+                <a href="#" class="hover:text-stu-dark transition-all">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
