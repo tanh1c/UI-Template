@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Lakers | Elite Basketball Club</title>
+    <meta name="description"
+        content="Welcome to the home of champions. Explore LA Lakers team stats, latest news, and exclusive club content.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind (Minimal use for layout) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#0a0a0a]">
+    <!-- Navigation -->
+    <nav class="nav-blur fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4 cursor-pointer">
+                <div class="w-20 h-20">
+                    <img src="https://cdn.nba.com/logos/nba/1610612747/primary/D/logo.svg" alt="Lakers Logo"
+                        class="w-full h-full object-contain">
+                </div>
+                <span class="text-2xl font-bold sport-font tracking-tighter">LA <span
+                        class="text-[#FDB927]">LAKERS</span></span>
+            </div>
+
+            <div class="hidden md:flex gap-10 items-center">
+                <a href="#news" class="sport-font text-lg hover:text-[#FDB927] transition-colors">NEWS</a>
+                <a href="#roster" class="sport-font text-lg hover:text-[#FDB927] transition-colors">ROSTER</a>
+                <a href="#stats" class="sport-font text-lg hover:text-[#FDB927] transition-colors">STATS</a>
+                <a href="#shop" class="sport-font text-lg hover:text-[#FDB927] transition-colors">SHOP</a>
+                <button class="cta-button">TICKETS</button>
+            </div>
+
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content px-6">
+            <div class="reveal-up">
+                <h1 class="big-text">HOME OF<br>CHAMPIONS</h1>
+                <p class="text-xl md:text-2xl mt-8 font-light max-w-2xl mx-auto text-white/80">
+                    Legacy written in Purple and Gold. Built on grit, loyalty, and 17 championship banners.
+                </p>
+                <div class="mt-12 flex justify-center gap-6">
+                    <button class="cta-button px-12">THE ROSTER</button>
+                    <button
+                        class="flex items-center gap-3 sport-font text-xl border-b-2 border-white/20 hover:border-[#FDB927] transition-all py-2">
+                        WATCH HIGHLIGHTS <i data-lucide="play-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Stats Bar -->
+        <div class="absolute bottom-10 w-full z-10 hidden lg:block">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-4 gap-4">
+                <div class="bg-black/80 backdrop-blur-md p-6 border-b-4 border-[#FDB927]">
+                    <span class="text-sm text-white/40 block">LAST GAME</span>
+                    <span class="text-2xl font-bold flex items-center gap-2">LAL 118 - 105 PHX <i
+                            data-lucide="check-circle" class="text-green-500 w-5 h-5"></i></span>
+                </div>
+                <div class="bg-black/80 backdrop-blur-md p-6">
+                    <span class="text-sm text-white/40 block">UPCOMING</span>
+                    <span class="text-2xl font-bold">LAL @ GSW</span>
+                </div>
+                <div class="bg-black/80 backdrop-blur-md p-6">
+                    <span class="text-sm text-white/40 block">TICKETS</span>
+                    <span class="text-2xl font-bold text-[#FDB927]">AVAILABLE</span>
+                </div>
+                <div class="bg-black/80 backdrop-blur-md p-6">
+                    <span class="text-sm text-white/40 block">STANDING</span>
+                    <span class="text-2xl font-bold">4th WESTERN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="stat-card reveal-up">
+                    <span class="stat-value" data-target="17">0</span>
+                    <span class="sport-font text-xl text-white/60">CHAMPIONSHIPS</span>
+                </div>
+                <div class="stat-card reveal-up" style="transition-delay: 0.1s;">
+                    <span class="stat-value" data-target="32">0</span>
+                    <span class="sport-font text-xl text-white/60">RETIRED JERSEYS</span>
+                </div>
+                <div class="stat-card reveal-up" style="transition-delay: 0.2s;">
+                    <span class="stat-value" data-target="26">0</span>
+                    <span class="sport-font text-xl text-white/60">HALL OF FAMERS</span>
+                </div>
+                <div class="stat-card reveal-up" style="transition-delay: 0.3s;">
+                    <span class="stat-value" data-target="120">0</span>
+                    <span class="sport-font text-xl text-white/60">AVG PPG</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Players -->
+    <section id="roster" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16 reveal-up">
+                <div>
+                    <h2 class="text-6xl sport-font">THE ELITE</h2>
+                    <p class="text-white/40 text-lg">Leading the charge this season</p>
+                </div>
+                <a href="#"
+                    class="text-[#FDB927] sport-font text-xl hover:translate-x-3 transition-transform flex items-center gap-2">FULL
+                    ROSTER <i data-lucide="arrow-right"></i></a>
+            </div>
+
+            <div class="player-row-container">
+                <div class="player-track">
+                    <!-- Original Set -->
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_James_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="LeBron James">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">LEBRON JAMES</span>
+                            <p class="text-[#FDB927] font-bold">FORWARD | #23</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_Doncic_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="Luka Doncic">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">LUKA DONCIC</span>
+                            <p class="text-[#FDB927] font-bold">GUARD | #77</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_Reaves_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="Austin Reaves">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">AUSTIN REAVES</span>
+                            <p class="text-[#FDB927] font-bold">GUARD | #15</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_Hachimura_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="Rui Hachimura">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">RUI HACHIMURA</span>
+                            <p class="text-[#FDB927] font-bold">FORWARD | #28</p>
+                        </div>
+                    </div>
+                    <!-- Duplicate Set for Loop -->
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_James_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="LeBron James">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">LEBRON JAMES</span>
+                            <p class="text-[#FDB927] font-bold">FORWARD | #23</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_Doncic_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="Luka Doncic">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">LUKA DONCIC</span>
+                            <p class="text-[#FDB927] font-bold">GUARD | #77</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_Reaves_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="Austin Reaves">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">AUSTIN REAVES</span>
+                            <p class="text-[#FDB927] font-bold">GUARD | #15</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <img src="https://cdn.nba.com/teams/uploads/sites/1610612747/2025/10/2526_RosterPage_Player_Hachimura_1040x1210.jpg?im=Resize=(960)"
+                            class="player-img" alt="Rui Hachimura">
+                        <div class="player-info">
+                            <span class="text-4xl sport-font">RUI HACHIMURA</span>
+                            <p class="text-[#FDB927] font-bold">FORWARD | #28</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section id="news" class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl sport-font mb-16 underline decoration-[#FDB927] underline-offset-8">LATEST UPDATES</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="news-card reveal-up">
+                    <div class="p-8">
+                        <span class="text-xs text-[#FDB927] font-bold tracking-widest block mb-4 uppercase">Team
+                            Update</span>
+                        <h3 class="text-3xl font-bold mb-4">Lakers Clinch Overtime Thriller Against Suns</h3>
+                        <p class="text-white/40 mb-6 font-light">Last night's victory marks the 5th consecutive win for
+                            the purple and gold as they climb the western standings...</p>
+                        <span class="flex items-center gap-2 text-sm font-bold opacity-60">READ ARTICLE <i
+                                data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                    </div>
+                </div>
+                <div class="news-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="p-8">
+                        <span class="text-xs text-[#FDB927] font-bold tracking-widest block mb-4 uppercase">Injury
+                            Report</span>
+                        <h3 class="text-3xl font-bold mb-4">Davis Cleared for Full Practice Ahead of Warriors Clast</h3>
+                        <p class="text-white/40 mb-6 font-light">Major boost for the Lakers as AD returns to the floor
+                            after missing three games with a minor ankle sprain...</p>
+                        <span class="flex items-center gap-2 text-sm font-bold opacity-60">READ ARTICLE <i
+                                data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                    </div>
+                </div>
+                <div class="news-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="p-8">
+                        <span
+                            class="text-xs text-[#FDB927] font-bold tracking-widest block mb-4 uppercase">Community</span>
+                        <h3 class="text-3xl font-bold mb-4">Lakers Youth Foundation Hosts Winter Skills Clinic</h3>
+                        <p class="text-white/40 mb-6 font-light">Over 500 local kids attended the annual clinic at the
+                            training center, with surprise guest appearances from the squad...</p>
+                        <span class="flex items-center gap-2 text-sm font-bold opacity-60">READ ARTICLE <i
+                                data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                    </div>
+                </div>
+                <div class="news-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="p-8">
+                        <span
+                            class="text-xs text-[#FDB927] font-bold tracking-widest block mb-4 uppercase">Merchandise</span>
+                        <h3 class="text-3xl font-bold mb-4">Special Edition City Jerseys Releasing Friday</h3>
+                        <p class="text-white/40 mb-6 font-light">The highly anticipated alternate uniforms are finally
+                            hitting the team store this week. Limited stock available...</p>
+                        <span class="flex items-center gap-2 text-sm font-bold opacity-60">READ ARTICLE <i
+                                data-lucide="arrow-right" class="w-4 h-4"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-32 pb-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 mb-24">
+            <div class="col-span-2">
+                <div class="flex items-center gap-4 mb-8">
+                    <div
+                        class="w-10 h-10 bg-[#552583] rounded-full flex items-center justify-center border border-[#FDB927]">
+                        <i data-lucide="trophy" class="text-[#FDB927] w-5 h-5"></i>
+                    </div>
+                    <span class="text-2xl font-bold sport-font">LA LAKERS</span>
+                </div>
+                <p class="text-white/40 max-w-sm mb-12">Building a future as bright as our past. The premier sports
+                    organization in Los Angeles and the world.</p>
+                <div class="flex gap-6">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#552583] transition-all"><i
+                            data-lucide="instagram"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#552583] transition-all"><i
+                            data-lucide="twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#552583] transition-all"><i
+                            data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="sport-font text-xl mb-6 text-[#FDB927]">CLUB</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="footer-link">Roster</a></li>
+                    <li><a href="#" class="footer-link">Schedule</a></li>
+                    <li><a href="#" class="footer-link">Standings</a></li>
+                    <li><a href="#" class="footer-link">History</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="sport-font text-xl mb-6 text-[#FDB927]">TICKETS</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="footer-link">Single Game</a></li>
+                    <li><a href="#" class="footer-link">Season Tickets</a></li>
+                    <li><a href="#" class="footer-link">Premium Seating</a></li>
+                    <li><a href="#" class="footer-link">Group Sales</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-12 flex flex-col md:row justify-between items-center gap-6 opacity-40 text-xs">
+            <p>&copy; 2025 Los Angeles Lakers. All rights reserved.</p>
+            <div class="flex gap-10">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">NBA.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "18", name: "MediCare+", folder: "MediCare_Plus", tag: "Healthcare / App", image: "MediCare_Plus/hero.png" },
         { id: "19", name: "CryptoNexus", folder: "CryptoNexus", tag: "Fintech / Crypto", image: "CryptoNexus/hero.png" },
         { id: "20", name: "NeoBank Elite", folder: "NeoBank_Elite", tag: "Elite / Finance", image: "NeoBank_Elite/hero.png" },
-        { id: "21", name: "Aether OS", folder: "Aether_OS", tag: "Spatial / OS", image: "Aether_OS/hero.png" }
+        { id: "21", name: "Aether OS", folder: "Aether_OS", tag: "Spatial / OS", image: "Aether_OS/hero.png" },
+        { id: "22", name: "Lakers Elite", folder: "Lakers_Elite", tag: "Sports / Club", image: "Lakers_Elite/hero.png" }
     ];
 
     // Render projects
