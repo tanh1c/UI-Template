@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ＮＥＯＮ　ＤＲＥＡＭＳ // VAPORWAVE ALBUM</title>
+    <meta name="description" content="Experience the nostalgia. Neon Dreams - The new vaporwave odyssey. Stream now.">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vp: {
+                            pink: '#FF71CE',
+                            cyan: '#01CDFE',
+                            purple: '#B967FF',
+                            green: '#05FFA1',
+                            yellow: '#FFFB96',
+                            dark: '#2D1B33'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-vp-dark text-white selection:bg-vp-pink overflow-x-hidden">
+
+    <!-- VHS Overlay -->
+    <div class="vhs-overlay"></div>
+    <div class="fixed inset-0 scanline z-50 pointer-events-none"></div>
+
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 -z-10 bg-zigzag opacity-5"></div>
+    <div class="fixed top-[20%] right-[-10%] w-[600px] h-[600px] bg-vp-pink/10 blur-[120px] rounded-full"></div>
+    <div class="fixed bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-vp-cyan/10 blur-[100px] rounded-full"></div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-40 bg-vp-dark/60 backdrop-blur-xl border-b border-vp-cyan/20 h-20 flex items-center px-8 md:px-16 justify-between">
+        <div class="flex items-center gap-4">
+            <span class="font-kanji text-2xl font-black text-glitch tracking-tighter">蒸気波</span>
+            <span class="font-tech text-xl tracking-[0.3em] hidden sm:block">NEON_DREAMS_V1.0</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-12 font-tech text-lg tracking-widest text-vp-cyan">
+            <a href="#album" class="hover:text-vp-pink transition-all">//ALBUM</a>
+            <a href="#visuals" class="hover:text-vp-green transition-all">//VISUALS</a>
+            <a href="#listen" class="hover:text-vp-yellow transition-all">//LISTEN</a>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <button
+                class="glass-retro px-6 py-2 border-vp-pink border font-tech text-vp-pink hover:bg-vp-pink hover:text-white transition-all uppercase">Enter_Void</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <header class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="font-kanji text-vp-cyan text-xl md:text-2xl mb-4 italic tracking-widest">懐かしい思い出 //
+                        NOSTALGIC MEMORIES</h2>
+                    <h1 class="text-6xl md:text-9xl font-black text-glitch leading-none mb-12 italic uppercase">
+                        NEON <br /> <span class="bg-vp-pink text-vp-dark px-4 rotate-2 inline-block">DREAMS</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-vp-white/80 max-w-xl leading-relaxed mb-16 italic">
+                        A sonic journey through a digital sunset that never ends. Retro synthesizers, lo-fi beats, and
+                        the ghost of the 90s.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center gap-8">
+                        <button
+                            class="bg-vp-cyan text-vp-dark px-12 py-5 font-tech text-2xl m-shadow shadow-[8px_8px_0px_#FF71CE] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                            STREAM_NOW
+                        </button>
+                        <a href="#album"
+                            class="font-tech text-xl text-vp-pink hover:underline underline-offset-8 tracking-widest">VIEW_TRACKLIST</a>
+                    </div>
+                </div>
+
+                <div class="relative reveal" style="transition-delay: 0.3s;">
+                    <!-- Hero Image Poster -->
+                    <div class="relative z-10 p-4 glass-retro -rotate-2 floating">
+                        <div class="absolute inset-0 bg-gradient-to-t from-vp-dark via-transparent to-transparent z-20">
+                        </div>
+                        <img src="hero.png" alt="Neon Dreams Cover"
+                            class="w-full h-auto border-4 border-vp-white shadow-[20px_20px_0px_#01CDFE]">
+                        <div class="absolute -top-10 -right-10 hidden md:block">
+                            <i data-lucide="sun" class="w-32 h-32 text-vp-yellow opacity-50 blur-sm"></i>
+                        </div>
+                    </div>
+                    <!-- Kanji Decoration -->
+                    <div
+                        class="absolute -bottom-10 -left-10 bg-vp-purple text-white px-8 py-4 font-kanji text-4xl rotate-6 shadow-xl z-30 border-2 border-white">
+                        音楽</div>
+                </div>
+            </div>
+
+            <!-- Background Floating Elements -->
+            <div class="absolute top-1/4 left-10 opacity-20 floating">
+                <i data-lucide="palm-tree" class="w-32 h-32 text-vp-green"></i>
+            </div>
+        </header>
+
+        <!-- Dynamic Ticker -->
+        <div
+            class="bg-vp-cyan text-vp-dark py-4 font-tech text-xl uppercase overflow-hidden border-y-4 border-white mt-20">
+            <div class="flex animate-marquee whitespace-nowrap">
+                <span class="px-12">AVAILABLE ON CASSETTE • DIGITAL ODYSSEY LIVE • 1999 VIBES ONLY • 蒸気波 • RETRO
+                    FUTURISM • CASSETTE • DIGITAL ODYSSEY LIVE • 1999 VIBES ONLY • 蒸気波 • RETRO FUTURISM • </span>
+                <span class="px-12">AVAILABLE ON CASSETTE • DIGITAL ODYSSEY LIVE • 1999 VIBES ONLY • 蒸気波 • RETRO
+                    FUTURISM • CASSETTE • DIGITAL ODYSSEY LIVE • 1999 VIBES ONLY • 蒸気波 • RETRO FUTURISM • </span>
+            </div>
+        </div>
+
+        <!-- Tracklist Section -->
+        <section id="album" class="py-40 container mx-auto px-6">
+            <div class="flex flex-col md:row justify-between items-end mb-24 gap-8">
+                <div>
+                    <h2 class="font-tech text-vp-pink text-xl tracking-[0.5em] mb-4 uppercase">Data Disc // 001</h2>
+                    <h3 class="text-6xl md:text-8xl font-black gradient-text uppercase tracking-tighter italic">
+                        THE_TRACKS</h3>
+                </div>
+                <div class="font-kanji text-vp-cyan text-3xl opacity-50 hidden lg:block">デジタル・ドリームス</div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <!-- Music Player Simulation -->
+                <div class="glass-retro p-10 border-2 border-vp-cyan/30 reveal">
+                    <div class="flex items-center gap-8 mb-12">
+                        <div
+                            class="w-32 h-32 bg-vp-pink flex items-center justify-center border-4 border-white rotate-3">
+                            <i data-lucide="disc" class="w-20 h-20 text-vp-dark animate-spin"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-black text-vp-cyan uppercase">Now Scanning...</h4>
+                            <p class="font-tech text-lg text-vp-white/60 uppercase tracking-widest">ID: VAPOR_WAVE_99
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div
+                            class="flex items-center justify-between p-4 border border-vp-white/10 hover:bg-vp-pink/20 transition-all cursor-pointer group">
+                            <div class="flex items-center gap-6">
+                                <span class="font-tech text-vp-pink text-2xl">01</span>
+                                <span class="text-xl font-bold uppercase group-hover:text-vp-cyan">Aesthetic
+                                    Sunset</span>
+                            </div>
+                            <span class="font-tech text-vp-white/40 italic">04:20</span>
+                        </div>
+                        <div
+                            class="flex items-center justify-between p-4 border border-vp-white/10 hover:bg-vp-pink/20 transition-all cursor-pointer group">
+                            <div class="flex items-center gap-6">
+                                <span class="font-tech text-vp-pink text-2xl">02</span>
+                                <span class="text-xl font-bold uppercase group-hover:text-vp-cyan">Linh's Dream</span>
+                            </div>
+                            <span class="font-tech text-vp-white/40 italic">03:15</span>
+                        </div>
+                        <div
+                            class="flex items-center justify-between p-4 border border-vp-white/10 hover:bg-vp-pink/20 transition-all cursor-pointer group">
+                            <div class="flex items-center gap-6">
+                                <span class="font-tech text-vp-pink text-2xl">03</span>
+                                <span class="text-xl font-bold uppercase group-hover:text-vp-cyan">Cybernetic
+                                    Mall</span>
+                            </div>
+                            <span class="font-tech text-vp-white/40 italic">05:01</span>
+                        </div>
+                        <div
+                            class="flex items-center justify-between p-4 border border-vp-white/10 hover:bg-vp-pink/20 transition-all cursor-pointer group">
+                            <div class="flex items-center gap-6">
+                                <span class="font-tech text-vp-pink text-2xl">04</span>
+                                <span class="text-xl font-bold uppercase group-hover:text-vp-cyan">Plastic
+                                    Memories</span>
+                            </div>
+                            <span class="font-tech text-vp-white/40 italic">02:58</span>
+                        </div>
+                    </div>
+                    <!-- Audio Progress -->
+                    <div class="mt-12 h-2 bg-vp-white/10 w-full relative">
+                        <div class="absolute top-0 left-0 h-full bg-vp-cyan w-1/3 shadow-[0_0_10px_#01CDFE]"></div>
+                        <div class="absolute top-[-4px] left-1/3 w-3 h-5 bg-vp-yellow border border-vp-dark"></div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <h4 class="text-4xl font-black mb-10 italic uppercase">MANIFESTO</h4>
+                    <p class="text-xl leading-loose text-vp-white/70 mb-12">
+                        Neon Dreams is a recursive exploration of consumerist nostalgia. We believe the future was
+                        better in the past. Every frequency is modulated through 90s hardware to replicate the feeling
+                        of a midnight drive through a shopping mall.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="p-6 border border-vp-green/30 bg-vp-green/5">
+                            <span class="font-tech text-vp-green block mb-4">//SYSTEM</span>
+                            <span class="text-xl font-bold uppercase">100% ANALOG SOURCE</span>
+                        </div>
+                        <div class="p-6 border border-vp-yellow/30 bg-vp-yellow/5">
+                            <span class="font-tech text-vp-yellow block mb-4">//VIBE</span>
+                            <span class="text-xl font-bold uppercase">LUXURY LO-FI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listen Section -->
+        <section id="listen" class="py-40 bg-white text-vp-dark relative overflow-hidden -mx-6 px-6">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-vp-pink/20 blur-[150px] rounded-full pointer-events-none">
+            </div>
+            <div class="container mx-auto text-center relative z-10 reveal">
+                <i data-lucide="waves" class="w-20 h-20 mx-auto text-vp-purple mb-8 floating"></i>
+                <h2 class="text-6xl md:text-9xl font-black italic mb-12 uppercase tracking-tighter">LISTEN_ <br /> TO_
+                    THE_ <span class="bg-vp-cyan px-6 rotate-1 inline-block">PAST</span></h2>
+                <div class="flex flex-wrap justify-center gap-8 mb-20">
+                    <button
+                        class="px-10 py-4 border-4 border-vp-dark font-tech text-2xl hover:bg-vp-dark hover:text-white transition-all uppercase">Spotify</button>
+                    <button
+                        class="px-10 py-4 border-4 border-vp-dark font-tech text-2xl hover:bg-vp-dark hover:text-white transition-all uppercase">Apple_Music</button>
+                    <button
+                        class="px-10 py-4 border-4 border-vp-dark font-tech text-2xl hover:bg-vp-dark hover:text-white transition-all uppercase">Bandcamp</button>
+                </div>
+                <p class="font-kanji text-xl tracking-widest opacity-60">デジタル・オーディオ・フォーマット</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-24 px-10 border-t-4 border-vp-pink bg-vp-dark">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-20">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="font-kanji text-4xl font-black text-vp-pink">蒸気</span>
+                    <span class="font-tech text-2xl tracking-tighter">VAPOR_CORP_2025</span>
+                </div>
+                <p class="text-vp-white/40 max-w-sm font-tech text-sm leading-loose">
+                    THE SIGNAL IS CLEAR. THE FUTURE IS GHOSTED. TRANSLATING NOSTALGIA TO THE BUFFER.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-tech text-xl text-vp-cyan mb-8 tracking-widest uppercase">//DIRECTORY</h4>
+                <ul class="space-y-4 font-tech text-lg text-vp-white/50 uppercase">
+                    <li><a href="#" class="hover:text-vp-pink transition-all">Download_RAM</a></li>
+                    <li><a href="#" class="hover:text-vp-pink transition-all">Merchandise_Store</a></li>
+                    <li><a href="#" class="hover:text-vp-pink transition-all">Mailing_List</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-tech text-xl text-vp-green mb-8 tracking-widest uppercase">//ENCRYPTION</h4>
+                <p class="font-tech text-vp-white/30 text-xs">
+                    HASH: 0x823293819283<br />
+                    STATUS: OPTIMAL<br />
+                    VERSION: AESTHETIC_V4
+                </p>
+            </div>
+        </div>
+        <div
+            class="mt-24 pt-10 border-t border-white/5 text-center text-[10px] font-tech text-white/20 uppercase tracking-[0.5em]">
+            © 2025 NEON DREAMS LABS. ALL DATA VOLATILE.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

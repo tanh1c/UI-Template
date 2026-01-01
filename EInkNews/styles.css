@@ -1,0 +1,143 @@
+/* E-Ink Newspaper Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;700;900&display=swap');
+
+:root {
+    --e-paper: #F2F2F2;
+    --e-ink: #121212;
+    --e-gray-dark: #404040;
+    --e-gray-mid: #898989;
+    --e-gray-light: #D1D1D1;
+    --e-gray-soft: #E6E6E6;
+}
+
+@layer utilities {
+    .ink-border {
+        border: 1px solid var(--e-ink);
+    }
+
+    .ink-border-thick {
+        border: 2px solid var(--e-ink);
+    }
+
+    .paper-texture {
+        background-color: var(--e-paper);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    }
+
+    .dither-effect {
+        filter: contrast(150%) grayscale(100%);
+    }
+
+    .dither-overlay {
+        position: relative;
+    }
+
+    .dither-overlay::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(var(--e-ink) 0.5px, transparent 0.5px);
+        background-size: 2px 2px;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+}
+
+body {
+    background-color: var(--e-paper);
+    color: var(--e-ink);
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.font-sans {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Page Transition Feature */
+.ink-flash {
+    position: fixed;
+    inset: 0;
+    background: var(--e-ink);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s steps(2);
+}
+
+.ink-flash.active {
+    opacity: 1;
+}
+
+/* Newspaper Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+    border-top: 2px solid var(--e-ink);
+    padding-top: 32px;
+}
+
+@media (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations that feel like E-Ink */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.4s steps(4);
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--e-ink);
+    margin: 24px 0;
+}
+
+.btn-ink {
+    background: var(--e-ink);
+    color: var(--e-paper);
+    padding: 8px 16px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background 0.1s steps(2);
+}
+
+.btn-ink:hover {
+    background: var(--e-gray-dark);
+}
+
+.underline-heavy {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}

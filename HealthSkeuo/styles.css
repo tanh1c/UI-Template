@@ -1,0 +1,114 @@
+/* Skeuomorphic Design System for VITAL_CHECK */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --sk-bg: #E0E5EC;
+    --sk-white: #FFFFFF;
+    --sk-shadow-dark: #A3B1C6;
+    --sk-shadow-light: #FFFFFF;
+    --sk-primary: #0A84FF;
+    --sk-primary-dark: #006EDF;
+    --sk-success: #34C759;
+    --sk-accent: #FF3B30;
+    --sk-text: #2D3436;
+    --sk-text-muted: #636E72;
+}
+
+@layer utilities {
+
+    /* Raised Element (Outset) */
+    .sk-outset {
+        background: var(--sk-bg);
+        box-shadow: 9px 9px 16px var(--sk-shadow-dark),
+            -9px -9px 16px var(--sk-shadow-light);
+    }
+
+    /* Recessed Element (Inset) */
+    .sk-inset {
+        background: var(--sk-bg);
+        box-shadow: inset 8px 8px 12px var(--sk-shadow-dark),
+            inset -8px -8px 12px var(--sk-shadow-light);
+    }
+
+    /* Glossy Blue Button */
+    .sk-btn-glossy {
+        background: linear-gradient(145deg, var(--sk-primary), var(--sk-primary-dark));
+        box-shadow: 6px 6px 12px rgba(10, 132, 255, 0.3),
+            -6px -6px 12px rgba(255, 255, 255, 0.8),
+            inset 2px 2px 4px rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sk-btn-glossy:active {
+        box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+            2px 2px 4px rgba(255, 255, 255, 0.5);
+        transform: scale(0.98);
+    }
+
+    /* Glass Effect (Skeuomorphic Glass) */
+    .sk-glass {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 8px 32px 0 rgba(163, 177, 198, 0.37);
+    }
+
+    /* Metal/Chrome Texture */
+    .sk-metal {
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        box-shadow: 4px 4px 8px #bebebe,
+            -4px -4px 8px #ffffff;
+    }
+}
+
+body {
+    background-color: var(--sk-bg);
+    color: var(--sk-text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-press {
+    transition: transform 0.2s ease;
+}
+
+.hover-press:hover {
+    transform: translateY(-2px);
+}
+
+.hover-press:active {
+    transform: translateY(1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sk-bg);
+    box-shadow: inset 2px 2px 5px var(--sk-shadow-dark),
+        inset -2px -2px 5px var(--sk-shadow-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sk-bg);
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px var(--sk-shadow-dark),
+        -3px -3px 6px var(--sk-shadow-light);
+    border: 3px solid var(--sk-bg);
+}

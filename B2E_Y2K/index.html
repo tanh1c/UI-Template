@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2E // LOCAL BRAND // Y2K AESTHETIC</title>
+    <meta name="description"
+        content="Enter the Y2K dimension. B2E Local Brand - Cyber-inspired apparel and footwear for the retro-future.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Share+Tech+Mono&family=DotGothic16&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        y2k: {
+                            pink: '#FF00F5',
+                            blue: '#00F0FF',
+                            lime: '#CCFF00',
+                            silver: '#E2E2E2',
+                            dark: '#0A0A0A'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Bungee', 'cursive'],
+                        mono: ['"Share Tech Mono"', 'monospace'],
+                        pixel: ['"DotGothic16"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-y2k-dark text-white font-mono selection:bg-y2k-blue selection:text-y2k-dark overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 scroll-none">
+        <div class="absolute top-[10%] left-[5%] w-[400px] h-[400px] holo-bg rounded-full"></div>
+        <div class="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] holo-bg rounded-full"
+            style="background: linear-gradient(135deg, #FF00F5 0%, #CCFF00 100%); opacity: 0.1;"></div>
+        <div class="fixed inset-0 scanline z-50"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 w-full z-40 bg-y2k-dark/80 backdrop-blur-md border-b-2 border-y2k-blue/30 h-16 flex items-center px-8 justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-y2k-blue flex items-center justify-center font-heading text-y2k-dark text-xl">B</div>
+            <span
+                class="font-heading text-2xl tracking-tighter hover:text-y2k-blue transition-all cursor-pointer">B2E.CORE</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-12 font-pixel text-sm tracking-widest text-y2k-silver">
+            <a href="#hero" class="hover:text-y2k-blue hover:underline underline-offset-4">ROOT://</a>
+            <a href="#drop" class="hover:text-y2k-pink hover:underline underline-offset-4">COLLECTION://</a>
+            <a href="#lab" class="hover:text-y2k-lime hover:underline underline-offset-4">THE_LAB://</a>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <i data-lucide="search"
+                class="w-5 h-5 text-y2k-silver hover:text-y2k-blue cursor-pointer transition-colors"></i>
+            <div class="relative group cursor-pointer">
+                <i data-lucide="shopping-bag"
+                    class="w-6 h-6 text-y2k-blue transition-transform group-hover:scale-110"></i>
+                <span
+                    class="absolute -top-2 -right-2 bg-y2k-pink text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center border border-white">3</span>
+            </div>
+            <button
+                class="bg-y2k-lime text-y2k-dark px-4 py-1 font-heading text-sm hover:translate-x-1 hover:-translate-y-1 transition-transform border-2 border-y2k-dark shadow-[4px_4px_0px_white]">CONNECT</button>
+        </div>
+    </nav>
+
+    <!-- Marquee -->
+    <div
+        class="bg-y2k-blue text-y2k-dark py-2 font-pixel font-bold text-xs uppercase overflow-hidden fixed top-16 w-full z-30 border-b-2 border-y2k-dark">
+        <div class="flex animate-marquee whitespace-nowrap">
+            <span class="px-8">CYBER FASHION REVOLUTION • LOCAL BRAND B2E • SYSTEM STATUS: OPTIMAL • DROP 01 LIVE •
+                CYBER FASHION REVOLUTION • LOCAL BRAND B2E • SYSTEM STATUS: OPTIMAL • DROP 01 LIVE • </span>
+            <span class="px-8">CYBER FASHION REVOLUTION • LOCAL BRAND B2E • SYSTEM STATUS: OPTIMAL • DROP 01 LIVE •
+                CYBER FASHION REVOLUTION • LOCAL BRAND B2E • SYSTEM STATUS: OPTIMAL • DROP 01 LIVE • </span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <header id="hero" class="min-h-screen flex items-center justify-center relative px-6 overflow-hidden">
+            <div class="text-center z-10">
+                <div class="inline-block border-2 border-y2k-blue bg-y2k-blue/10 px-6 py-2 mb-8 animate-float">
+                    <span class="text-y2k-blue font-pixel font-black tracking-[0.4em] uppercase">Established 200X</span>
+                </div>
+                <h1
+                    class="text-chrome font-heading text-8xl md:text-[160px] leading-[0.8] mb-12 tracking-tighter reveal">
+                    FUTURE <br /> <span class="bg-y2k-pink text-white px-6 -rotate-2 inline-block">B2E</span>
+                </h1>
+
+                <!-- Real Hero Image -->
+                <div class="relative w-full max-w-4xl mx-auto mb-16 reveal">
+                    <div class="absolute -inset-4 bg-y2k-blue/20 blur-xl opacity-50 -z-10"></div>
+                    <img src="hero.png" alt="B2E Y2K Fashion"
+                        class="w-full h-auto border-4 border-white shadow-[20px_20px_0px_#FF00F5]">
+                </div>
+
+                <p class="text-lg md:text-2xl text-y2k-silver max-w-2xl mx-auto leading-relaxed mb-16 font-mono reveal">
+                    Tactical streetwear meets the gloss of the digital dawn. We bridge the gap between 1999 and the deep
+                    future.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 reveal">
+                    <button
+                        class="bg-y2k-blue text-y2k-dark px-12 py-5 font-heading text-2xl hover:scale-105 active:scale-95 transition-all shadow-[8px_8px_0px_#FF00F5]">
+                        ENTER_LOBBY
+                    </button>
+                    <button
+                        class="bg-white text-y2k-dark px-12 py-5 font-heading text-2xl hover:scale-105 active:scale-95 transition-all border-4 border-y2k-dark">
+                        VIEW_DATA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Floating Tech Elements -->
+            <div
+                class="absolute top-[20%] right-[15%] w-48 h-48 border-4 border-y2k-blue/20 rounded-full animate-float flex items-center justify-center">
+                <div class="w-32 h-32 border-2 border-y2k-pink/40 rounded-full flex items-center justify-center">
+                    <i data-lucide="cpu" class="text-y2k-lime w-12 h-12"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Product Grid -->
+        <section id="drop" class="py-40 container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                <div>
+                    <h2 class="font-pixel text-y2k- lime text-xl tracking-[0.3em] mb-4">Current Drop</h2>
+                    <h3 class="font-heading text-6xl md:text-8xl leading-none">CYBER_DRIP <br /><span
+                            class="text-y2k-blue">SEASON 01</span></h3>
+                </div>
+                <div class="glass-y2k p-6 max-w-sm">
+                    <p class="text-sm font-bold opacity-60 uppercase italic tracking-widest mb-4">// metadata</p>
+                    <p class="text-y2k-silver">Limited quantities available. No restocks for the current timeline.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Product 1 -->
+                <div class="group relative reveal">
+                    <div
+                        class="bg-white p-2 border-2 border-y2k-dark shadow-[12px_12px_0px_#00F0FF] aspect-square overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&q=80&w=800"
+                            alt="Cyber Hoodie"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-y2k-pink text-white px-3 py-1 font-heading text-xs -rotate-12 select-none">
+                            NEW</div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4
+                                class="font-heading text-2xl mb-2 group-hover:text-y2k-blue transition-colors uppercase">
+                                NEOROTIC HOODIE</h4>
+                            <p class="text-y2k-silver font-pixel uppercase tracking-widest text-[10px]">Apparel //
+                                Oversized</p>
+                        </div>
+                        <span class="font-heading text-xl text-y2k-lime">$89.00</span>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-4 border-2 border-white font-heading text-lg hover:bg-white hover:text-y2k-dark transition-all">ADD_TO_CORE</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group relative reveal" style="transition-delay: 0.1s;">
+                    <div
+                        class="bg-white p-2 border-2 border-y2k-dark shadow-[12px_12px_0px_#FF00F5] aspect-square overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=800"
+                            alt="Cyber Tee"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div
+                            class="absolute top-4 left-4 bg-y2k-blue text-y2k-dark px-3 py-1 font-heading text-xs rotate-6 select-none">
+                            SALE</div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4
+                                class="font-heading text-2xl mb-2 group-hover:text-y2k-pink transition-colors uppercase">
+                                VAPOR_TECH TEE</h4>
+                            <p class="text-y2k-silver font-pixel uppercase tracking-widest text-[10px]">Apparel //
+                                Cotton</p>
+                        </div>
+                        <span class="font-heading text-xl text-y2k-lime">$45.00</span>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-4 border-2 border-white font-heading text-lg hover:bg-white hover:text-y2k-dark transition-all">ADD_TO_CORE</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group relative reveal" style="transition-delay: 0.2s;">
+                    <div
+                        class="bg-white p-2 border-2 border-y2k-dark shadow-[12px_12px_0px_#CCFF00] aspect-square overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&q=80&w=800"
+                            alt="Cyber Shoes"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-y2k-dark text-white px-3 py-1 font-heading text-xs rotate-12 select-none border border-white">
+                            LTD</div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4
+                                class="font-heading text-2xl mb-2 group-hover:text-y2k-lime transition-colors uppercase">
+                                CHROME_KICKS V1</h4>
+                            <p class="text-y2k-silver font-pixel uppercase tracking-widest text-[10px]">Footwear //
+                                Synthetic</p>
+                        </div>
+                        <span class="font-heading text-xl text-y2k-lime">$120.00</span>
+                    </div>
+                    <button
+                        class="w-full mt-6 py-4 border-2 border-white font-heading text-lg hover:bg-white hover:text-y2k-dark transition-all">ADD_TO_CORE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech/Lab Section -->
+        <section id="lab" class="py-40 bg-white text-y2k-dark -mx-6 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 scanline opacity-30 pointer-events-none"></div>
+            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="font-heading text-5xl md:text-7xl mb-8 leading-none italic uppercase">THE_ <br />
+                        LABORATORY</h2>
+                    <p class="text-xl font-bold leading-relaxed mb-12">
+                        B2E is not just a brand. It's an experiment in retro-futurism. We utilize liquid metals,
+                        iridescent fabrics, and the aesthetics of the early internet to craft the next era of fashion.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6 border-b-2 border-y2k-dark pb-4">
+                            <span class="font-heading text-3xl text-y2k-pink">01</span>
+                            <span class="font-black uppercase tracking-widest">Digital-First Design Approach</span>
+                        </div>
+                        <div class="flex items-center gap-6 border-b-2 border-y2k-dark pb-4">
+                            <span class="font-heading text-3xl text-y2k-blue">02</span>
+                            <span class="font-black uppercase tracking-widest">Sustainability in the Void</span>
+                        </div>
+                        <div class="flex items-center gap-6 border-b-2 border-y2k-dark pb-4">
+                            <span class="font-heading text-3xl text-y2k-lime">03</span>
+                            <span class="font-black uppercase tracking-widest">Community Hub Verification</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative reveal">
+                    <div class="bg-y2k-dark p-4 shadow-[30px_30px_0px_#CCFF00] -rotate-2">
+                        <div
+                            class="bg-y2k-blue aspect-[4/3] flex items-center justify-center p-8 border-4 border-white">
+                            <i data-lucide="monitor" class="w-full h-full text-y2k-dark"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 bg-y2k-pink text-white p-8 font-heading text-4xl rotate-6 shadow-xl">
+                        B2E_VERIFIED</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-y2k-dark py-32 px-10 border-t-4 border-y2k-blue/20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-20">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-2 mb-8">
+                    <div
+                        class="w-10 h-10 bg-y2k-pink flex items-center justify-center font-heading text-y2k-dark text-2xl">
+                        B</div>
+                    <span class="font-heading text-4xl tracking-tighter">B2E.LABS</span>
+                </div>
+                <p class="text-y2k-silver max-w-sm font-mono text-sm leading-loose mb-12">
+                    Providing the aesthetic since the dial-up era. Cybernetics for the street.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#"
+                        class="w-12 h-12 bg-white/5 border-2 border-white/10 flex items-center justify-center hover:bg-y2k-blue hover:text-y2k-dark transition-all">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 bg-white/5 border-2 border-white/10 flex items-center justify-center hover:bg-y2k-pink hover:text-white transition-all">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 bg-white/5 border-2 border-white/10 flex items-center justify-center hover:bg-y2k-lime hover:text-y2k-dark transition-all">
+                        <i data-lucide="dribbble"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-xl text-white mb-10 tracking-widest uppercase">Protocol</h4>
+                <ul class="space-y-6 text-sm font-mono text-y2k-silver uppercase">
+                    <li><a href="#" class="hover:text-y2k-blue">Downloads</a></li>
+                    <li><a href="#" class="hover:text-y2k-blue">Verification</a></li>
+                    <li><a href="#" class="hover:text-y2k-blue">Manifesto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-xl text-white mb-10 tracking-widest uppercase">Support</h4>
+                <ul class="space-y-6 text-sm font-mono text-y2k-silver uppercase">
+                    <li><a href="#" class="hover:text-y2k-pink">Encrypted Chat</a></li>
+                    <li><a href="#" class="hover:text-y2k-pink">Trace Order</a></li>
+                    <li><a href="#" class="hover:text-y2k-pink">HQ_Location</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="container mx-auto mt-32 pt-10 border-t-2 border-white/5 flex flex-col md:row items-center justify-between gap-8">
+            <p class="text-[10px] font-mono font-bold uppercase tracking-[0.5em] text-y2k-silver/40">© 200X-2025 B2E CO.
+                ALL RIGHTS RESERVED. [SYSTEM_CLOCK: ERROR]</p>
+            <div class="flex gap-10 text-[10px] font-mono font-bold uppercase tracking-[0.5em] text-y2k-silver/40">
+                <a href="#">Privacy_Policy</a>
+                <a href="#">Terms_Of_Usage</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

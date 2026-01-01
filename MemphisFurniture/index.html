@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDIO MEMPHIS // RADICAL FURNITURE</title>
+    <meta name="description"
+        content="Bold, playful, and functional. Discover high-quality Memphis-style furniture for your modern home.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@400;700;900&family=Space+Grotesk:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        m: {
+                            yellow: '#FFDE03',
+                            pink: '#FF4A9F',
+                            blue: '#03A9F4',
+                            green: '#00FFCA',
+                            orange: '#FF5722',
+                            black: '#1A1A1B',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Lexend Exa"', 'sans-serif'],
+                        body: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white text-m-black font-body overflow-x-hidden">
+
+    <!-- Geometric Background Shapes -->
+    <div class="fixed inset-0 -z-10 bg-zigzag opacity-5"></div>
+    <div class="floating-shape w-64 h-64 bg-m-yellow rounded-full top-[10%] left-[-5%] opacity-40"></div>
+    <div class="floating-shape w-48 h-48 bg-m-blue top-[60%] right-[-5%] pattern-dots opacity-40"
+        style="animation-delay: -2s;"></div>
+    <div class="floating-shape w-32 h-32 bg-m-pink rounded-lg bottom-[10%] left-[10%] rotate-45 opacity-40"
+        style="animation-delay: -5s;"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 p-6">
+        <div class="container mx-auto flex items-center justify-between bg-white brutal-border m-shadow px-8 py-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-m-yellow brutal-border flex items-center justify-center">
+                    <div class="w-4 h-4 bg-m-black rounded-full"></div>
+                </div>
+                <span class="font-heading text-2xl tracking-tighter">STUDIO//MEMPHIS</span>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-10 font-bold uppercase text-xs tracking-widest">
+                <a href="#objects"
+                    class="hover:text-m-blue hover:underline decoration-4 underline-offset-8 transition-all">Objects</a>
+                <a href="#radical"
+                    class="hover:text-m-pink hover:underline decoration-4 underline-offset-8 transition-all">Radical</a>
+                <a href="#story"
+                    class="hover:text-m-green hover:underline decoration-4 underline-offset-8 transition-all">Story</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <button class="relative">
+                    <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                    <span
+                        class="absolute -top-3 -right-3 bg-m-orange text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-m-black font-black">2</span>
+                </button>
+                <button
+                    class="hidden sm:block bg-m-black text-white px-6 py-2 brutal-border m-shadow-blue hover:m-shadow-pink transition-all font-bold uppercase text-xs">Shop
+                    All</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section class="min-h-[90vh] flex items-center justify-center px-6 relative">
+            <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div
+                        class="inline-block bg-m-pink text-white px-4 py-1 brutal-border mb-8 -rotate-1 font-bold uppercase text-xs tracking-widest">
+                        New Radical Collection
+                    </div>
+                    <h1 class="font-heading text-6xl md:text-8xl leading-[0.85] mb-8 tracking-tighter">
+                        LIVE <br /> <span class="text-m-blue">COLOURFL</span> <br /> <span
+                            class="bg-m-yellow px-4 brutal-border inline-block rotate-1">LOUD.</span>
+                    </h1>
+                    <p class="text-2xl font-bold leading-tight mb-12 max-w-xl">
+                        Why settle for beige? Our furniture is a geometry lesson your living room never knew it needed.
+                        Radical design for the bold.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <button
+                            class="bg-m-blue text-white px-10 py-5 brutal-border m-shadow-pink font-heading text-xl hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                            GO SHOP
+                        </button>
+                        <button
+                            class="bg-white text-m-black px-10 py-5 brutal-border font-heading text-xl hover:bg-m-yellow transition-all">
+                            OUR PHILOSOPHY
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative reveal" style="transition-delay: 0.2s;">
+                    <div class="relative z-10 p-4 bg-white brutal-border m-shadow-blue rotate-2">
+                        <img src="hero.png" alt="Memphis Furniture" class="w-full h-auto">
+                        <div
+                            class="absolute -top-10 -right-10 w-32 h-32 bg-m-yellow rounded-full brutal-border flex items-center justify-center -rotate-12 animate-pulse">
+                            <span class="font-heading text-sm text-center font-black">OFF <br /> 30%</span>
+                        </div>
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div
+                        class="absolute -bottom-10 -left-10 w-40 h-12 bg-m-green brutal-border pattern-dots -rotate-12">
+                    </div>
+                    <div
+                        class="absolute -top-5 left-1/2 w-20 h-20 bg-m-orange brutal-border rounded-full -translate-x-12 translate-y-[-20%]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Grid -->
+        <section id="objects" class="py-40 container mx-auto px-6">
+            <div class="mb-24 flex flex-col md:flex-row justify-between items-baseline gap-8">
+                <h2 class="font-heading text-5xl md:text-7xl uppercase reveal">RADICAL OBJECTS</h2>
+                <div class="bg-m-black text-white p-6 brutal-border m-shadow-blue rotate-1 max-w-sm reveal">
+                    <p class="font-bold uppercase tracking-widest text-xs mb-2 italic">// object_metadata</p>
+                    <p class="text-lg">Geometry is the language. Color is the message. Studio Memphis objects are
+                        functional art for the daring.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Product 1 -->
+                <div class="card-vibe p-3 bg-m-yellow brutal-border reveal">
+                    <div class="bg-white brutal-border relative overflow-hidden aspect-square mb-6">
+                        <div class="absolute inset-0 pattern-dots opacity-10"></div>
+                        <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=80&w=800"
+                            alt="Arc Chair" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-2 pb-2">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="font-heading text-2xl uppercase">ARC CHAIR</h3>
+                            <span class="bg-m-black text-white px-3 py-1 font-bold">$420</span>
+                        </div>
+                        <button
+                            class="w-full py-4 bg-m-black text-white brutal-border font-bold uppercase transition-all hover:bg-m-pink">Move
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card-vibe p-3 bg-m-blue brutal-border rotate-1 reveal" style="transition-delay: 0.1s;">
+                    <div class="bg-white brutal-border relative overflow-hidden aspect-square mb-6">
+                        <img src="https://images.unsplash.com/photo-1544450173-8c879791368a?auto=format&fit=crop&q=80&w=800"
+                            alt="Tetris Lamp" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-2 pb-2 text-white">
+                        <div class="flex justify-between items-center mb-4 text-m-black">
+                            <h3 class="font-heading text-2xl uppercase">TETRIS LAMP</h3>
+                            <span class="bg-white text-m-black brutal-border px-3 py-1 font-bold">$180</span>
+                        </div>
+                        <button
+                            class="w-full py-4 bg-white text-m-black brutal-border font-bold uppercase transition-all hover:bg-m-yellow">Move
+                            To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card-vibe p-3 bg-m-pink brutal-border -rotate-1 reveal" style="transition-delay: 0.2s;">
+                    <div class="bg-white brutal-border relative overflow-hidden aspect-square mb-6 text-m-black">
+                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=800"
+                            alt="Zigzag Table" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-2 pb-2">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="font-heading text-2xl uppercase">ZIGZAG TBL</h3>
+                            <span class="bg-m-black text-white px-3 py-1 font-bold">$550</span>
+                        </div>
+                        <button
+                            class="w-full py-4 bg-m-black text-white brutal-border font-bold uppercase transition-all hover:bg-m-green hover:text-m-black">Move
+                            To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="story" class="py-40 bg-m-black text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-m-pink opacity-20 blur-[150px] rounded-full">
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10 reveal">
+                <h2 class="font-heading text-6xl md:text-9xl mb-12 italic tracking-tighter">STOP <br /> BEING <br />
+                    <span class="text-m-yellow">BORING.</span></h2>
+                <p
+                    class="text-2xl font-bold max-w-2xl mx-auto mb-20 opacity-80 uppercase tracking-widest leading-tight">
+                    Join the radical movement. We transform spaces from "okay" to "holy cow" in one delivery.</p>
+                <button
+                    class="px-16 py-8 bg-m-yellow text-m-black brutal-border m-shadow-white font-heading text-4xl hover:m-shadow-pink transition-all">
+                    JOIN THE LIST
+                </button>
+            </div>
+
+            <!-- More Floating Shapes for Footer -->
+            <div class="absolute bottom-0 left-0 w-full h-20 bg-m-blue pattern-lines opacity-30"></div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-24 px-10 border-t-4 border-m-black">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-20">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-2 mb-8">
+                    <div
+                        class="w-10 h-10 bg-m-pink brutal-border flex items-center justify-center font-heading text-white text-2xl">
+                        M</div>
+                    <span class="font-heading text-4xl tracking-tighter">STUDIO//MEMPHIS</span>
+                </div>
+                <p class="text-m-black/60 max-w-sm font-bold uppercase tracking-widest text-xs leading-loose mb-12">
+                    RADICAL DESIGN SINCE WE DECIDED BEIGE WAS OFFICIALLY ILLEGAL. MADE FOR THE BOLD.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-12 h-12 brutal-border bg-m-blue flex items-center justify-center hover:bg-m-yellow transition-all"><i
+                            data-lucide="instagram"></i></a>
+                    <a href="#"
+                        class="w-12 h-12 brutal-border bg-m-pink flex items-center justify-center hover:bg-m-green transition-all"><i
+                            data-lucide="twitter"></i></a>
+                    <a href="#"
+                        class="w-12 h-12 brutal-border bg-m-orange flex items-center justify-center hover:bg-m-blue transition-all text-white"><i
+                            data-lucide="dribbble"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-xl mb-10 tracking-widest uppercase">Catalog</h4>
+                <ul class="space-y-6 text-sm font-bold uppercase tracking-widest text-m-black/60">
+                    <li><a href="#" class="hover:text-m-pink">Furniture</a></li>
+                    <li><a href="#" class="hover:text-m-blue">Lighting</a></li>
+                    <li><a href="#" class="hover:text-m-green">Objects</a></li>
+                    <li><a href="#" class="hover:text-m-orange">Radical Wear</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-xl mb-10 tracking-widest uppercase">Connect</h4>
+                <ul class="space-y-6 text-sm font-bold uppercase tracking-widest text-m-black/60">
+                    <li><a href="#" class="hover:text-m-blue">Collaborate</a></li>
+                    <li><a href="#" class="hover:text-m-pink">Newsletter</a></li>
+                    <li><a href="#" class="hover:text-m-green">Legal Data</a></li>
+                    <li><a href="#" class="hover:text-m-yellow">Press Kit</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto mt-24 pt-10 border-t-2 border-m-black/10 text-center">
+            <p class="text-[10px] font-bold uppercase tracking-[0.5em] text-m-black/40">© 1981-2025 STUDIO MEMPHIS
+                DESIGN LAB. NO BORING STUFF ALLOWED.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

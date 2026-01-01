@@ -1,0 +1,124 @@
+/* Y2K Aesthetic Design System for B2E */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bungee&family=DotGothic16&display=swap');
+
+:root {
+    --y2k-pink: #FF00F5;
+    --y2k-blue: #00F0FF;
+    --y2k-lime: #CCFF00;
+    --y2k-silver: #E2E2E2;
+    --y2k-dark: #0A0A0A;
+    --y2k-white: #FFFFFF;
+}
+
+@layer utilities {
+    .text-chrome {
+        background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 45%, #FFFFFF 50%, #404040 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
+    }
+
+    .glass-y2k {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+    }
+
+    .scanline {
+        background: linear-gradient(to bottom, transparent 50%, rgba(0, 240, 255, 0.05) 50%);
+        background-size: 100% 4px;
+        pointer-events: none;
+    }
+
+    .holo-bg {
+        background: linear-gradient(135deg, #00F0FF 0%, #FF00F5 50%, #CCFF00 100%);
+        opacity: 0.15;
+        filter: blur(100px);
+    }
+
+    .pixel-border {
+        border-style: solid;
+        border-width: 4px;
+        border-image-slice: 2;
+        border-image-width: 2;
+        border-image-outset: 0;
+        border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Cpath d='M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z' fill='%23000'/%3E%3C/svg%3E");
+    }
+}
+
+/* Base Body Styles */
+body {
+    background-color: var(--y2k-dark);
+    cursor: crosshair;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(2deg);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 15s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--y2k-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--y2k-blue);
+    border-radius: 0px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: scale(0.8) translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Y2K Star Cursor */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: var(--y2k-lime);
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: translate(-50%, -50%);
+}

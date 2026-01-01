@@ -2,59 +2,78 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Intersection Observer with Gaming Warp (Skew)
+    // Intersection Observer for Reveal Animations
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target);
+                revealObserver.unobserve(entry.target); // Only reveal once
             }
         });
     }, observerOptions);
 
-    // Apply animation to elements
-    document.querySelectorAll('section, h1, .grid > div').forEach(el => {
-        el.classList.add('reveal-on-scroll');
-        revealObserver.observe(el);
-    });
+    // Dynamic selection of elements to reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => revealObserver.observe(el));
 
     // Navbar Scroll Effect
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            nav.style.backgroundColor = 'rgba(15, 15, 35, 0.95)';
-            nav.style.height = '80px';
+        if (window.scrollY > 50) {
+            nav.classList.add('py-4');
+            nav.classList.remove('py-2'); // If using padding, adjust here
+            nav.classList.add('bg-valo-dark');
         } else {
-            nav.style.backgroundColor = 'rgba(15, 15, 35, 0.8)';
-            nav.style.height = '96px';
+            nav.classList.remove('py-4');
+            nav.classList.remove('bg-valo-dark');
         }
     });
 
-    // Smooth Scroll
+    // Custom Button Feedback (Brutal Design)
+    const brutalButtons = document.querySelectorAll('.brutal-shadow');
+    brutalButtons.forEach(btn => {
+        btn.addEventListener('mousedown', () => {
+            btn.classList.add('translate-x-1', 'translate-y-1', 'shadow-none');
+        });
+        btn.addEventListener('mouseup', () => {
+            btn.classList.remove('translate-x-1', 'translate-y-1', 'shadow-none');
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.classList.remove('translate-x-1', 'translate-y-1', 'shadow-none');
+        });
+    });
+
+    // Smooth Scroll for Internal Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const target = document.querySelector(targetId);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const navHeight = 84;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 
-    // Subtle Hero Parallax
+    // Simple Parallax for Hero
+    const heroImage = document.querySelector('header img');
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
-        const heroImg = document.querySelector('.absolute.inset-0.z-0 img');
-        if (heroImg) {
-            heroImg.style.transform = `translateY(${scrolled * 0.4}px)`;
+        if (heroImage) {
+            heroImage.style.transform = `translateY(${scrolled * 0.3}px) scale(1.1)`;
         }
     });
 });

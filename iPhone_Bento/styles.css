@@ -1,0 +1,116 @@
+/* iPhone Bento Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --apple-black: #000000;
+    --apple-dark: #1D1D1F;
+    --apple-gray: #86868B;
+    --apple-bg: #F5F5F7;
+    --apple-blue: #0071E3;
+    --titanium-natural: #BEB4A8;
+    --titanium-black: #3A3A3C;
+    --titanium-blue: #464B56;
+    --titanium-white: #DADADA;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--apple-black);
+    color: white;
+    overflow-x: hidden;
+}
+
+@layer utilities {
+    .bento-card {
+        background: var(--apple-dark);
+        border-radius: 32px;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bento-card:hover {
+        transform: scale(1.02);
+    }
+
+    .glass-effect {
+        background: rgba(29, 29, 31, 0.72);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .text-gray {
+        color: var(--apple-gray);
+    }
+
+    .gradient-text {
+        background: linear-gradient(180deg, #FFFFFF 0%, #86868B 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-titanium {
+        background: linear-gradient(135deg, #BEB4A8 0%, #86868B 100%);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--apple-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--apple-gray);
+    border-radius: 10px;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slow-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.animate-slow-zoom {
+    animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+
+/* Bento Grid Specifics */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVATAR: FIRE AND ASH | OFFICIAL EXPERIENCE</title>
+    <meta name="description"
+        content="Return to Pandora. Submerge into the unknown. Witness the next chapter of James Cameron's Avatar.">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        av: {
+                            deep: '#020817',
+                            ocean: '#004e92',
+                            biolume: '#00ffc3',
+                            lava: '#ff4e00'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-av-deep text-slate-100">
+    <div class="atmosphere"></div>
+
+    <!-- Immersive Navbar -->
+    <nav
+        class="fixed top-0 w-full z-50 flex items-center justify-between px-10 py-8 glass-cinematic border-b border-white/5">
+        <div class="flex items-center gap-6">
+            <span class="font-cinzel text-3xl font-black tracking-[0.2em] text-glow">AVATAR</span>
+            <div class="h-6 w-[1px] bg-white/20 hidden md:block"></div>
+            <span class="font-cinzel text-xs tracking-[0.5em] hidden md:block opacity-60">FIRE AND ASH</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-12 font-cinzel text-xs tracking-[0.3em]">
+            <a href="#story" class="hover:text-av-biolume transition-colors">THE STORY</a>
+            <a href="#biomes" class="hover:text-av-biolume transition-colors">BIOMES</a>
+            <a href="#cast" class="hover:text-av-biolume transition-colors">CAST</a>
+        </div>
+
+        <button
+            class="px-8 py-3 border border-av-biolume/50 font-cinzel text-xs tracking-widest hover:bg-av-biolume hover:text-av-deep transition-all biolume-border">
+            BOOK TICKETS
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Hero Image (Hyperrealistic) -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-av-deep via-transparent to-transparent z-10"></div>
+            <img src="hero.png" alt="Avatar 3 World" class="w-full h-full object-cover scale-110 opacity-70">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-20 text-center">
+            <div class="reveal">
+                <span class="font-cinzel text-av-biolume tracking-[1em] uppercase mb-8 block text-sm">A JAMES CAMERON
+                    FILM</span>
+                <h1
+                    class="text-7xl md:text-[10rem] font-black font-cinzel leading-none tracking-tighter mb-12 text-glow">
+                    FIRE <span class="text-white/20 px-4">&</span> ASH
+                </h1>
+                <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed opacity-60 italic mb-16">
+                    Pandora is in transition. The ocean mourns, but the fire rises. Discovery begins where the shadows
+                    fall.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-10">
+                    <button
+                        class="bg-white text-av-deep px-12 py-5 font-cinzel font-black tracking-widest hover:bg-av-biolume transition-all">
+                        WATCH TRAILER
+                    </button>
+                    <a href="#story" class="flex items-center gap-4 font-cinzel text-xs tracking-[0.4em] group">
+                        EXPLORE PANDORA <i data-lucide="arrow-right"
+                            class="w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+            class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-40">
+            <div class="w-[1px] h-20 bg-gradient-to-b from-transparent to-white"></div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-40">
+        <!-- The Story Section -->
+        <section id="story" class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-60">
+            <div class="reveal">
+                <h2 class="text-4xl md:text-6xl font-cinzel mb-12 leading-tight">THE NEXT <br /> EVOLUTION.</h2>
+                <div class="space-y-8 text-lg md:text-xl font-light opacity-70 leading-relaxed">
+                    <p>
+                        Following the events on the reefs, the Sully family must venture into the volatile Ash Realms—a
+                        volcanic territory home to the "People of the Ash."
+                    </p>
+                    <p>
+                        New cultures, new bioluminescent landscapes, and a conflict that threatens the very core of
+                        Pandora's soul. Hyperrealistic visuals meet infinite depth in the most ambitious chapter yet.
+                    </p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-10">
+                    <div class="border-l-2 border-av-lava pl-6">
+                        <span class="block text-3xl font-cinzel mb-2">3500+</span>
+                        <span class="text-xs tracking-widest opacity-40 uppercase">VFX Artists</span>
+                    </div>
+                    <div class="border-l-2 border-av-biolume pl-6">
+                        <span class="block text-3xl font-cinzel mb-2">IMAX</span>
+                        <span class="text-xs tracking-widest opacity-40 uppercase">Exclusive Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative reveal" style="transition-delay: 0.3s;">
+                <div class="absolute -inset-10 bg-av-lava/10 blur-[80px] rounded-full -z-10"></div>
+                <!-- 3D Card Effect -->
+                <div class="glass-cinematic p-4 rounded-3xl floating-cinematic hyper-3d scale-110">
+                    <img src="ash_people.png" alt="People of the Ash"
+                        class="rounded-2xl shadow-2xl brightness-110 contrast-110">
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black/80 to-transparent rounded-b-2xl">
+                        <span class="font-cinzel text-av-lava tracking-[0.5em] text-[10px] block mb-2 uppercase">New
+                            Character</span>
+                        <h3 class="text-2xl font-cinzel tracking-wider">VARANG</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Tech Section -->
+        <section id="biomes" class="mb-60">
+            <div class="text-center mb-24 reveal">
+                <h2 class="text-5xl md:text-7xl font-cinzel mb-8 tracking-wider">HYPERREAL WORLDS</h2>
+                <p class="font-cinzel text-xs tracking-[0.5em] opacity-40 uppercase">Beyond the limits of imagination
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="reveal group cursor-pointer" style="transition-delay: 0.1s;">
+                    <div class="relative overflow-hidden rounded-3xl h-[600px]">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-av-deep/60 flex flex-col justify-end p-12 group-hover:bg-transparent transition-all">
+                            <h4 class="text-3xl font-cinzel mb-4">THE ASH PLAINS</h4>
+                            <p
+                                class="text-sm font-light opacity-60 max-w-xs group-hover:opacity-100 italic transition-opacity">
+                                Volcanic dust, crimson horizons, and the heat of eternal fire.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal group cursor-pointer" style="transition-delay: 0.2s;">
+                    <div class="relative overflow-hidden rounded-3xl h-[600px]">
+                        <img src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?auto=format&fit=crop&q=80"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-av-deep/60 flex flex-col justify-end p-12 group-hover:bg-transparent transition-all">
+                            <h4 class="text-3xl font-cinzel mb-4">CELESTIAL CANYONS</h4>
+                            <p
+                                class="text-sm font-light opacity-60 max-w-xs group-hover:opacity-100 italic transition-opacity">
+                                Floating mountains above the clouds of the northern hemisphere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal group cursor-pointer" style="transition-delay: 0.3s;">
+                    <div class="relative overflow-hidden rounded-3xl h-[600px]">
+                        <img src="https://images.unsplash.com/photo-1518173946687-a4c8a9ba332f?auto=format&fit=crop&q=80"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-av-deep/60 flex flex-col justify-end p-12 group-hover:bg-transparent transition-all">
+                            <h4 class="text-3xl font-cinzel mb-4">THE DEEP BIOLUME</h4>
+                            <p
+                                class="text-sm font-light opacity-60 max-w-xs group-hover:opacity-100 italic transition-opacity">
+                                Underwater forests that pulse with the rhythm of the planet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pre-Footer CTA -->
+    <section class="py-60 bg-gradient-to-b from-transparent via-av-lava/5 to-transparent text-center reveal">
+        <h2 class="text-6xl md:text-9xl font-black font-cinzel mb-16 tracking-tighter italic">SEE_THE_FUTURE_</h2>
+        <div class="flex flex-wrap justify-center gap-10">
+            <button
+                class="px-16 py-6 bg-av-biolume text-av-deep font-cinzel font-black tracking-widest text-xl hover:scale-110 transition-transform">REGISTER
+                FOR IMAX</button>
+            <button
+                class="px-16 py-6 border-2 border-white/20 font-cinzel font-black tracking-widest text-xl hover:bg-white hover:text-av-deep transition-all">SIGN
+                UP FOR UPDATES</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-32 px-10 border-t border-white/5 relative overflow-hidden">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-20 items-start">
+            <div class="md:col-span-2">
+                <span class="font-cinzel text-5xl font-black tracking-widest mb-10 block opacity-20">AVATAR 3</span>
+                <p class="text-xs tracking-[0.4em] font-light opacity-40 uppercase mb-8">Developed by Disney Interactive
+                </p>
+                <div class="flex gap-8 opacity-40">
+                    <i data-lucide="twitter" class="w-6 h-6 hover:opacity-100 transition-opacity cursor-pointer"></i>
+                    <i data-lucide="instagram" class="w-6 h-6 hover:opacity-100 transition-opacity cursor-pointer"></i>
+                    <i data-lucide="youtube" class="w-6 h-6 hover:opacity-100 transition-opacity cursor-pointer"></i>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="font-cinzel text-xs tracking-[0.5em] mb-8 text-av-biolume uppercase">EXPLORE</h5>
+                <ul class="text-xs tracking-[0.3em] font-light space-y-4 opacity-50 uppercase">
+                    <li><a href="#" class="hover:opacity-100 transition-opacity">Media Kit</a></li>
+                    <li><a href="#" class="hover:opacity-100 transition-opacity">Press Center</a></li>
+                    <li><a href="#" class="hover:opacity-100 transition-opacity">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <div class="text-right">
+                <p class="text-[8px] font-bold tracking-[0.8em] opacity-20 uppercase">
+                    © 2025 20TH CENTURY STUDIOS. ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

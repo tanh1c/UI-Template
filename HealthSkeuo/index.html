@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAL_CHECK // INTELLIGENT HEALTH SKEUO</title>
+    <meta name="description"
+        content="A tangible approach to your health. Monitor your vitals with the precision of high-end medical equipment.">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sk: {
+                            bg: '#E0E5EC',
+                            primary: '#0A84FF',
+                            text: '#2D3436'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-sk-bg p-4 md:p-8">
+
+    <!-- Top Navigation Card -->
+    <nav class="container mx-auto max-w-7xl mb-12 sk-outset rounded-[40px] px-8 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 sk-inset rounded-full flex items-center justify-center">
+                <i data-lucide="heart-pulse" class="text-sk-primary w-6 h-6"></i>
+            </div>
+            <span class="font-extrabold text-xl tracking-tighter">VITAL_CHECK</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-12 text-sm font-bold text-sk-text/60 uppercase tracking-widest">
+            <a href="#stats" class="hover:text-sk-primary transition-colors">Vitals</a>
+            <a href="#devices" class="hover:text-sk-primary transition-colors">Nodes</a>
+            <a href="#pro" class="hover:text-sk-primary transition-colors">Expert</a>
+        </div>
+
+        <button class="sk-btn-glossy px-8 py-3 rounded-2xl text-white font-bold text-sm">
+            LOGIN_SECURE
+        </button>
+    </nav>
+
+    <main class="container mx-auto max-w-7xl">
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+            <div class="reveal">
+                <div
+                    class="sk-inset inline-block px-4 py-1 rounded-full text-[10px] font-black uppercase text-sk-primary mb-8 tracking-[0.3em]">
+                    REAL-TIME MONITORING V4.0
+                </div>
+                <h1 class="text-5xl md:text-[5rem] font-black leading-none mb-10 tracking-tighter">
+                    HEALTH YOU CAN <br /> <span class="text-sk-primary">TOUCH.</span>
+                </h1>
+                <p class="text-xl text-sk-text/60 leading-relaxed mb-12 max-w-lg">
+                    Ditch the flat interfaces. Experience a health tracker that feels like a professional medical
+                    instrument. Precision in every pixel.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <button class="sk-btn-glossy px-10 py-5 rounded-3xl text-xl font-black text-white spatial-shadow">
+                        START_TRACKING
+                    </button>
+                    <div class="sk-inset px-10 py-5 rounded-3xl flex items-center gap-4">
+                        <i data-lucide="info" class="text-sk-text/40"></i>
+                        <span class="font-bold text-sk-text/80">LEARN_MORE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative reveal pt-10" style="transition-delay: 0.2s;">
+                <!-- Main Dashboard Card (Realistic Device Look) -->
+                <div class="sk-outset p-1 rounded-[60px] border-[12px] border-sk-bg">
+                    <div class="bg-sk-bg p-8 rounded-[48px] sk-inset">
+                        <img src="hero.png" alt="Health Dashboard" class="w-full h-auto rounded-[32px] shadow-lg">
+                    </div>
+                </div>
+                <!-- Floating Mini Gear -->
+                <div
+                    class="absolute -top-10 -right-10 w-32 h-32 sk-metal rounded-full p-4 flex items-center justify-center animate-spin-slow">
+                    <div class="w-full h-full sk-inset rounded-full flex items-center justify-center">
+                        <i data-lucide="settings" class="text-sk-text/40 w-8 h-8"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Grid (Recessed Bento) -->
+        <section id="stats" class="mb-32">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-black mb-4">TACTILE METRICS</h2>
+                <p class="text-sk-text/60 font-bold uppercase tracking-widest text-xs">Your core vitals in
+                    high-definition</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- BPM Card -->
+                <div class="sk-outset p-2 rounded-[40px] reveal">
+                    <div
+                        class="sk-inset h-full p-10 rounded-[38px] flex flex-col items-center justify-center text-center">
+                        <i data-lucide="activity" class="text-red-500 w-12 h-12 mb-6"></i>
+                        <span class="text-6xl font-black text-sk-text mb-2">72</span>
+                        <span class="uppercase font-bold text-sk-text/40 text-xs tracking-widest">Beats Per
+                            Minute</span>
+                        <div class="w-full h-2 sk-inset mt-8 rounded-full overflow-hidden">
+                            <div class="h-full bg-red-500 w-[72%] shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLEEP Card -->
+                <div class="sk-outset p-2 rounded-[40px] reveal" style="transition-delay: 0.1s;">
+                    <div
+                        class="sk-inset h-full p-10 rounded-[38px] flex flex-col items-center justify-center text-center">
+                        <i data-lucide="moon" class="text-purple-500 w-12 h-12 mb-6"></i>
+                        <span class="text-6xl font-black text-sk-text mb-2">8.5</span>
+                        <span class="uppercase font-bold text-sk-text/40 text-xs tracking-widest">Hours Slept</span>
+                        <div class="w-full h-2 sk-inset mt-8 rounded-full overflow-hidden">
+                            <div class="h-full bg-purple-500 w-[85%] shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEPS Card -->
+                <div class="sk-outset p-2 rounded-[40px] reveal" style="transition-delay: 0.2s;">
+                    <div
+                        class="sk-inset h-full p-10 rounded-[38px] flex flex-col items-center justify-center text-center">
+                        <i data-lucide="footprints" class="text-sk-primary w-12 h-12 mb-6"></i>
+                        <span class="text-6xl font-black text-sk-text mb-2">12k</span>
+                        <span class="uppercase font-bold text-sk-text/40 text-xs tracking-widest">Steps Taken</span>
+                        <div class="w-full h-2 sk-inset mt-8 rounded-full overflow-hidden">
+                            <div class="h-full bg-sk-primary w-1/2 shadow-[0_0_10px_rgba(10,132,255,0.5)]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Control Area -->
+        <section id="devices" class="mb-32">
+            <div class="sk-outset rounded-[60px] p-12 lg:p-20 flex flex-col lg:flex-row gap-16 items-center">
+                <div class="flex-1 reveal">
+                    <h3 class="text-4xl font-black mb-8">NODE_SYNC</h3>
+                    <p class="text-xl text-sk-text/60 leading-relaxed mb-12">
+                        Connect with the complete VITAL ecosystem. Smart scales, rings, and medical-grade sensors. All
+                        synced to your skeuomorphic dashboard.
+                    </p>
+                    <div class="space-y-6">
+                        <div
+                            class="sk-inset p-6 rounded-3xl flex items-center justify-between group cursor-pointer hover:bg-neutral-100/10 transition-all">
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 sk-metal rounded-2xl flex items-center justify-center">
+                                    <i data-lucide="watch" class="text-sk-text/60"></i>
+                                </div>
+                                <span class="font-bold text-lg">VitalRing Gen 4</span>
+                            </div>
+                            <span class="text-sk-primary font-black uppercase text-xs tracking-widest">Connected_</span>
+                        </div>
+                        <div
+                            class="sk-inset p-6 rounded-3xl flex items-center justify-between group cursor-pointer hover:bg-neutral-100/10 transition-all">
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 sk-metal rounded-2xl flex items-center justify-center">
+                                    <i data-lucide="scale" class="text-sk-text/60"></i>
+                                </div>
+                                <span class="font-bold text-lg">SmartScale Pro</span>
+                            </div>
+                            <span
+                                class="text-sk-text/20 font-black uppercase text-xs tracking-widest">Searching...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-sm reveal" style="transition-delay: 0.2s;">
+                    <div class="sk-metal p-1 rounded-[60px]">
+                        <div
+                            class="bg-sk-bg h-96 rounded-[59px] sk-inset flex items-center justify-center relative overflow-hidden">
+                            <!-- Pulse Animation -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-32 h-32 bg-sk-primary/10 rounded-full animate-ping"></div>
+                            </div>
+                            <i data-lucide="bluetooth" class="text-sk-primary w-20 h-20 relative z-10 opacity-70"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pro Expert CTA -->
+        <section id="pro" class="mb-32 py-20 bg-sk-primary rounded-[60px] text-center text-white spatial-shadow reveal">
+            <h2 class="text-5xl font-black mb-8">EXPERT_OVERSIGHT</h2>
+            <p class="text-xl opacity-80 max-w-2xl mx-auto mb-16 font-medium">Link your account with your physician for
+                real-time data sharing and professional consultation.</p>
+            <div class="flex flex-col sm:row items-center justify-center gap-8 px-6">
+                <button
+                    class="bg-white text-sk-primary px-12 py-5 rounded-3xl text-2xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all">
+                    HIRE_COACH
+                </button>
+                <div class="flex items-center gap-6">
+                    <div class="flex -space-x-4">
+                        <div class="w-12 h-12 rounded-full border-4 border-sk-primary bg-neutral-200"></div>
+                        <div class="w-12 h-12 rounded-full border-4 border-sk-primary bg-neutral-300"></div>
+                        <div class="w-12 h-12 rounded-full border-4 border-sk-primary bg-neutral-400"></div>
+                    </div>
+                    <span class="font-bold text-sm tracking-widest uppercase opacity-70">1,200+ Experts Active</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="container mx-auto max-w-7xl py-24 px-8 sk-outset rounded-[60px] flex flex-col lg:flex-row justify-between items-start gap-20">
+        <div class="max-w-xs">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-8 h-8 sk-inset rounded-full flex items-center justify-center">
+                    <i data-lucide="heart-pulse" class="text-sk-primary w-5 h-5"></i>
+                </div>
+                <span class="font-extrabold text-lg tracking-tighter uppercase">VITAL_CHECK</span>
+            </div>
+            <p class="text-xs text-sk-text/40 font-bold leading-loose uppercase tracking-widest">
+                Professional health tracking for the physical world. Built to endure.
+            </p>
+        </div>
+
+        <div
+            class="grid grid-cols-2 md:grid-cols-3 gap-16 tracking-widest uppercase font-black text-[10px] text-sk-text/60">
+            <div class="flex flex-col gap-6">
+                <span class="text-sk-primary">PROTOCOL</span>
+                <a href="#" class="hover:text-sk-text">Privacy_Doc</a>
+                <a href="#" class="hover:text-sk-text">Encryption_v4</a>
+                <a href="#" class="hover:text-sk-text">Whitepaper</a>
+            </div>
+            <div class="flex flex-col gap-6">
+                <span class="text-sk-primary">SYSTEM</span>
+                <a href="#" class="hover:text-sk-text">iOS_Nodes</a>
+                <a href="#" class="hover:text-sk-text">Android_Nodes</a>
+                <a href="#" class="hover:text-sk-text">API_Status</a>
+            </div>
+            <div class="flex flex-col gap-6 hidden md:flex">
+                <span class="text-sk-primary">CONNECT</span>
+                <a href="#" class="hover:text-sk-text">Twitter</a>
+                <a href="#" class="hover:text-sk-text">Discord</a>
+                <a href="#" class="hover:text-sk-text">Git_Source</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mt-20 text-center opacity-20 text-[8px] font-black uppercase tracking-[0.6em] pb-20">
+        © 2025 VITAL LABORATORIES. ALL DATA TACTILE.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

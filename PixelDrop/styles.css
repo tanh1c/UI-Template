@@ -1,0 +1,117 @@
+/* Pixel Art Design System for PIXEL_DROP */
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
+
+:root {
+    --pixel-black: #1A1A1A;
+    --pixel-white: #FFFFFF;
+    --pixel-primary: #5A69E0;
+    --pixel-secondary: #FFB000;
+    --pixel-accent: #FF5A5A;
+    --pixel-bg: #2D3436;
+    --pixel-green: #00B894;
+    --pixel-purple: #6C5CE7;
+}
+
+@layer utilities {
+    .pixel-border {
+        border-style: solid;
+        border-width: 4px;
+        border-image-slice: 2;
+        border-image-width: 2;
+        border-image-outset: 0;
+        border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Cpath d='M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z' fill='%231A1A1A'/%3E%3C/svg%3E");
+    }
+
+    .pixel-border-white {
+        border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Cpath d='M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+    }
+
+    .pixel-shadow {
+        box-shadow: 8px 8px 0px 0px var(--pixel-black);
+    }
+
+    .pixel-shadow-primary {
+        box-shadow: 8px 8px 0px 0px var(--pixel-primary);
+    }
+
+    .pixel-text-shadow {
+        text-shadow: 2px 2px 0px var(--pixel-black);
+    }
+
+    .pixel-bg-grid {
+        background-size: 32px 32px;
+        background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+
+    .pixel-btn {
+        position: relative;
+        transition: all 0.1s steps(2);
+    }
+
+    .pixel-btn:active {
+        transform: translate(4px, 4px);
+        box-shadow: 4px 4px 0px 0px var(--pixel-black);
+    }
+}
+
+body {
+    background-color: var(--pixel-bg);
+    color: var(--pixel-white);
+    font-family: 'Silkscreen', cursive;
+    image-rendering: pixelated;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.5;
+}
+
+/* Animations */
+/* Snappier Animations to reduce perceived lag */
+@keyframes pixel-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.pixel-float {
+    animation: pixel-float 1.2s steps(6) infinite;
+}
+
+@keyframes pixel-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.pixel-blink {
+    animation: pixel-blink 0.8s steps(2) infinite;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

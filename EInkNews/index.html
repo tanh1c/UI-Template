@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE OBSERVER | DIGITAL DISPATCH</title>
+    <meta name="description"
+        content="A minimalist, high-contrast news portal designed for focus and clarity. The Observer - Daily Editorial.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F2F2F2',
+                        ink: '#121212',
+                        gray: {
+                            dark: '#404040',
+                            mid: '#898989',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Lora', 'serif'],
+                        display: ['"Instrument Serif"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="paper-texture selection:bg-ink selection:text-paper">
+
+    <!-- Ink Flash Overlay -->
+    <div id="inkFlash" class="ink-flash"></div>
+
+    <!-- Top Navigation / Masthead -->
+    <header class="container mx-auto px-6 pt-12">
+        <div class="flex flex-col items-center">
+            <div
+                class="w-full flex justify-between items-end mb-4 font-sans text-[10px] font-bold uppercase tracking-widest border-b border-ink pb-2">
+                <span>VOL. LXIV // NO. 256</span>
+                <span>THURSDAY, JANUARY 1, 2026</span>
+                <span>GLOBAL EDITION</span>
+            </div>
+            <h1
+                class="text-8xl md:text-[12rem] font-display text-center leading-none tracking-tighter hover:italic transition-all cursor-crosshair">
+                THE OBSERVER
+            </h1>
+            <div
+                class="w-full border-t-4 border-ink mt-4 pt-2 flex justify-between font-sans text-[10px] font-bold uppercase tracking-widest">
+                <span>POLITICS</span>
+                <span>CULTURE</span>
+                <span>TECHNOLOGY</span>
+                <span>FINANCE</span>
+                <span>ESSAYS</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Content -->
+    <main class="container mx-auto px-6 mt-16">
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b-2 border-ink pb-16">
+            <!-- Main Story -->
+            <div class="lg:col-span-8 reveal">
+                <div class="mb-4">
+                    <span
+                        class="font-sans font-black uppercase text-xs tracking-widest border border-ink px-2 py-0.5">LEAD
+                        STORY</span>
+                </div>
+                <h2 class="text-6xl md:text-8xl font-display mb-8 leading-[0.9] underline-heavy">
+                    THE SILENCE OF ALGORITHMS.
+                </h2>
+                <div class="dither-overlay mb-8 ink-border">
+                    <img src="hero.png" alt="Digital Fog" class="w-full h-[500px] object-cover dither-effect">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <p class="text-xl font-bold leading-tight">
+                        As automated systems retreat from the public forum, a new quietude emerges. Researchers suggest
+                        the "Great Muting" may be intentional.
+                    </p>
+                    <p class="text-gray-dark italic">
+                        By Elias Vance, Senior Correspondent. Page 4.
+                        <br><br>
+                        In the heart of the digital landscape, the hum of machines has reached a frequency beyond human
+                        hearing. What remains is a void that we are only beginning to understand.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Side Commentary -->
+            <div class="lg:col-span-4 border-l-2 border-ink pl-12 reveal" style="transition-delay: 0.1s;">
+                <h3 class="font-sans font-black text-xs uppercase tracking-[0.4em] mb-8 text-gray-mid">// OPINION</h3>
+                <div class="space-y-12">
+                    <article>
+                        <h4 class="text-3xl font-display leading-[1.1] mb-4 hover:underline cursor-pointer italic">
+                            The Fallacy of Constant Progress.
+                        </h4>
+                        <p class="text-sm text-gray-dark mb-4">
+                            Is it possible that we have reached the apex of utility? The current plateau suggests a need
+                            for re-evaluation.
+                        </p>
+                        <hr>
+                    </article>
+                    <article>
+                        <h4 class="text-3xl font-display leading-[1.1] mb-4 hover:underline cursor-pointer italic">
+                            Paper as a Radical Medium.
+                        </h4>
+                        <p class="text-sm text-gray-dark mb-4">
+                            In a world of flickering pixels, the permanence of the printed word becomes an act of
+                            rebellion.
+                        </p>
+                        <hr>
+                    </article>
+                    <div class="bg-ink text-paper p-8 ink-border">
+                        <h5 class="font-display text-4xl mb-4 italic">SUBSCRIBE</h5>
+                        <p class="font-sans text-[10px] leading-relaxed mb-6">SUPPORT UNFILTERED JOURNALISM. $5/MONTH
+                            FOR THE TRUTH.</p>
+                        <button
+                            class="w-full border-2 border-paper font-sans font-bold py-3 hover:bg-paper hover:text-ink transition-all">JOIN
+                            NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary Grid -->
+        <section class="mt-16 pb-32">
+            <h3 class="font-sans font-black text-xs uppercase tracking-[0.5em] mb-12 flex items-center gap-4">
+                <span>TODAY'S DISPATCH</span>
+                <div class="flex-grow h-[1px] bg-ink"></div>
+            </h3>
+
+            <div class="news-grid">
+                <!-- Story 1 -->
+                <div class="reveal">
+                    <div class="dither-overlay h-48 mb-6 ink-border">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab752?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover dither-effect">
+                    </div>
+                    <h4 class="text-3xl font-display leading-none mb-4 uppercase italic">Black Coffee & Cold Data.</h4>
+                    <p class="text-sm text-gray-dark">How the modern workspace evolved from cubicles to nomadic nodes.
+                        Page 12.</p>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <div class="dither-overlay h-48 mb-6 ink-border">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover dither-effect">
+                    </div>
+                    <h4 class="text-3xl font-display leading-none mb-4 uppercase italic">Architecture of the Void.</h4>
+                    <p class="text-sm text-gray-dark">The rise of minimalist cities designed for digital-only living.
+                        Page 18.</p>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="dither-overlay h-48 mb-6 ink-border">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover dither-effect">
+                    </div>
+                    <h4 class="text-3xl font-display leading-none mb-4 uppercase italic">Code as Literature.</h4>
+                    <p class="text-sm text-gray-dark">Analyzing the syntax of the world's most elegant scripts. Page 24.
+                    </p>
+                </div>
+
+                <!-- Story 4 -->
+                <div class="reveal" style="transition-delay: 0.3s;">
+                    <div class="dither-overlay h-48 mb-6 ink-border">
+                        <img src="https://images.unsplash.com/photo-1454165833222-d1ba2221730b?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover dither-effect">
+                    </div>
+                    <h4 class="text-3xl font-display leading-none mb-4 uppercase italic">Analog Resurgence.</h4>
+                    <p class="text-sm text-gray-dark">Why physical tools are becoming the new luxury status symbol. Page
+                        30.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-paper py-32 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-20 items-start mb-20">
+                <div class="md:col-span-2">
+                    <h1 class="font-display text-8xl leading-none italic mb-8">THE OBSERVER.</h1>
+                    <p class="font-sans text-[10px] uppercase font-bold tracking-[0.4em] opacity-40">Est. since the dawn
+                        of the glitch</p>
+                </div>
+                <div>
+                    <h5 class="font-display text-2xl mb-8 italic">PAGES</h5>
+                    <ul class="font-sans text-[10px] uppercase tracking-widest space-y-4 font-bold">
+                        <li class="hover:underline cursor-pointer">Archive</li>
+                        <li class="hover:underline cursor-pointer">Manifesto</li>
+                        <li class="hover:underline cursor-pointer">Classifieds</li>
+                        <li class="hover:underline cursor-pointer">Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-display text-2xl mb-8 italic">LEGAL</h5>
+                    <ul class="font-sans text-[10px] uppercase tracking-widest space-y-4 font-bold">
+                        <li class="hover:underline cursor-pointer">Privacy</li>
+                        <li class="hover:underline cursor-pointer">Terms</li>
+                        <li class="hover:underline cursor-pointer">Masthead</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-10 border-t border-paper/10 flex flex-col md:row justify-between items-center font-sans text-[8px] font-bold uppercase tracking-[0.6em] opacity-20">
+                <span>ALL WORDS SECURED // NO DATA RETENTION POLICY</span>
+                <span>© 2026 THE OBSERVER CORP</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Refresh Button (E-Ink Vibe) -->
+    <div class="fixed bottom-10 right-10 z-50">
+        <button id="refreshBtn"
+            class="bg-ink text-paper w-16 h-16 rounded-full flex items-center justify-center ink-border-thick m-shadow hover:scale-110 active:scale-95 transition-all">
+            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

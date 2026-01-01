@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SONIX | Feel the Sound</title>
+    <title>VIBE_CHECK // THE AUDIO CHAOS</title>
     <meta name="description"
-        content="Experience high-fidelity music streaming with SONIX. Explore millions of tracks, curated playlists, and lossless audio Quality.">
+        content="Anti-boring music streaming for the next gen. Break the algorithm. Feel the noise.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind -->
@@ -26,35 +26,18 @@
             theme: {
                 extend: {
                     colors: {
-                        sonix: {
-                            base: '#000000',
-                            primary: '#1D75F0',
-                            secondary: '#0A2472',
-                            accent: '#3D5AFA',
-                            text: '#FFFFFF',
-                            muted: '#A1A1AA',
-                            glass: 'rgba(255, 255, 255, 0.03)'
+                        chaos: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            yellow: '#FBFF00',
+                            pink: '#FF00F5',
+                            blue: '#00F0FF',
+                            green: '#00FF19'
                         }
                     },
                     fontFamily: {
-                        heading: ['Outfit', 'sans-serif'],
-                        body: ['Outfit', 'sans-serif'],
-                        mono: ['Space Grotesk', 'monospace']
-                    },
-                    animation: {
-                        'spin-slow': 'spin 12s linear infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        'pulse-glow': {
-                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
-                            '50%': { opacity: '0.6', transform: 'scale(1.1)' },
-                        }
+                        syne: ['Syne', 'sans-serif'],
+                        unbounded: ['Unbounded', 'sans-serif'],
                     }
                 }
             }
@@ -64,282 +47,387 @@
 </head>
 
 <body
-    class="bg-sonix-base text-sonix-text font-body selection:bg-sonix-primary selection:text-sonix-base overflow-x-hidden">
+    class="bg-chaos-yellow text-chaos-black font-unbounded selection:bg-chaos-white selection:text-chaos-black overflow-x-hidden">
 
-    <!-- Ambient Background Blobs -->
-    <div class="fixed inset-0 -z-10 bg-sonix-base overflow-hidden">
-        <div
-            class="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-sonix-primary/10 blur-[180px] rounded-full animate-pulse-glow">
+    <!-- Texture Overlay -->
+    <div class="fixed inset-0 grainy-bg z-50 pointer-events-none"></div>
+
+    <!-- Marquee Header -->
+    <div class="bg-chaos-black text-chaos-white py-3 border-b-4 border-chaos-black overflow-hidden relative z-40">
+        <div class="flex animate-marquee whitespace-nowrap font-syne font-black text-sm uppercase italic">
+            <span class="px-4">NO ALGORITHMS • JUST VIBES • BREAK THE INTERNET • NO ALGORITHMS • JUST VIBES • BREAK THE
+                INTERNET • </span>
+            <span class="px-4">NO ALGORITHMS • JUST VIBES • BREAK THE INTERNET • NO ALGORITHMS • JUST VIBES • BREAK THE
+                INTERNET • </span>
+            <span class="px-4">NO ALGORITHMS • JUST VIBES • BREAK THE INTERNET • NO ALGORITHMS • JUST VIBES • BREAK THE
+                INTERNET • </span>
         </div>
-        <div class="absolute top-[30%] -right-[15%] w-[55%] h-[55%] bg-sonix-accent/10 blur-[200px] rounded-full animate-pulse-glow"
-            style="animation-delay: 1.5s;"></div>
-        <div class="absolute -bottom-[10%] left-[20%] w-[45%] h-[45%] bg-sonix-secondary/15 blur-[150px] rounded-full animate-pulse-glow"
-            style="animation-delay: 3s;"></div>
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar"
-        class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between transition-all duration-500 bg-transparent">
-        <div class="flex items-center gap-2">
-            <div
-                class="w-10 h-10 bg-gradient-to-br from-sonix-primary to-sonix-secondary rounded-full flex items-center justify-center shadow-lg shadow-sonix-primary/20">
-                <i data-lucide="music" class="text-sonix-base w-6 h-6"></i>
-            </div>
-            <span class="font-heading font-extrabold text-2xl tracking-tighter">SONIX</span>
-        </div>
+    <nav
+        class="sticky top-4 z-40 mx-auto w-[95%] max-w-7xl px-8 py-4 bg-chaos-white border-4 border-chaos-black chaos-shadow flex items-center justify-between mt-6">
+        <a href="#" class="font-black text-3xl tracking-tighter font-syne group">
+            VIBE<span class="text-chaos-pink group-hover:text-chaos-blue transition-colors">_CHECK</span>
+        </a>
 
-        <div class="hidden lg:flex items-center gap-10 font-medium text-sm uppercase tracking-widest text-sonix-muted">
-            <a href="#discover" class="hover:text-sonix-primary transition-colors">Discover</a>
-            <a href="#premium" class="hover:text-sonix-primary transition-colors">Premium</a>
-            <a href="#devices" class="hover:text-sonix-primary transition-colors">Devices</a>
-            <a href="#support" class="hover:text-sonix-primary transition-colors">Support</a>
+        <div class="hidden lg:flex items-center gap-10 font-black uppercase text-xs tracking-widest">
+            <a href="#loud" class="hover:bg-chaos-blue px-2 transition-all">Go Loud</a>
+            <a href="#chaotic" class="hover:bg-chaos-pink px-2 transition-all">Mixers</a>
+            <a href="#drop" class="hover:bg-chaos-green px-2 transition-all">The Drop</a>
         </div>
 
         <div class="flex items-center gap-4">
-            <button class="hidden sm:block text-sm font-bold hover:text-sonix-primary transition-colors">Sign
-                In</button>
-            <a href="#"
-                class="px-7 py-3 bg-white text-sonix-base rounded-full font-extrabold text-xs uppercase tracking-[0.2em] hover:bg-sonix-primary transition-all hover:scale-105 active:scale-95 shadow-xl shadow-white/5">Start
-                Free Trial</a>
+            <div
+                class="hidden md:flex items-center border-4 border-chaos-black bg-chaos-yellow px-4 py-2 chaos-shadow-blue rotate-1">
+                <i data-lucide="search" class="w-4 h-4 mr-2"></i>
+                <input type="text" placeholder="FIND NOISE..."
+                    class="bg-transparent outline-none font-black uppercase text-[10px] w-32 placeholder:text-chaos-black/40">
+            </div>
+            <button
+                class="bg-chaos-black text-chaos-white px-6 py-3 font-black uppercase text-xs chaos-shadow-pink hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none transition-all">Join
+                The Cult</button>
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center pt-24 pb-20">
-            <div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative z-10 text-center lg:text-left">
+    <main class="container mx-auto px-6">
+        <!-- Hero: The Chaos Drop -->
+        <section class="min-h-screen py-20 flex flex-col items-center justify-center relative">
+
+            <!-- Stickers Floating -->
+            <div
+                class="sticker absolute top-20 left-10 w-32 h-32 bg-chaos-blue border-4 border-chaos-black flex items-center justify-center animate-bounce -rotate-12 z-10">
+                <i data-lucide="zap" class="w-16 h-16"></i>
+            </div>
+            <div
+                class="sticker absolute bottom-20 right-10 w-40 h-40 bg-chaos-pink border-4 border-chaos-black flex flex-col items-center justify-center rotate-12 z-10">
+                <span class="text-[10px] font-black uppercase mb-1">Vol_1</span>
+                <i data-lucide="disc" class="w-20 h-20 animate-spin"></i>
+            </div>
+
+            <div class="text-center relative z-20">
+                <div
+                    class="inline-block bg-chaos-black text-chaos-white px-8 py-2 border-4 border-chaos-black rotate-2 mb-8">
+                    <span class="font-syne font-black text-xl uppercase italic tracking-widest">Master Quality / No
+                        Limits</span>
+                </div>
+
+                <h1
+                    class="font-syne font-black text-7xl md:text-[180px] leading-[0.8] mb-12 uppercase tracking-tighter">
+                    LOUD <br />
+                    <span class="text-stroke">CHAOS</span> <br />
+                    <span class="bg-chaos-black text-chaos-white px-4 -rotate-2 inline-block">ONLY</span>
+                </h1>
+
+                <!-- Hero Image Poster -->
+                <div class="relative w-full max-w-2xl mx-auto mb-16 reveal">
+                    <div class="absolute -inset-4 bg-chaos-blue -rotate-2 chaos-shadow-pink -z-10"></div>
+                    <img src="hero.png" alt="Vibe Check Chaos"
+                        class="w-full h-auto border-4 border-chaos-black rotate-1 brutal-shadow">
                     <div
-                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sonix-primary/30 bg-sonix-primary/10 text-sonix-primary text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                        <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sonix-primary opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-sonix-primary"></span>
-                        </span>
-                        Lossless Audio Now Live
-                    </div>
-                    <h1 class="font-heading font-black text-6xl md:text-8xl lg:text-[100px] leading-[0.9] mb-8">
-                        Music <br /> That <span
-                            class="bg-gradient-to-r from-sonix-primary to-sonix-accent bg-clip-text text-transparent italic">Breathes.</span>
-                    </h1>
-                    <p class="text-xl text-sonix-muted max-w-xl mx-auto lg:mx-0 leading-relaxed mb-12 font-medium">
-                        Hear your music as the artists intended. Millions of tracks in ultra-high fidelity, now with
-                        spatial audio.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-6">
-                        <a href="#"
-                            class="group px-10 py-5 bg-gradient-to-r from-sonix-primary to-sonix-secondary text-sonix-base rounded-[20px] font-black text-lg flex items-center justify-center gap-3 hover:shadow-[0_0_40px_rgba(0,245,255,0.3)] transition-all hover:-translate-y-1">
-                            Get Sonix Free <i data-lucide="play" class="w-5 h-5 fill-current"></i>
-                        </a>
-                        <a href="#"
-                            class="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-[20px] font-black text-lg flex items-center justify-center gap-3 backdrop-blur-xl hover:bg-white/10 transition-all">
-                            See Pricing
-                        </a>
-                    </div>
-                    <div class="mt-16 flex flex-col sm:row items-center justify-center lg:justify-start gap-8">
-                        <div class="flex -space-x-4">
-                            <div class="w-12 h-12 rounded-full border-4 border-sonix-base bg-zinc-800"></div>
-                            <div class="w-12 h-12 rounded-full border-4 border-sonix-base bg-zinc-700"></div>
-                            <div class="w-12 h-12 rounded-full border-4 border-sonix-base bg-zinc-600"></div>
-                        </div>
-                        <p class="text-xs text-sonix-muted font-bold uppercase tracking-[0.2em]"><span
-                                class="text-white">12M+</span> Active Listeners</p>
+                        class="absolute -top-10 -right-10 bg-chaos-pink text-chaos-white p-4 font-black uppercase text-xl -rotate-12 border-4 border-chaos-black">
+                        FRESH<br />DROP
                     </div>
                 </div>
 
-                <div class="relative items-center justify-center flex lg:justify-end">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-sonix-primary/20 to-sonix-accent/20 blur-[100px] -z-10">
-                    </div>
-                    <div class="relative w-full max-w-[550px] animate-float">
-                        <img src="hero.png" alt="Sonix High-Fi Audio"
-                            class="w-full h-auto drop-shadow-[0_0_60px_rgba(0,245,255,0.2)]">
+                <p
+                    class="text-2xl font-black max-w-3xl mx-auto leading-tight mb-16 uppercase underline decoration-4 underline-offset-8">
+                    Stop pretending you like curated playlists. We give you the raw noise, the underground energy, and
+                    the bass that actually breaks things.
+                </p>
 
-                        <!-- HUD Player Element -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-10">
+                    <button
+                        class="px-16 py-8 bg-chaos-black text-chaos-white font-syne font-black text-4xl uppercase chaos-shadow-blue hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all group">
+                        Enter Noise <i data-lucide="arrow-right"
+                            class="inline-block ml-4 group-hover:translate-x-4 transition-transform"></i>
+                    </button>
+                    <div class="flex items-center gap-4 border-4 border-chaos-black p-4 bg-chaos-white rotate-2">
                         <div
-                            class="absolute -bottom-10 right-0 lg:-right-10 p-6 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[30px] shadow-2xl reveal-on-scroll">
-                            <div class="flex items-center gap-5 mb-6">
-                                <div
-                                    class="w-16 h-16 bg-gradient-to-br from-sonix-primary to-sonix-accent rounded-2xl flex items-center justify-center animate-spin-slow">
-                                    <i data-lucide="disc" class="text-white w-10 h-10"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-extrabold text-white text-lg">Hyper-Spatial</h4>
-                                    <p class="text-sonix-primary text-xs font-black uppercase tracking-widest">Master
-                                        Quality</p>
-                                </div>
-                            </div>
-                            <div class="w-48 h-1 bg-white/10 rounded-full overflow-hidden">
-                                <div class="w-2/3 h-full bg-sonix-primary shadow-[0_0_10px_#00F5FF]"></div>
-                            </div>
-                            <div
-                                class="mt-4 flex justify-between text-[10px] font-mono font-bold text-sonix-muted uppercase tracking-widest">
-                                <span>3:42</span>
-                                <span>5:12</span>
-                            </div>
+                            class="w-12 h-12 bg-chaos-green border-2 border-chaos-black flex items-center justify-center">
+                            <i data-lucide="play" class="fill-current w-6 h-6"></i>
                         </div>
+                        <span class="font-black text-sm uppercase">Quick Blast</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Big Visualizer Bars -->
+            <div class="absolute bottom-0 left-0 w-full h-40 flex items-end gap-2 px-10 pointer-events-none opacity-20">
+                <div class="flex-1 bg-chaos-black h-[40%] animate-[bounce_0.5s_infinite]"></div>
+                <div class="flex-1 bg-chaos-black h-[80%] animate-[bounce_0.7s_infinite]"></div>
+                <div class="flex-1 bg-chaos-black h-[60%] animate-[bounce_0.4s_infinite]"></div>
+                <div class="flex-1 bg-chaos-black h-[90%] animate-[bounce_0.8s_infinite]"></div>
+                <div class="flex-1 bg-chaos-black h-[50%] animate-[bounce_0.6s_infinite]"></div>
+                <div class="flex-1 bg-chaos-black h-[70%] animate-[bounce_0.9s_infinite]"></div>
+                <div class="flex-1 bg-chaos-black h-[30%] animate-[bounce_0.4s_infinite]"></div>
+            </div>
         </section>
 
-        <!-- Features Bento -->
-        <section id="discover" class="py-40 relative">
-            <div class="container mx-auto px-8">
-                <div class="max-w-3xl mb-24">
-                    <h2 class="font-heading font-black text-5xl md:text-7xl mb-8 leading-tight">Elevate Your <br />
+        <!-- Product Feature: Grid of Destruction -->
+        <section id="loud" class="py-40 bg-chaos-black -mx-6 px-6 text-chaos-white relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-[500px] h-[500px] bg-chaos-blue opacity-10 rounded-full blur-[100px] -z-10 animate-pulse">
+            </div>
+
+            <div class="flex flex-col lg:flex-row justify-between items-start mb-32 gap-12">
+                <h2 class="font-syne font-black text-6xl md:text-9xl uppercase leading-none tracking-tighter reveal">
+                    WHAT'S <br /> THE <br /> <span class="bg-chaos-blue text-chaos-black px-4 italic">DEAL?</span>
+                </h2>
+                <div class="max-w-md reveal">
+                    <p class="text-3xl font-black uppercase mb-12 text-chaos-yellow">We built a music app for people who
+                        hate music apps.</p>
+                    <div class="flex flex-wrap gap-4">
                         <span
-                            class="bg-gradient-to-r from-sonix-primary to-sonix-secondary bg-clip-text text-transparent">Sonic
-                            World.</span>
-                    </h2>
-                    <p class="text-xl text-sonix-muted">More than just streaming. Sonix is an ecosystem built for those
-                        who live for the detail in every note.</p>
+                            class="bg-chaos-white text-chaos-black px-6 py-2 border-2 border-chaos-white font-black uppercase text-xs rotate-1 italic">NO
+                            ADS EVER</span>
+                        <span
+                            class="bg-chaos-pink text-chaos-white px-6 py-2 border-2 border-chaos-pink font-black uppercase text-xs -rotate-2">24-BIT
+                            NOISE</span>
+                        <span
+                            class="bg-chaos-green text-chaos-black px-6 py-2 border-2 border-chaos-green font-black uppercase text-xs rotate-3">MOSH
+                            PIT MODE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Card 1 -->
+                <div
+                    class="bg-chaos-white text-chaos-black border-4 border-chaos-blue p-8 chaos-shadow-blue hover-shake cursor-pointer reveal">
+                    <div
+                        class="w-16 h-16 bg-chaos-black text-chaos-white flex items-center justify-center mb-8 rotate-12">
+                        <i data-lucide="thermometer" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-syne font-black text-4xl uppercase mb-6">Thermal Audio</h3>
+                    <p class="text-lg font-bold">See your music. Our engine maps frequencies to heat maps so you can
+                        literally see when the drop is too hot to handle.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
+                <!-- Card 2 -->
+                <div class="bg-chaos-blue text-chaos-black border-4 border-chaos-black p-8 chaos-shadow-pink tilt-right cursor-pointer reveal"
+                    style="transition-delay: 0.1s;">
                     <div
-                        class="md:col-span-2 group relative p-12 rounded-[40px] bg-white/[0.02] border border-white/5 overflow-hidden hover:border-sonix-primary/30 transition-all duration-700">
-                        <div
-                            class="absolute top-0 right-0 w-64 h-64 bg-sonix-primary/10 blur-[80px] -z-10 group-hover:bg-sonix-primary/20 transition-all">
+                        class="w-16 h-16 bg-chaos-pink text-chaos-white flex items-center justify-center mb-8 -rotate-6">
+                        <i data-lucide="radio" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-syne font-black text-4xl uppercase mb-6">Anti-Radio</h3>
+                    <p class="text-lg font-bold">Bored of the same 10 songs? Anti-Radio connects you to illegal pirate
+                        stations around the globe in real-time.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-chaos-pink text-chaos-white border-4 border-chaos-white p-8 chaos-shadow-yellow tilt-left cursor-pointer reveal"
+                    style="transition-delay: 0.2s;">
+                    <div
+                        class="w-16 h-16 bg-chaos-yellow text-chaos-black flex items-center justify-center mb-8 rotate-12">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-syne font-black text-4xl uppercase mb-6">Collab Noise</h3>
+                    <p class="text-lg font-bold">Build Moshpits. Real-time collaborative listening that lets everyone
+                        vote for the next sonic assault.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scrolling Ticker -->
+        <div class="bg-chaos-white py-10 border-y-4 border-chaos-black -mx-6 overflow-hidden">
+            <div
+                class="flex animate-marquee whitespace-nowrap font-syne font-black text-6xl uppercase tracking-tighter">
+                <span class="px-10 text-stroke">BORN IN CHAOS</span>
+                <span class="px-10">BORN IN CHAOS</span>
+                <span class="px-10 text-stroke">BORN IN CHAOS</span>
+                <span class="px-10">BORN IN CHAOS</span>
+                <span class="px-10 text-stroke">BORN IN CHAOS</span>
+                <span class="px-10">BORN IN CHAOS</span>
+            </div>
+        </div>
+
+        <!-- Section: The Daily Drop (Track List) -->
+        <section id="drop" class="py-40">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-20">
+                <h2 class="font-syne font-black text-7xl uppercase reveal">DAILY <span
+                        class="bg-chaos-green px-4 -rotate-1 inline-block">DROP</span></h2>
+                <p class="font-black uppercase text-xl italic mt-4 md:mt-0 underline decoration-4">Refreshed: 04:20 AM
+                </p>
+            </div>
+
+            <div class="space-y-4 reveal">
+                <!-- Track 1 -->
+                <div class="track-item active flex items-center justify-between p-6 border-4 border-chaos-black chaos-shadow-blue cursor-pointer group"
+                    data-track="1" data-name="CYBER_PUNCH" data-artist="GLITCH_MOB">
+                    <div class="flex items-center gap-8">
+                        <span class="font-syne font-black text-4xl opacity-20 group-hover:opacity-100">01</span>
+                        <div class="w-16 h-16 bg-chaos-black p-1 rotate-3 group-hover:rotate-0 transition-transform">
+                            <div class="w-full h-full bg-chaos-pink"></div>
                         </div>
-                        <div class="relative z-10 flex flex-col h-full justify-between">
-                            <div>
-                                <h3 class="font-heading font-black text-4xl mb-6">Smart Curation</h3>
-                                <p class="text-lg text-sonix-muted max-w-md">Our neural engine learns your frequency.
-                                    Discover tracks that match your mood, perfectly syncopated to your day.</p>
-                            </div>
-                            <div class="mt-12 flex gap-4">
-                                <span
-                                    class="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-widest">Mood-Sync</span>
-                                <span
-                                    class="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-widest">Neural
-                                    Flow</span>
-                            </div>
+                        <div>
+                            <h4 class="font-black text-2xl uppercase">CYBER_PUNCH</h4>
+                            <p class="font-bold text-xs uppercase opacity-60">GLITCH_MOB // 145 BPM</p>
                         </div>
                     </div>
-
-                    <!-- Feature 2 -->
-                    <div
-                        class="group relative p-12 rounded-[40px] bg-gradient-to-b from-sonix-primary/10 to-transparent border border-white/5 overflow-hidden hover:border-sonix-primary/30 transition-all duration-700 text-center">
-                        <div
-                            class="w-20 h-20 bg-sonix-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform">
-                            <i data-lucide="wifi-off" class="text-sonix-primary w-10 h-10"></i>
+                    <div class="flex items-center gap-12">
+                        <div class="hidden md:flex gap-1 h-8 items-end eq-active">
+                            <div class="visualizer-line" style="animation-delay: 0.1s"></div>
+                            <div class="visualizer-line" style="animation-delay: 0.3s"></div>
+                            <div class="visualizer-line" style="animation-delay: 0.2s"></div>
+                            <div class="visualizer-line" style="animation-delay: 0.4s"></div>
                         </div>
-                        <h3 class="font-heading font-black text-3xl mb-4">Total Freedom</h3>
-                        <p class="text-sonix-muted">Offline mode that actually works. High-fi downloads in one tap.</p>
+                        <span class="font-black font-syne text-xl">03:45</span>
+                        <button class="bg-chaos-black text-chaos-white p-3 hover:bg-chaos-blue transition-colors">
+                            <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                        </button>
                     </div>
+                </div>
 
-                    <!-- Feature 3 -->
-                    <div
-                        class="group relative p-12 rounded-[40px] bg-white/[0.02] border border-white/5 overflow-hidden hover:border-sonix-accent/30 transition-all duration-700">
-                        <div class="w-16 h-16 bg-sonix-accent/10 rounded-2xl flex items-center justify-center mb-8">
-                            <i data-lucide="headphones" class="text-sonix-accent w-8 h-8"></i>
+                <!-- Track 2 -->
+                <div class="track-item flex items-center justify-between p-6 border-4 border-chaos-black chaos-shadow-pink cursor-pointer group rotate-1"
+                    data-track="2" data-name="VOID_STATIC" data-artist="NEON_REBEL">
+                    <div class="flex items-center gap-8">
+                        <span class="font-syne font-black text-4xl opacity-20 group-hover:opacity-100">02</span>
+                        <div class="w-16 h-16 bg-chaos-black p-1 -rotate-2 group-hover:rotate-0 transition-transform">
+                            <div class="w-full h-full bg-chaos-blue"></div>
                         </div>
-                        <h3 class="font-heading font-black text-2xl mb-4 uppercase tracking-tighter">Hi-Fi Audio</h3>
-                        <p class="text-sonix-muted text-sm leading-relaxed">Lossless FLAC streaming at 24-bit / 192kHz.
-                            Hear what you've been missing.</p>
+                        <div>
+                            <h4 class="font-black text-2xl uppercase">VOID_STATIC</h4>
+                            <p class="font-bold text-xs uppercase opacity-60">NEON_REBEL // 128 BPM</p>
+                        </div>
                     </div>
+                    <div class="flex items-center gap-12">
+                        <span class="font-black font-syne text-xl">04:12</span>
+                        <button class="bg-chaos-black text-chaos-white p-3 hover:bg-chaos-pink transition-colors">
+                            <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Feature 4 -->
-                    <div
-                        class="md:col-span-2 group relative p-12 rounded-[40px] bg-sonix-primary text-sonix-base overflow-hidden hover:shadow-[0_0_50px_rgba(0,245,255,0.2)] transition-all duration-700">
-                        <div
-                            class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/20 rounded-full blur-[60px] group-hover:scale-110 transition-transform">
+                <!-- Track 3 -->
+                <div class="track-item flex items-center justify-between p-6 border-4 border-chaos-black chaos-shadow-yellow cursor-pointer group -rotate-1"
+                    data-track="3" data-name="ACID_RAIN" data-artist="PIRATE_CORE">
+                    <div class="flex items-center gap-8">
+                        <span class="font-syne font-black text-4xl opacity-20 group-hover:opacity-100">03</span>
+                        <div class="w-16 h-16 bg-chaos-black p-1 rotate-1 group-hover:rotate-0 transition-transform">
+                            <div class="w-full h-full bg-chaos-yellow"></div>
                         </div>
-                        <div class="relative z-10">
-                            <h3 class="font-heading font-black text-4xl mb-6 tracking-tight">Ecosystem Sync</h3>
-                            <p class="text-sonix-base font-medium text-lg max-w-md">Seamless transition from your phone
-                                to your speakers. Control your world with a single tap.</p>
-                            <a href="#"
-                                class="inline-flex items-center gap-3 mt-10 font-black uppercase text-xs tracking-widest group">Launch
-                                App <i data-lucide="arrow-right"
-                                    class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i></a>
+                        <div>
+                            <h4 class="font-black text-2xl uppercase">ACID_RAIN</h4>
+                            <p class="font-bold text-xs uppercase opacity-60">PIRATE_CORE // 160 BPM</p>
                         </div>
+                    </div>
+                    <div class="flex items-center gap-12">
+                        <span class="font-black font-syne text-xl">02:58</span>
+                        <button class="bg-chaos-black text-chaos-white p-3 hover:bg-chaos-yellow transition-colors">
+                            <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="py-40">
-            <div class="container mx-auto px-8">
-                <div class="relative rounded-[60px] bg-gradient-to-r from-sonix-primary to-sonix-accent p-1">
-                    <div class="bg-sonix-base rounded-[59px] py-24 px-8 text-center overflow-hidden relative">
-                        <div
-                            class="absolute -top-40 -left-40 w-96 h-96 bg-sonix-primary/20 blur-[120px] rounded-full animate-pulse-glow">
-                        </div>
-                        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-sonix-accent/20 blur-[120px] rounded-full animate-pulse-glow"
-                            style="animation-delay: 2s;"></div>
-
-                        <h2 class="font-heading font-black text-5xl md:text-8xl mb-10 tracking-tight relative z-10">Stop
-                            listening. <br /> <span
-                                class="italic text-transparent bg-clip-text bg-gradient-to-r from-sonix-primary to-sonix-secondary">Start
-                                feeling.</span></h2>
-                        <a href="#"
-                            class="inline-flex items-center gap-4 px-14 py-7 bg-white text-sonix-base rounded-[25px] font-black text-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl relative z-10">
-                            Get Sonix Premium <i data-lucide="sparkles" class="w-8 h-8 text-sonix-primary"></i>
-                        </a>
-                        <p class="mt-8 text-sonix-muted font-bold uppercase text-xs tracking-[0.4em] relative z-10">No
-                            commitment • Cancel anytime</p>
-                    </div>
+        <!-- Call to Action -->
+        <section class="py-40 text-center">
+            <div class="relative inline-block reveal">
+                <div class="absolute -inset-10 bg-chaos-pink rotate-3 chaos-shadow-blue -z-10"></div>
+                <div class="bg-chaos-black text-chaos-white p-20 border-4 border-chaos-black relative z-10">
+                    <h2 class="font-syne font-black text-5xl md:text-8xl mb-12 uppercase italic tracking-tighter">THE
+                        PARTY <br /> ENDS IN 2029</h2>
+                    <p class="text-2xl font-black mb-16 text-chaos-yellow uppercase">EVERY SECOND YOU WAIT IS A SECOND
+                        OF SILENCE.</p>
+                    <a href="#"
+                        class="px-12 py-6 bg-chaos-yellow text-chaos-black font-syne font-black text-4xl uppercase chaos-shadow-pink hover:-translate-x-2 hover:-translate-y-2 hover:shadow-none transition-all hover:bg-chaos-green group">
+                        UPGRADE NOW <i data-lucide="skull"
+                            class="inline-block ml-4 group-hover:rotate-12 transition-transform"></i>
+                    </a>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="bg-sonix-base border-t border-white/5 py-32">
-        <div class="container mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-20">
-            <div class="col-span-1 md:col-span-2">
-                <div class="flex items-center gap-2 mb-10">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-sonix-primary to-sonix-secondary rounded-full flex items-center justify-center">
-                        <i data-lucide="music" class="text-sonix-base w-6 h-6"></i>
-                    </div>
-                    <span class="font-heading font-extrabold text-2xl tracking-tighter">SONIX</span>
-                </div>
-                <p class="text-sonix-muted max-w-sm mb-12 leading-relaxed font-medium">Reimagining the way the world
-                    experiences music through high-fidelity technology and neural curation.</p>
-                <div class="flex gap-8">
-                    <a href="#"
-                        class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-sonix-primary hover:text-sonix-base transition-all"><i
-                            data-lucide="twitter"></i></a>
-                    <a href="#"
-                        class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-sonix-primary hover:text-sonix-base transition-all"><i
-                            data-lucide="instagram"></i></a>
-                    <a href="#"
-                        class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-sonix-primary hover:text-sonix-base transition-all"><i
-                            data-lucide="youtube"></i></a>
+    <!-- Chaos Player Bar -->
+    <div
+        class="fixed bottom-0 left-0 w-full bg-chaos-white player-bar z-[100] px-6 py-4 flex flex-col md:flex-row items-center gap-6">
+        <!-- Progress Bar (Full Width Top) -->
+        <div class="absolute top-0 left-0 w-full -translate-y-[6px]">
+            <div class="progress-bar group">
+                <div class="progress-fill" id="playerProgress" style="width: 45%;"></div>
+                <div class="progress-knob" id="playerKnob" style="left: 45%;"></div>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6 flex-1 min-w-0">
+            <div class="w-16 h-16 bg-chaos-black p-1 border-2 border-chaos-black rotate-2 shrink-0">
+                <div class="w-full h-full bg-chaos-pink" id="playerArt"></div>
+            </div>
+            <div class="truncate">
+                <h5 class="font-black uppercase text-xl truncate" id="playerTrack">CYBER_PUNCH</h5>
+                <p class="font-bold text-[10px] uppercase text-chaos-black/60 truncate" id="playerArtist">GLITCH_MOB</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-8">
+            <button class="hover:text-chaos-pink transition-colors"><i data-lucide="skip-back"
+                    class="w-8 h-8 fill-current"></i></button>
+            <button
+                class="w-16 h-16 bg-chaos-black text-chaos-white flex items-center justify-center chaos-shadow-blue hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+                id="playBtn">
+                <i data-lucide="pause" class="w-10 h-10 fill-current" id="playIcon"></i>
+            </button>
+            <button class="hover:text-chaos-blue transition-colors"><i data-lucide="skip-forward"
+                    class="w-8 h-8 fill-current"></i></button>
+        </div>
+
+        <div class="hidden md:flex items-center gap-6 flex-1 justify-end">
+            <div class="flex items-center gap-4">
+                <i data-lucide="volume-2" class="w-5 h-5"></i>
+                <div class="w-32 h-2 bg-chaos-black/10 border-2 border-chaos-black relative">
+                    <div class="absolute inset-y-0 left-0 bg-chaos-green w-3/4"></div>
                 </div>
             </div>
+            <button class="bg-chaos-blue p-2 border-2 border-chaos-black chaos-shadow-pink">
+                <i data-lucide="maximize-2" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </div>
 
+    <footer class="bg-chaos-black text-chaos-white py-24 px-10 pb-48">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between gap-20">
             <div>
-                <h4 class="font-heading font-bold text-white mb-10 uppercase tracking-[0.3em] text-xs">Ecosystem</h4>
-                <ul class="space-y-6 text-sm font-medium text-sonix-muted">
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Sonix Mobile</a></li>
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Sonix Desktop</a></li>
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Sonix Hi-Fi</a></li>
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Devices</a></li>
-                </ul>
+                <a href="#" class="font-black text-4xl tracking-tighter font-syne mb-10 block">
+                    VIBE<span class="text-chaos-pink uppercase font-italic">_CHECK</span>
+                </a>
+                <p class="max-w-xs text-xs font-black uppercase tracking-widest text-chaos-white/60 leading-loose">
+                    This is not a streaming service. This is a digital protest against boring audio. Born in the
+                    bedroom, deployed to the void.
+                </p>
             </div>
 
-            <div>
-                <h4 class="font-heading font-bold text-white mb-10 uppercase tracking-[0.3em] text-xs">Platform</h4>
-                <ul class="space-y-6 text-sm font-medium text-sonix-muted">
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">About</a></li>
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Careers</a></li>
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Artists</a></li>
-                    <li><a href="#" class="hover:text-sonix-primary transition-colors">Privacy</a></li>
-                </ul>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-20">
+                <div>
+                    <h4 class="font-bold text-chaos-blue mb-8 uppercase text-xs tracking-widest">Protocol</h4>
+                    <ul class="space-y-4 text-xs font-black uppercase tracking-[0.2em] text-chaos-white/40">
+                        <li><a href="#" class="hover:text-chaos-white">Download</a></li>
+                        <li><a href="#" class="hover:text-chaos-white">Desktop</a></li>
+                        <li><a href="#" class="hover:text-chaos-white">Devices</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-chaos-pink mb-8 uppercase text-xs tracking-widest">The Lab</h4>
+                    <ul class="space-y-4 text-xs font-black uppercase tracking-[0.2em] text-chaos-white/40">
+                        <li><a href="#" class="hover:text-chaos-white">About</a></li>
+                        <li><a href="#" class="hover:text-chaos-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-chaos-white">Leaks</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div
-            class="container mx-auto px-8 mt-32 pt-10 border-t border-white/5 flex flex-col md:row items-center justify-between gap-8 opacity-40">
-            <p class="text-[10px] font-bold uppercase tracking-[0.5em]">© 2025 Sonix Global Media. Built for the ears.
-            </p>
-            <div class="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.5em] text-sonix-primary">
-                <div class="w-2 h-2 rounded-full bg-sonix-primary animate-pulse"></div>
-                Sonix Stream Status: Optimal
+            class="container mx-auto mt-24 pt-10 border-t-2 border-white/10 flex flex-col md:flex-row items-center justify-between text-[10px] font-black uppercase tracking-[0.5em] text-chaos-white/20">
+            <p>© NOW + ETERNITY. VIBE_CHECK LABS.</p>
+            <div class="flex gap-10">
+                <a href="#">Privacy?</a>
+                <a href="#">Terms!</a>
+                <a href="#">Chaos</a>
             </div>
         </div>
     </footer>

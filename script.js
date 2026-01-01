@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "06", name: "SaaS Platform", folder: "SaaS", tag: "Business / Dashboard", image: "SaaS/nexgen_analytics_hero.png" },
         { id: "07", name: "Cinema Hub", folder: "Cinema", tag: "Entertainment / Media", image: "Cinema/hero.png" },
         { id: "08", name: "AI Chatbot UI", folder: "AIChatbot", tag: "AI / Interaction", image: "AIChatbot/hero.png" },
-        { id: "09", name: "Gaming Portal", folder: "Gaming", tag: "Gaming / Community", image: "Gaming/hero.png" },
+        { id: "09", name: "VALO ARENA", folder: "Gaming", tag: "Gaming / Community", image: "Gaming/hero.png" },
         { id: "10", name: "Coffee Shop", folder: "CoffeeShop", tag: "Branding / Retail", image: "CoffeeShop/hero.png" },
-        { id: "11", name: "Music Streaming", folder: "MusicStreaming", tag: "App / Media", image: "MusicStreaming/hero.png" },
+        { id: "11", name: "VIBE_CHECK", folder: "MusicStreaming", tag: "Gen Z / Chaos", image: "MusicStreaming/hero.png" },
         { id: "12", name: "Luxury Brand", folder: "LuxuryBrand", tag: "High-End / Fashion", image: "LuxuryBrand/hero.png" },
         { id: "13", name: "Automotive XP", folder: "Automotive", tag: "Luxury / Showroom", image: "Automotive/hero.png" },
         { id: "14", name: "Architecture", folder: "ArchitectureEurope", tag: "Design / Showcase", image: "ArchitectureEurope/hero.png" },
@@ -27,7 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: "19", name: "CryptoNexus", folder: "CryptoNexus", tag: "Fintech / Crypto", image: "CryptoNexus/hero.png" },
         { id: "20", name: "NeoBank Elite", folder: "NeoBank_Elite", tag: "Elite / Finance", image: "NeoBank_Elite/hero.png" },
         { id: "21", name: "Aether OS", folder: "Aether_OS", tag: "Spatial / OS", image: "Aether_OS/hero.png" },
-        { id: "22", name: "Lakers Elite", folder: "Lakers_Elite", tag: "Sports / Club", image: "Lakers_Elite/hero.png" }
+        { id: "22", name: "Lakers Elite", folder: "Lakers_Elite", tag: "Sports / Club", image: "Lakers_Elite/hero.png" },
+        { id: "23", name: "B2E BRAND", folder: "B2E_Y2K", tag: "Fashion / Y2K", image: "B2E_Y2K/hero.png" },
+        { id: "24", name: "STUDIO MEMPHIS", folder: "MemphisFurniture", tag: "Furniture / Radical", image: "MemphisFurniture/hero.png" },
+        { id: "25", name: "PIXEL_DROP", folder: "PixelDrop", tag: "Messaging / Retro", image: "PixelDrop/hero.png" },
+        { id: "26", name: "iPhone 16 Pro", folder: "iPhone_Bento", tag: "Product / Bento", image: "iPhone_Bento/hero.png" },
+        { id: "27", name: "NEON DREAMS", folder: "VaporwaveMusic", tag: "Music / Vaporwave", image: "VaporwaveMusic/hero.png" },
+        { id: "28", name: "THE OBSERVER", folder: "EInkNews", tag: "News / E-Ink", image: "EInkNews/hero.png" },
+        { id: "29", name: "AETHER HOME", folder: "SpatialHome", tag: "IoT / Spatial UI", image: "SpatialHome/hero.png" },
+        { id: "30", name: "VITAL_CHECK", folder: "HealthSkeuo", tag: "Health / Skeuo", image: "HealthSkeuo/hero.png" },
+        { id: "31", name: "AVATAR: FIRE & ASH", folder: "Avatar3", tag: "Movie / Hyperreal", image: "Avatar3/hero.png" }
     ];
 
     // Render projects
